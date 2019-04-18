@@ -8,13 +8,14 @@ namespace Bitmonlandia
 {
     class Bitmon
     {
+        string tipo_De_Bitmon;
         private int tiempo_De_Vida;
         private bool estado_De_Vida;
         private int puntos_De_Ataque;
         private int puntos_De_Vida;
-        private int [] posicion= new int[2];        
+        private int [] posicion= new int[2];
 
-        public Bitmon(int tiempo_De_Vida,int puntos_De_Ataque,int puntos_De_Vida, int [] posicion)
+        public Bitmon(string tipo_De_Bitmon, int tiempo_De_Vida,int puntos_De_Ataque,int puntos_De_Vida, int [] posicion)
         {
             this.tiempo_De_Vida = tiempo_De_Vida;
             this.estado_De_Vida = true;
@@ -25,6 +26,7 @@ namespace Bitmonlandia
 
         public virtual Bitmon Pelea(Bitmon peleador) // Pelea entre bitmons
         {
+
             return peleador;
         }
 
@@ -43,6 +45,10 @@ namespace Bitmonlandia
             return estado_De_Vida;
         }
 
-        
+        public string GetNombre()
+        {
+
+            return tipo_De_Bitmon;
+        }
     }
 }
