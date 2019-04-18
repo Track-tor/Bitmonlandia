@@ -10,22 +10,22 @@ namespace Bitmonlandia
     {
         static void Main(string[] args)
         {
-            Bitmonlandia bitmonlandia = new Bitmonlandia();
+            Bitmonlandia bitmonlandia = new Bitmonlandia(3);
+
             int[] tupla = { 1, 2 };
-
-            bitmonlandia.lista_bitmons_totales.Add(new Ent("Ent",1, 2, 3,tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Ent("Ent",1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Taplan("Taplan",1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Taplan("Taplan", 1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Doti("Doti", 1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Doti("Doti", 1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Dorvalo("Dorvalo", 1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Dorvalo("Dorvalo", 1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Wetar("Wetar", 1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Wetar("Wetar", 1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Gofue("Gofue", 1, 2, 3, tupla));
-            bitmonlandia.lista_bitmons_totales.Add(new Gofue("Gofue", 1, 2, 3, tupla));
-
+            bitmonlandia.añadir_bitmon(new Ent(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Ent(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Taplan(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Taplan(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Doti(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Doti(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Dorvalo(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Dorvalo(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Wetar(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Wetar(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Gofue(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Gofue(1, 2, 3, tupla));
+            bitmonlandia.GetMapa();
         }
     }
 }

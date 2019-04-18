@@ -8,14 +8,18 @@ namespace Bitmonlandia
 {
     class Bitmonlandia
     {
-        Mapa mapa = new Mapa();
-        //lista con todos los bitmons presentes en el mapa (vivos y muertos)
-        public List<Bitmon> lista_bitmons_totales;
-        //mapa a utilizar en el mundo bitmon, que se obtiene con GetTbalero() ya que es private
-        private string[] tablero = mapa.GetTablero();
+        private int seed;
 
+        private Mapa mapa; //lista con todos los bitmons presentes en el mapa (vivos y muertos)
 
+        private List<Bitmon> lista_bitmons_totales = new List<Bitmon>(); //mapa a utilizar en el mundo bitmon, que se obtiene con GetTbalero() ya que es private
         private int tiempo_Transcurrido = 0;
+
+        public Bitmonlandia(int seed)
+        {
+            this.seed = seed;
+            mapa = new Mapa(seed);
+        }
 
         //Metodos:
         //Esta funcion retorna el tiempo transcurrido en meses que esta en private en esta clase
@@ -43,9 +47,18 @@ namespace Bitmonlandia
             return muertos;
         }
 
+        public void añadir_bitmon(Bitmon bitmon)
+        {
+            lista_bitmons_totales.Add(bitmon);
+        }
         public void Posicionar_bitmons(List<Bitmon> lista_bitmons_totales, string[] tablero)
         {
 
         }
+        public void GetMapa()
+        {
+            mapa.GetTablero();
+        }
+
     }
 }
