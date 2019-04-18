@@ -23,11 +23,7 @@ namespace Bitmonlandia
         }
 
         public override Bitmon Reproduccion(Bitmon pareja)
-        {
-            if (pareja.GetNombre() == "Ent" | pareja.GetNombre() == "Taplan" | pareja.GetNombre() == "Wetar" | pareja.GetNombre() == "Doti")
-            {
-
-            }
+        { }
             return base.Reproduccion(pareja);
         }
 
