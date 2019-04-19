@@ -12,6 +12,15 @@ namespace Bitmonlandia
         {
 
         }
+
+        /*Esta funcion es para que la planta transforme un terreno vegatcion en desiertico, o un terreno
+         * de nieve en uno de agua:*/
+        public void Secar(Mapa mapa)
+        {
+            //
+        }
+
+
         public override Bitmon Pelea(Bitmon peleador)
         {
             if (peleador.GetNombre() == "Wetar"| peleador.GetNombre() == "Taplan" | peleador.GetNombre() == "Ent")
