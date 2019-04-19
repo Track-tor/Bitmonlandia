@@ -8,7 +8,7 @@ namespace Bitmonlandia
 {
     class Bitmon
     {
-        string tipo_De_Bitmon;
+        private string tipo_De_Bitmon;
         private int tiempo_De_Vida;
         private bool estado_De_Vida;
         private int puntos_De_Ataque;
@@ -53,8 +53,37 @@ namespace Bitmonlandia
 
         public int[] GetPosicion()
         {
-
             return posicion;
+        }
+
+        /*Esta funcion es para que el Gofue transforme un terreno vegetacion en desiertico, o un terreno
+        * de nieve en uno de agua:*/
+        public void Secar(Mapa mapa)
+        {
+            int x = GetPosicion()[0];
+            int y = GetPosicion()[1];
+            string[,,] tablero = mapa.GetTablero();
+            if (tablero[x, y, 0] == "V")
+            {
+                mapa.SetTerreno("D", x, y);
+            }
+
+            else if (tablero[x, y, 0] == "N")
+            {
+                mapa.SetTerreno("A", x, y);
+            }
+        }
+
+        //Esta funcion es para que la plnta transforme un terreno desiertico en vegetacion
+        public void Plantar(Mapa mapa)
+        {
+            int x = GetPosicion()[0];
+            int y = GetPosicion()[1];
+            string[,,] tablero = mapa.GetTablero();
+            if (tablero[x, y, 0] == "D")
+            {
+                mapa.SetTerreno("V", x, y);
+            }
         }
     }
 }

@@ -76,6 +76,7 @@ namespace Bitmonlandia
 
         public string[,,] GetTablero()
         {
+            //Imprimir tablero en pantalla
             for (int i = 0; i < ancho; i++)
             {
                 for (int j = 0; j < alto; j++)
@@ -84,10 +85,14 @@ namespace Bitmonlandia
                 }
                 Console.Write(Environment.NewLine + Environment.NewLine);
             }
-            Console.ReadLine();
             return tablero;
         }
 
+        //Funcion para cambiar el terrrno del tablero ya que es private
+        public void SetTerreno(string terreno, int x, int y)
+        {
+            this.tablero[x,y,0] = terreno;
+        }
 
     }
 }

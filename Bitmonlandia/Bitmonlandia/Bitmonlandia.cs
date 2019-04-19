@@ -62,9 +62,12 @@ namespace Bitmonlandia
         {
 
         }
-        public void GetMapa()
+
+        //Funcion que imprime el tablero en pantalla y da acceso a el map que es privado
+        public Mapa GetMapa()
         {
             mapa.GetTablero();
+            return mapa;
         }
 
     }
