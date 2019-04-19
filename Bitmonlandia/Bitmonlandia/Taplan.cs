@@ -8,6 +8,8 @@ namespace Bitmonlandia
 {
     class Taplan:Bitmon
     {
+        Random random = new Random();
+
         public Taplan(string tipo_De_Bitmon, int tiempo_De_Vida, int puntos_De_Ataque, int puntos_De_Vida, int[] posicion) : base(tipo_De_Bitmon, tiempo_De_Vida, puntos_De_Ataque, puntos_De_Vida, posicion)
         {
 
@@ -34,7 +36,7 @@ namespace Bitmonlandia
 
         public override void Movimiento(Mapa mapa)
         {
-            base.Movimiento(mapa);
+            //
         }
 
     }

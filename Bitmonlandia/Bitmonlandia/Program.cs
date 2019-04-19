@@ -82,7 +82,13 @@ namespace Bitmonlandia
                         }
 
                         //Moverse:
-                        //
+                        if (especie != "Ent")
+                        {
+
+
+
+
+                        }
                     }
                 }
 
