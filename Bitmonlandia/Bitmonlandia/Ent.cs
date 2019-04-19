@@ -23,7 +23,7 @@ namespace Bitmonlandia
         }
 
         public override Bitmon Reproduccion(Bitmon pareja)
-        { }
+        {
             return base.Reproduccion(pareja);
         }
 
