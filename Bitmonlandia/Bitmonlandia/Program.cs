@@ -13,26 +13,26 @@ namespace Bitmonlandia
             Bitmonlandia bitmonlandia = new Bitmonlandia(3);
 
             int[] tupla = { 1, 2 };
-            bitmonlandia.añadir_bitmon(new Ent(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Ent(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Taplan(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Taplan(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Doti(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Doti(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Dorvalo(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Dorvalo(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Wetar(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Wetar(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Gofue(1, 2, 3, tupla));
-            bitmonlandia.añadir_bitmon(new Gofue(1, 2, 3, tupla));
+            bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5,10,tupla));
+            bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
             Mapa mapa = bitmonlandia.GetMapa();
 
             //////////////////////////////////////////////////////////////
             //Simulacion por meses:
-            string opcion = "0";
-            int mes = 0;
+            Console.WriteLine("Cuantos meses deasea simular");
+            int cantidad_meses = int.Parse(Console.ReadLine());
 
-            while (opcion == "0")
+            for (int mes=0; mes<cantidad_meses; mes++)
             {
                 List<Bitmon> lista = bitmonlandia.GetLista();
 
@@ -82,7 +82,7 @@ namespace Bitmonlandia
                         }
 
                         //Moverse:
-
+                        //
                     }
                 }
 
@@ -94,15 +94,12 @@ namespace Bitmonlandia
 
 
 
-                //Seguir con la simulacion???
-                Console.WriteLine("[0] Continuar");
-                Console.WriteLine("[1] Finalizar la simulacion");
-                opcion = Console.ReadLine();
-                if (opcion == "0")
-                {
-                    mes++;
-                }
-                
+
+
+
+
+                Console.WriteLine("Presione una tecla para continuar");
+                Console.ReadLine();
             }
         }
     }
