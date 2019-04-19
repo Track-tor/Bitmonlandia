@@ -10,9 +10,10 @@ namespace Bitmonlandia
     {
         private int seed;
 
-        private Mapa mapa; //lista con todos los bitmons presentes en el mapa (vivos y muertos)
-
-        private List<Bitmon> lista_bitmons_totales = new List<Bitmon>(); //mapa a utilizar en el mundo bitmon, que se obtiene con GetTbalero() ya que es private
+        private Mapa mapa; 
+        
+        //lista con todos los bitmons presentes en el mapa (vivos y muertos)
+        private List<Bitmon> lista_bitmons_totales = new List<Bitmon>();
         private int tiempo_Transcurrido = 0;
 
         public Bitmonlandia(int seed)
@@ -46,6 +47,12 @@ namespace Bitmonlandia
 
             return muertos;
         }
+
+        public List<Bitmon> GetLista()
+        {
+            return lista_bitmons_totales;
+        }
+
 
         public void añadir_bitmon(Bitmon bitmon)
         {

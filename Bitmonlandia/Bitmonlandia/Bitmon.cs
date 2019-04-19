@@ -50,5 +50,11 @@ namespace Bitmonlandia
 
             return tipo_De_Bitmon;
         }
+
+        public int[] GetPosicion()
+        {
+
+            return posicion;
+        }
     }
 }

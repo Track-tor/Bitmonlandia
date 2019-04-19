@@ -26,6 +26,60 @@ namespace Bitmonlandia
             bitmonlandia.añadir_bitmon(new Gofue(1, 2, 3, tupla));
             bitmonlandia.añadir_bitmon(new Gofue(1, 2, 3, tupla));
             bitmonlandia.GetMapa();
+
+
+            //////////////////////////////////////////////////////////////
+            //Simulacion por meses:
+            string opcion = "0";
+            int mes = 0;
+
+            while (opcion == "0")
+            {
+                List<Bitmon> lista = bitmonlandia.GetLista();
+
+                //Se recorre la lista de bitmons para ver si hay bitmons en la misma casilla
+                for (int bit=0; bit< lista.Count; bit++)
+                {
+                    //Selecciono el primer bitmon
+                    Bitmon bitmonA = lista[bit];
+                    //Y recorro la lista en busca de una coincidencia
+                    for (int pareja = 0; pareja<lista.Count; pareja++)
+                    {
+                        //No queremos que se junte con él mismo asi que lo omitimos
+                        if (pareja == bit)
+                        {
+                            continue;
+                        }
+
+                        if (lista[bit].GetPosicion() == lista[pareja].GetPosicion())
+                        {
+                            //Primero intentamos con pelea
+                            lista[bit].Pelea(lista[pareja]);
+
+                            //Si no funciona, significa que se llevan bien para reproducirse
+                            lista[bit].Reproduccion(lista[pareja]);
+                        }
+                    }
+                }
+
+
+
+
+
+
+
+
+
+                //Seguir con la simulacion???
+                Console.WriteLine("[0] Continuar");
+                Console.WriteLine("[1] Finalizar la simulacion");
+                opcion = Console.ReadLine();
+                if (opcion == "0")
+                {
+                    mes++;
+                }
+                
+            }
         }
     }
 }
