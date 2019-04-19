@@ -13,6 +13,12 @@ namespace Bitmonlandia
 
         }
 
+        //Esta funcion es para que la plnta transforme un terreno desiertico en vegetacion
+        public void Plantar(Mapa mapa)
+        {
+         //
+        }
+
         public override Bitmon Pelea(Bitmon peleador)
         {
             if (peleador.GetNombre() == "Gofue" | peleador.GetNombre() == "Dorvalo")
