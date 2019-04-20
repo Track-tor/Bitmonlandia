@@ -94,5 +94,16 @@ namespace Bitmonlandia
             this.tablero[x,y,0] = terreno;
         }
 
+        //Funcion para agregar el bitmon a la cordenada deseada (vital para Moverse())
+        public void SetBitmon(string especie, int x, int y)
+        {
+            this.tablero[x, y, 1] = especie;
+        }
+
+        //Funcion para quitar el bitmon de la cordenada deseada (vital para Moverse())
+        public void RemoveBitmon(int x, int y)
+        {
+            this.tablero[x, y, 1] = "";
+        }
     }
 }

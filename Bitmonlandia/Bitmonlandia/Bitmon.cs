@@ -8,12 +8,12 @@ namespace Bitmonlandia
 {
     class Bitmon
     {
-        private string tipo_De_Bitmon = "";
-        private int tiempo_De_Vida;
-        private bool estado_De_Vida = true;
-        private int puntos_De_Ataque;
-        private int puntos_De_Vida;
-        private int [] posicion= new int[2];
+        protected string tipo_De_Bitmon = "";
+        protected int tiempo_De_Vida;
+        protected bool estado_De_Vida = true;
+        protected int puntos_De_Ataque;
+        protected int puntos_De_Vida;
+        protected int [] posicion= new int[2];
 
         public Bitmon(string tipo_De_Bitmon, int tiempo_De_Vida,int puntos_De_Ataque,int puntos_De_Vida, int [] posicion)
         {
