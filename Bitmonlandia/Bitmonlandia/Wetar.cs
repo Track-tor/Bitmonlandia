@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace Bitmonlandia
 {
     class Wetar:Bitmon
-    {
-        Random random = new Random();
+    {  
+        private static Random random = new Random();
 
         public Wetar(string tipo_De_Bitmon, int tiempo_De_Vida, int puntos_De_Ataque, int puntos_De_Vida, int[] posicion) : base(tipo_De_Bitmon, tiempo_De_Vida, puntos_De_Ataque, puntos_De_Vida, posicion)
         {
@@ -46,64 +46,126 @@ namespace Bitmonlandia
             //Esta en la esquina superior izquierda del tablero?
             if (x == 0 && y == 0)
             {
-                vertical = random.Next(0, 2);
-                horizontal = random.Next(0, 2);
+                while (true) {
+                    vertical = random.Next(0, 2);
+                    horizontal = random.Next(0, 2);
+                    if (tablero[x + vertical, y + horizontal, 0] == "A")
+                    {
+                        break;
+                    }
+                }
             }
 
             //Esta en el borde superior del tablero??
             else if (x == 0 && y != cant_columnas - 1 && y != 0)
             {
-                vertical = random.Next(0, 2);
-                horizontal = random.Next(-1, 2);
+                while (true)
+                {
+                    vertical = random.Next(0, 2);
+                    horizontal = random.Next(-1, 2);
+                    if (tablero[x + vertical, y + horizontal, 0] == "A")
+                    {
+                        break;
+                    }
+                }
             }
 
             //Esta en la esquina superior derecha del tablero??
             else if (x == 0 && y == cant_columnas - 1)
             {
-                vertical = random.Next(0, 2);
-                horizontal = random.Next(-1, 0);
+                while (true)
+                {
+                    vertical = random.Next(0, 2);
+                    horizontal = random.Next(-1, 1);
+                    if (tablero[x + vertical, y + horizontal, 0] == "A")
+                    {
+                        break;
+                    }
+                }
             }
 
             //Esta en el borde derecha del tablero??
             else if (x != 0 && x != cant_filas - 1 && y == cant_columnas - 1)
             {
-                vertical = random.Next(-1, 2);
-                horizontal = random.Next(-1, 0);
+                while (true)
+                {
+                    vertical = random.Next(-1, 2);
+                    horizontal = random.Next(-1, 1);
+                    if (tablero[x + vertical, y + horizontal, 0] == "A")
+                    {
+                        break;
+                    }
+                }
             }
 
             //Esta en la esquina inferior derecha del tablero??
             else if (x == cant_filas - 1 && y == cant_columnas - 1)
             {
-                vertical = random.Next(-1, 0);
-                horizontal = random.Next(-1, 0);
+                while (true)
+                {
+                    vertical = random.Next(-1, 1);
+                    horizontal = random.Next(-1, 1);
+                    if (tablero[x + vertical, y + horizontal, 0] == "A")
+                    {
+                        break;
+                    }
+                }
             }
 
             //Esta en el borde inferior del tablero??
             else if (x == cant_filas - 1 && y != cant_columnas - 1 && y != 0)
             {
-                vertical = random.Next(-1, 0);
-                horizontal = random.Next(-1, 2);
+                while (true)
+                {
+                    vertical = random.Next(-1, 1);
+                    horizontal = random.Next(-1, 2);
+                    if (tablero[x + vertical, y + horizontal, 0] == "A")
+                    {
+                        break;
+                    }
+                }
             }
 
             //Esta en la esquina inferior izquierda del tablero??
             else if (x == cant_filas - 1 && y == 0)
             {
-                vertical = random.Next(-1, 0);
-                horizontal = random.Next(0, 2);
+                while (true)
+                {
+                    vertical = random.Next(-1, 1);
+                    horizontal = random.Next(0, 2);
+                    if (tablero[x + vertical, y + horizontal, 0] == "A")
+                    {
+                        break;
+                    }
+                }
             }
 
             //Esta en el borde izquierdo del tablero??
             else if (x != 0 && x != cant_filas - 1 && y == 0)
             {
-                vertical = random.Next(-1, 2);
-                horizontal = random.Next(0, 2);
+                while (true)
+                {
+                    vertical = random.Next(-1, 2);
+                    horizontal = random.Next(0, 2);
+                    if (tablero[x + vertical, y + horizontal, 0] == "A")
+                    {
+                        break;
+                    }
+                }
             }
 
             //No esta en los bordes
             else
             {
-                vertical = random.Next(-1, 2);
-                horizontal = random.Next(-1, 2);
+                while (true)
+                {
+                    vertical = random.Next(-1, 2);
+                    horizontal = random.Next(-1, 2);
+                    if (tablero[x + vertical, y + horizontal, 0] == "A")
+                    {
+                        break;
+                    }
+                }
             }
 
             mapa.RemoveBitmon(x, y);

@@ -63,34 +63,34 @@ namespace Bitmonlandia
             else if (x == 0 && y == cant_columnas - 1)
             {
                 vertical = random.Next(0, 2);
-                horizontal = random.Next(-1, 0);
+                horizontal = random.Next(-1, 1);
             }
 
             //Esta en el borde derecha del tablero??
             else if (x != 0 && x != cant_filas - 1 && y == cant_columnas - 1)
             {
                 vertical = random.Next(-1, 2);
-                horizontal = random.Next(-1, 0);
+                horizontal = random.Next(-1, 1);
             }
 
             //Esta en la esquina inferior derecha del tablero??
             else if (x == cant_filas - 1 && y == cant_columnas - 1)
             {
-                vertical = random.Next(-1, 0);
-                horizontal = random.Next(-1, 0);
+                vertical = random.Next(-1, 1);
+                horizontal = random.Next(-1, 1);
             }
 
             //Esta en el borde inferior del tablero??
             else if (x == cant_filas - 1 && y != cant_columnas - 1 && y != 0)
             {
-                vertical = random.Next(-1, 0);
+                vertical = random.Next(-1, 1);
                 horizontal = random.Next(-1, 2);
             }
 
             //Esta en la esquina inferior izquierda del tablero??
             else if (x == cant_filas - 1 && y == 0)
             {
-                vertical = random.Next(-1, 0);
+                vertical = random.Next(-1, 1);
                 horizontal = random.Next(0, 2);
             }
 
@@ -111,7 +111,7 @@ namespace Bitmonlandia
             mapa.RemoveBitmon(x, y);
             posicion[0] += vertical;
             posicion[1] += horizontal;
-            string sigla = tipo_De_Bitmon.Substring(0, 3);
+            string sigla = tipo_De_Bitmon.Substring(0,3);
             mapa.SetBitmon(sigla, x + vertical, y + horizontal);
         }
     }

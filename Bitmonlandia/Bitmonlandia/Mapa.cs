@@ -33,8 +33,8 @@ namespace Bitmonlandia
                 tablero = new string[5, 5, 2] { { { "D", "   " }, { "V", "   " }, { "A", "   " }, { "A", "   " }, { "N", "   " } }, 
                                                 { { "D", "   " }, { "A", "   " }, { "A", "Tap" }, { "A", "   " }, { "N", "   " } }, 
                                                 { { "D", "   " }, { "A", "   " }, { "A", "   " }, { "D", "   " }, { "V", "   " } }, 
-                                                { { "V", "   " }, { "L", "   " }, { "A", "   " }, { "D", "Dor" }, { "N", "   " } }, 
-                                                { { "V", "   " }, { "L", "   " }, { "L", "   " }, { "A", "   " }, { "N", "   " } } };
+                                                { { "V", "   " }, { "L", "   " }, { "L", "   " }, { "D", "Dor" }, { "A", "   " } }, 
+                                                { { "V", "   " }, { "L", "   " }, { "L", "   " }, { "A", "   " }, { "A", "Wet" } } };
             }
             else if (preset == 2)
             {
@@ -81,6 +81,29 @@ namespace Bitmonlandia
             {
                 for (int j = 0; j < alto; j++)
                 {
+                    switch (tablero[i, j, 0])
+                    {
+                        case "V":
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            break;
+
+                        case "A":
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            break;
+
+                        case "D":
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            break;
+
+                        case "N":
+                            Console.ForegroundColor = ConsoleColor.White;
+                            break;
+
+                        case "L":
+                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            break;
+
+                    }
                     Console.Write("({0},{1})     ", tablero[i, j, 0].ToString(), tablero[i,j,1].ToString());
                 }
                 Console.WriteLine("");

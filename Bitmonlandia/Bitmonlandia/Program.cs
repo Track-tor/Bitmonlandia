@@ -14,6 +14,7 @@ namespace Bitmonlandia
 
             int[] tupla = { 1, 2 };
             int[] tupla2 = { 3, 3 };
+            int[] tupla3 = { 4, 4 };
             /*bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5,10,tupla));
             bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5, 10, tupla));*/
             bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 5, 10, tupla));
@@ -21,9 +22,9 @@ namespace Bitmonlandia
             /*bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
             */bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla2));
-            /*bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla));
-            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
-            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
+            /*bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla));*/
+            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla3));
+            /*bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));*/
             Mapa mapa = bitmonlandia.GetMapa();
@@ -36,6 +37,7 @@ namespace Bitmonlandia
 
             for (int mes=0; mes<cantidad_meses; mes++)
             {
+                Console.WriteLine("Mes: {0}", mes);
                 List<Bitmon> lista = bitmonlandia.GetLista();
 
                 //Se recorre la lista de bitmons para ver si hay bitmons en la misma casilla
