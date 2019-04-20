@@ -24,17 +24,17 @@ namespace Bitmonlandia
 
 
         public Mapa(int preset)
-        {
+        {   //{Terreno, Bitmon en el terreno}
             this.preset = preset;
             if (preset == 1)
             {
                 alto = 5;
                 ancho = 5;
-                tablero = new string[5, 5, 2] { { { "F", "A" }, { "B", "A" }, { "A", "A" }, { "A", "A" }, { "A", "A" } }, 
-                                                { { "A", "A" }, { "A", "A" }, { "A", "A" }, { "A", "A" }, { "A", "A" } }, 
-                                                { { "A", "A" }, { "A", "A" }, { "A", "A" }, { "A", "A" }, { "A", "A" } }, 
-                                                { { "A", "A" }, { "A", "A" }, { "A", "A" }, { "A", "A" }, { "A", "A" } }, 
-                                                { { "A", "A" }, { "A", "A" }, { "A", "A" }, { "A", "A" }, { "A", "A" } } };
+                tablero = new string[5, 5, 2] { { { "D", "   " }, { "V", "   " }, { "A", "   " }, { "A", "   " }, { "N", "   " } }, 
+                                                { { "D", "   " }, { "A", "   " }, { "A", "Tap" }, { "A", "   " }, { "N", "   " } }, 
+                                                { { "D", "   " }, { "A", "   " }, { "A", "   " }, { "D", "   " }, { "V", "   " } }, 
+                                                { { "V", "   " }, { "L", "   " }, { "A", "   " }, { "D", "Dor" }, { "N", "   " } }, 
+                                                { { "V", "   " }, { "L", "   " }, { "L", "   " }, { "A", "   " }, { "N", "   " } } };
             }
             else if (preset == 2)
             {
@@ -74,17 +74,24 @@ namespace Bitmonlandia
 
         }
 
-        public string[,,] GetTablero()
+        public void ImprimirTablero()
         {
             //Imprimir tablero en pantalla
             for (int i = 0; i < ancho; i++)
             {
                 for (int j = 0; j < alto; j++)
                 {
-                    Console.Write(string.Format("{0} ", tablero[i, j, 0]));
+                    Console.Write("({0},{1})     ", tablero[i, j, 0].ToString(), tablero[i,j,1].ToString());
                 }
-                Console.Write(Environment.NewLine + Environment.NewLine);
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine("");
+
             }
+        }
+
+        public string [,,] GetTablero()
+        {
             return tablero;
         }
 
@@ -103,7 +110,7 @@ namespace Bitmonlandia
         //Funcion para quitar el bitmon de la cordenada deseada (vital para Moverse())
         public void RemoveBitmon(int x, int y)
         {
-            this.tablero[x, y, 1] = "";
+            this.tablero[x, y, 1] = "   ";
         }
     }
 }

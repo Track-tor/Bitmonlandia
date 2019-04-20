@@ -26,10 +26,5 @@ namespace Bitmonlandia
             }
             return base.Reproduccion(pareja);
         }
-
-        public override void Movimiento(Mapa mapa)
-        {
-            base.Movimiento(mapa);
-        }
     }
 }
