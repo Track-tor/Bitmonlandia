@@ -26,7 +26,7 @@ namespace Bitmonlandia
             Console.Write("\n");
             Bitmonlandia bitmonlandia = new Bitmonlandia(Convert.ToInt32(opcion));
 
-            int size;
+            int size = 0;
             switch (Convert.ToInt32(opcion))
             {
                 case (1):
