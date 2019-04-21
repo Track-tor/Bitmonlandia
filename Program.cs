@@ -18,6 +18,11 @@ namespace Bitmonlandia
             Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("{3} MAPA: 15X15 // BITMONS: ~ // TERRENOS: ~ \n");
             Console.ForegroundColor = ConsoleColor.White; Console.Write("Opcion: ");
             int opcion = int.Parse(Console.ReadLine());
+            while (opcion<1 || opcion > 3)
+            {
+                Console.WriteLine("Opcion inválida, intente de nuevo");
+                opcion = int.Parse(Console.ReadLine());
+            }
             Console.Write("\n");
             Bitmonlandia bitmonlandia = new Bitmonlandia(opcion);
 
