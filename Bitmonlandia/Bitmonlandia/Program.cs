@@ -20,7 +20,7 @@ namespace Bitmonlandia
             int[] tupla3 = { 4, 4 };
             /*bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5,10,tupla));
             bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5, 10, tupla));*/
-            bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10 , 5, 10, tupla));
             //bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 5, 10, tupla2));
             /*bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
@@ -31,9 +31,9 @@ namespace Bitmonlandia
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));*/
             Console.WriteLine("Escoge una de las siguentes opciones para generar BITMONLANDIA:\n");
-            Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("{1} MAPA: 5X5 BITMONS: ~ TERRENOS: ~ ");
-            Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("{2} MAPA: 10X10 BITMONS: ~ TERRENOS: ~ ");
-            Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("{3} MAPA: 15X15 BITMONS: ~ TERRENOS: ~ \n");
+            Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("{1} MAPA: 5X5 // BITMONS: Dorvalo-Taplan-Wetar // TERRENOS: Desierto-Agua-Lava-Vegetacion  ");
+            Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("{2} MAPA: 10X10 // BITMONS: ~ // TERRENOS: ~ ");
+            Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("{3} MAPA: 15X15 // BITMONS: ~ // TERRENOS: ~ \n");
             Console.ForegroundColor = ConsoleColor.White; Console.Write("Opcion: ");
             int opcion = int.Parse(Console.ReadLine());
             Console.Write("\n");

@@ -26,18 +26,65 @@ namespace Bitmonlandia
             this.posicion = posicion;
         }
 
-        public virtual Bitmon Pelea(Bitmon peleador) // Pelea entre bitmons
+        //Gets De Atributos
+
+        public bool GetEstadoDeVida()
+        {
+            return estado_De_Vida;
+        }
+
+        public int GetPuntosDeVida()
+        {
+            return puntos_De_Vida;
+        }
+
+        public int GetPuntosDeAtaque()
+        {
+            return puntos_De_Ataque;
+        }
+
+        public string GetNombre()
+        {
+
+            return tipo_De_Bitmon;
+        }
+
+        public int[] GetPosicion()
+        {
+            return posicion;
+        }
+
+
+        // El Bitmon recibe el ataque
+        public void RecibirAtaque(int puntos_De_Ataque)
+        {
+            this.puntos_De_Vida -= puntos_De_Ataque;
+        }
+
+        // Cambia el estado de vida del Bitmon cuando los puntos de vida son menores a 0
+        private void CambiarEstadoDeVida(bool estado_De_Vida)
+        {
+            if (puntos_De_Vida <= 0)
+            {
+                this.estado_De_Vida = false;
+            }
+        }
+
+        // Pelea entre bitmons
+        public virtual Bitmon Pelea(Bitmon peleador) 
         {
 
             return peleador;
         }
 
-        public virtual Bitmon Reproduccion(Bitmon pareja) // Reproduccion de Bitmons
+        // Reproduccion de Bitmons
+        public virtual Bitmon Reproduccion(Bitmon pareja) 
         {
             return pareja;
         }
 
-        public virtual void Movimiento(Mapa mapa) // Movimiento de los Bitmons
+        // Movimiento de los Bitmons
+        public virtual void Movimiento(Mapa mapa)
         {
             string[,,] tablero = mapa.GetTablero();
             int cant_filas = tablero.GetLength(0);
@@ -64,22 +111,6 @@ namespace Bitmonlandia
             Console.WriteLine("AHORA: {0}: ({1},{2})", tipo_De_Bitmon, posicion[0], posicion[1]);
         }
 
-        public bool GetEstadoDeVida()
-        {
-            return estado_De_Vida;
-        }
-
-        public string GetNombre()
-        {
-
-            return tipo_De_Bitmon;
-        }
-
-        public int[] GetPosicion()
-        {
-            return posicion;
-        }
-
         /*Esta funcion es para que el Gofue transforme un terreno vegetacion en desiertico, o un terreno
         * de nieve en uno de agua:*/
         public void Secar(Mapa mapa)
@@ -98,7 +129,7 @@ namespace Bitmonlandia
             }
         }
 
-        //Esta funcion es para que la plnta transforme un terreno desiertico en vegetacion
+        //Esta funcion es para que el Taplan transforme un terreno desiertico en vegetacion
         public void Plantar(Mapa mapa)
         {
             int x = GetPosicion()[0];

@@ -19,7 +19,11 @@ namespace Bitmonlandia
         {
             if (peleador.GetNombre() == "Wetar" | peleador.GetNombre() == "Taplan" | peleador.GetNombre() == "Ent")
             {
-
+                while (estado_De_Vida == true | peleador.GetEstadoDeVida() == true)
+                {
+                    puntos_De_Vida -= peleador.GetPuntosDeAtaque();
+                    peleador.RecibirAtaque(puntos_De_Ataque);
+                }
             }
 
             return base.Pelea(peleador);
