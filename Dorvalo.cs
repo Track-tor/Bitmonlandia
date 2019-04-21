@@ -33,13 +33,13 @@ namespace Bitmonlandia
         /* Reproduccion de Bitmons consiste en que si la pareja es compatible, se instancia dentro de la lista de Bitmons 
          * un nuevo Bitmon de una especie aleatoria
         */
-        public override Bitmon Reproduccion(Bitmon pareja)
+        public override Bitmon Reproduccion(Bitmon pareja, int size)
         {
             if (pareja.GetNombre() == "Gofue" | pareja.GetNombre() == "Dorvalo" | pareja.GetNombre() == "Doti")
             {
                 int num = random.Next(1,7); // Numero aleatorio que genere un bitmon aleatorio
-                int c1 = random.Next(5); // Asignacion de una coordenada aleatoria
-                int c2 = random.Next(5); // Asignacion de una coordenada aleatoria
+                int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
+                int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
                 int[] tupla = { c1, c2 };
                 switch (num)
                 {
@@ -64,7 +64,7 @@ namespace Bitmonlandia
                 }
                     
             }
-            return base.Reproduccion(pareja);
+            return base.Reproduccion(pareja, size);
         }
 
         public override void Movimiento(Mapa mapa)
@@ -90,7 +90,7 @@ namespace Bitmonlandia
             while (tablero[x + vertical, y + horizontal, celda_nueva] != "   ")
             {
                 //Si ya no hay mas espacio a donde se va a mover, se quedar en el mismo lugar
-                if (celda_nueva == 3 && (tablero[x + vertical, y + horizontal, celda_nueva] != "   "))
+                if (celda_nueva == 2 && (tablero[x + vertical, y + horizontal, celda_nueva] != "   "))
                 {
                     celda_nueva = celda;
                     vertical = 0;

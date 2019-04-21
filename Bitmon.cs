@@ -80,7 +80,7 @@ namespace Bitmonlandia
         }
 
         // Reproduccion de Bitmons
-        public virtual Bitmon Reproduccion(Bitmon pareja) 
+        public virtual Bitmon Reproduccion(Bitmon pareja, int size) 
         {
             return pareja;
         }
@@ -111,7 +111,7 @@ namespace Bitmonlandia
             while (tablero[x + vertical, y + horizontal, celda_nueva] != "   ")
             {
                 //Si ya no hay mas espacio a donde se va a mover, se quedar en el mismo lugar
-                if (celda_nueva == 3 && (tablero[x + vertical, y + horizontal, celda_nueva] != "   "))
+                if (celda_nueva == 2 && (tablero[x + vertical, y + horizontal, celda_nueva] != "   "))
                 {
                     celda_nueva = celda;
                     vertical = 0;

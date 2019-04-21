@@ -25,6 +25,22 @@ namespace Bitmonlandia
             }
             Console.Write("\n");
             Bitmonlandia bitmonlandia = new Bitmonlandia(opcion);
+            int size = 0;
+            switch (opcion)
+            {
+                case (1):
+                    size = 5;
+                    break;
+
+                case (2):
+                    size = 10;
+                    break;
+
+                case (3):
+                    size = 15;
+                    break;
+
+            }
 
             int[] tupla = { 1, 2 };
             int[] tupla2 = { 4, 3 };
@@ -84,7 +100,7 @@ namespace Bitmonlandia
                             lista[bit].Pelea(lista[pareja]);
 
                             //Si no funciona, significa que se llevan bien para reproducirse
-                            lista[bit].Reproduccion(lista[pareja]);
+                            lista[bit].Reproduccion(lista[pareja], size);
                         }
                     }
 
