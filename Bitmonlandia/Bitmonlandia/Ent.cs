@@ -9,7 +9,6 @@ namespace Bitmonlandia
     class Ent:Bitmon
     {
         Random random = new Random();
-        Bitmonlandia bitmonlandia = new Bitmonlandia(1);
 
         public Ent(string tipo_De_Bitmon, int tiempo_De_Vida, int puntos_De_Ataque, int puntos_De_Vida, int[] posicion) : base(tipo_De_Bitmon, tiempo_De_Vida, puntos_De_Ataque, puntos_De_Vida, posicion)
         {
@@ -29,9 +28,9 @@ namespace Bitmonlandia
             return base.Pelea(peleador);
         }
 
-        public override Bitmon Reproduccion(Bitmon pareja, int size)
+        public override Bitmon Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia)
         {
-            return base.Reproduccion(pareja, size);
+            return base.Reproduccion(pareja, size, bitmonlandia);
         }
 
     }

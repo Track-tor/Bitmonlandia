@@ -101,7 +101,7 @@ namespace Bitmonlandia
                             lista[bit].Pelea(lista[pareja]);
 
                             //Si no funciona, significa que se llevan bien para reproducirse
-                            lista[bit].Reproduccion(lista[pareja], size);
+                            lista[bit].Reproduccion(lista[pareja], size, bitmonlandia);
                         }
                     }
 

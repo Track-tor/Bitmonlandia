@@ -80,7 +80,7 @@ namespace Bitmonlandia
         }
 
         // Reproduccion de Bitmons
-        public virtual Bitmon Reproduccion(Bitmon pareja, int size) 
+        public virtual Bitmon Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia) 
         {
             return pareja;
         }

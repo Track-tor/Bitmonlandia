@@ -9,7 +9,6 @@ namespace Bitmonlandia
     class Taplan:Bitmon
     {
         Random random = new Random();
-        Bitmonlandia bitmonlandia = new Bitmonlandia(1);
 
         public Taplan(string tipo_De_Bitmon, int tiempo_De_Vida, int puntos_De_Ataque, int puntos_De_Vida, int[] posicion) : base(tipo_De_Bitmon, tiempo_De_Vida, puntos_De_Ataque, puntos_De_Vida, posicion)
         {
@@ -33,7 +32,7 @@ namespace Bitmonlandia
         /* Reproduccion de Bitmons consiste en que si la pareja es compatible, se instancia dentro de la lista de Bitmons 
         * un nuevo Bitmon de una especie aleatoria
        */
-        public override Bitmon Reproduccion(Bitmon pareja, int size)
+        public override Bitmon Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia)
         {
             if (pareja.GetNombre() == "Ent" | pareja.GetNombre() == "Taplan" | pareja.GetNombre() == "Wetar" | pareja.GetNombre() == "Doti")
             {
@@ -64,7 +63,7 @@ namespace Bitmonlandia
                 }
 
             }
-            return base.Reproduccion(pareja, size);
+            return base.Reproduccion(pareja, size, bitmonlandia);
         }
     }
 }
