@@ -11,7 +11,7 @@ namespace Bitmonlandia
         static void Main(string[] args)
         {
 
-            Console.WriteLine("BITMONLANDIA\n");
+            Console.WriteLine("# BITMONLANDIA # \n");
            
             Bitmonlandia bitmonlandia = new Bitmonlandia(1);
 
@@ -30,6 +30,8 @@ namespace Bitmonlandia
             /*bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));*/
+
+            //-----------------------------------------------MENU----------------------------------------------------------------------
             Console.WriteLine("Escoge una de las siguentes opciones para generar BITMONLANDIA:\n");
             Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("{1} MAPA: 5X5 // BITMONS: Dorvalo-Taplan-Wetar // TERRENOS: Desierto-Agua-Lava-Vegetacion  ");
             Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("{2} MAPA: 10X10 // BITMONS: ~ // TERRENOS: ~ ");
@@ -39,11 +41,12 @@ namespace Bitmonlandia
             Console.Write("\n");
             Mapa mapa = new Mapa(opcion);
             //Mapa mapa  bitmonlandia.GetMapa(); *Instancie el mapa de manera que se pueda colocar la opcion*
+            Console.WriteLine("--------------------# MAPA INICIAL #---------------------\n");
             mapa.ImprimirTablero();
 
             //////////////////////////////////////////////////////////////
             //Simulacion por meses:
-            Console.Write("Cuantos meses desea simular: ");
+            Console.Write("¿Cuantos meses desea simular?: ");
             int cantidad_meses = int.Parse(Console.ReadLine());
             Console.Write("\n");
 
