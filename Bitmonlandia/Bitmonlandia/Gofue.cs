@@ -33,13 +33,13 @@ namespace Bitmonlandia
         * un nuevo Bitmon de una especie aleatoria
        */
 
-        public override Bitmon Reproduccion(Bitmon pareja)
+        public override Bitmon Reproduccion(Bitmon pareja, int size)
         {
             if (pareja.GetNombre() == "Gofue" | pareja.GetNombre() == "Dorvalo" | pareja.GetNombre() == "Doti")
             {
                 int num = random.Next(1, 7); // Numero aleatorio que genere un bitmon aleatorio
-                int c1 = random.Next(5); // Asignacion de una coordenada aleatoria
-                int c2 = random.Next(5); // Asignacion de una coordenada aleatoria
+                int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
+                int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
                 int[] tupla = { c1, c2 };
                 switch (num)
                 {
@@ -64,7 +64,7 @@ namespace Bitmonlandia
                 }
 
             }
-            return base.Reproduccion(pareja);
+            return base.Reproduccion(pareja, size);
         }
     }
 }

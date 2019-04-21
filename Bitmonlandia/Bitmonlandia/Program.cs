@@ -18,8 +18,29 @@ namespace Bitmonlandia
             Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("{3} MAPA: 15X15 // BITMONS: ~ // TERRENOS: ~ \n");
             Console.ForegroundColor = ConsoleColor.White; Console.Write("Opcion: ");
             int opcion = int.Parse(Console.ReadLine());
+            while (opcion<1 || opcion > 3)
+            {
+                Console.WriteLine("Opcion inválida, intente de nuevo");
+                opcion = int.Parse(Console.ReadLine());
+            }
             Console.Write("\n");
             Bitmonlandia bitmonlandia = new Bitmonlandia(opcion);
+            int size = 0;
+            switch (opcion)
+            {
+                case (1):
+                    size = 5;
+                    break;
+
+                case (2):
+                    size = 10;
+                    break;
+
+                case (3):
+                    size = 15;
+                    break;
+
+            }
 
             int[] tupla = { 1, 2 };
             int[] tupla2 = { 4, 3 };
@@ -79,7 +100,7 @@ namespace Bitmonlandia
                             lista[bit].Pelea(lista[pareja]);
 
                             //Si no funciona, significa que se llevan bien para reproducirse
-                            lista[bit].Reproduccion(lista[pareja]);
+                            lista[bit].Reproduccion(lista[pareja], size);
                         }
                     }
 

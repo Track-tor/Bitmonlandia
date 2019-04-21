@@ -80,7 +80,7 @@ namespace Bitmonlandia
         }
 
         // Reproduccion de Bitmons
-        public virtual Bitmon Reproduccion(Bitmon pareja) 
+        public virtual Bitmon Reproduccion(Bitmon pareja, int size) 
         {
             return pareja;
         }
@@ -105,14 +105,15 @@ namespace Bitmonlandia
             }
 
             int celda_antigua = celda;
-            int celda_nueva = celda;
+            int celda_nueva = 1;
 
             //Veo si esta ocupada la celda a la cual se va a mover
-            while (tablero[x+vertical,y+horizontal,celda_nueva] != "   ")
+            while (tablero[x + vertical, y + horizontal, celda_nueva] != "   ")
             {
                 //Si ya no hay mas espacio a donde se va a mover, se quedar en el mismo lugar
-                if (celda_nueva == 3 && (tablero[x+vertical,y+horizontal,celda_nueva] != "   "))
+                if (celda_nueva == 2 && (tablero[x + vertical, y + horizontal, celda_nueva] != "   "))
                 {
+                    celda_nueva = celda;
                     vertical = 0;
                     horizontal = 0;
                     break;
@@ -120,9 +121,10 @@ namespace Bitmonlandia
                 celda_nueva++;
             }
 
-            mapa.RemoveBitmon(x, y, celda_nueva);
+            mapa.RemoveBitmon(x, y, celda_antigua);
             posicion[0] += vertical;
             posicion[1] += horizontal;
+            celda = celda_nueva; 
             string sigla = tipo_De_Bitmon.Substring(0, 3);
             mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
         }
