@@ -29,9 +29,9 @@ namespace Bitmonlandia
             return base.Pelea(peleador);
         }
 
-        public override Bitmon Reproduccion(Bitmon pareja)
+        public override Bitmon Reproduccion(Bitmon pareja, int size)
         {
-            return base.Reproduccion(pareja);
+            return base.Reproduccion(pareja, size);
         }
 
     }
