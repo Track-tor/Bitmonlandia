@@ -171,7 +171,7 @@ namespace Bitmonlandia
         //Funcion para quitar el bitmon de la cordenada deseada (vital para Moverse())
         public void RemoveBitmon(int x, int y, int celda)
         {
-            this.tablero[x, y, 1] = "   ";
+            this.tablero[x, y, celda] = "   ";
         }
     }
 }
