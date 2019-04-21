@@ -10,23 +10,24 @@ namespace Bitmonlandia
     {
         static void Main(string[] args)
         {
-
+            
             Console.WriteLine("# BITMONLANDIA # \n");
             Console.WriteLine("Escoge una de las siguentes opciones para generar BITMONLANDIA:\n");
             Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("{1} MAPA: 5X5 // BITMONS: Dorvalo-Taplan-Wetar // TERRENOS: Desierto-Agua-Lava-Vegetacion  ");
             Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("{2} MAPA: 10X10 // BITMONS: ~ // TERRENOS: ~ ");
             Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("{3} MAPA: 15X15 // BITMONS: ~ // TERRENOS: ~ \n");
             Console.ForegroundColor = ConsoleColor.White; Console.Write("Opcion: ");
-            int opcion = int.Parse(Console.ReadLine());
-            while (opcion<1 || opcion > 3)
+            string opcion = (Console.ReadLine());
+            while (opcion != "1" && opcion != "2" && opcion != "3")
             {
                 Console.WriteLine("Opcion inválida, intente de nuevo");
-                opcion = int.Parse(Console.ReadLine());
+                opcion = (Console.ReadLine());
             }
             Console.Write("\n");
-            Bitmonlandia bitmonlandia = new Bitmonlandia(opcion);
-            int size = 0;
-            switch (opcion)
+            Bitmonlandia bitmonlandia = new Bitmonlandia(Convert.ToInt32(opcion));
+
+            int size;
+            switch (Convert.ToInt32(opcion))
             {
                 case (1):
                     size = 5;
@@ -100,7 +101,7 @@ namespace Bitmonlandia
                             lista[bit].Pelea(lista[pareja]);
 
                             //Si no funciona, significa que se llevan bien para reproducirse
-                            lista[bit].Reproduccion(lista[pareja], size);
+                            lista[bit].Reproduccion(lista[pareja]);
                         }
                     }
 
