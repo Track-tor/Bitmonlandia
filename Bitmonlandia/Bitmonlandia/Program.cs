@@ -12,8 +12,14 @@ namespace Bitmonlandia
         {
 
             Console.WriteLine("# BITMONLANDIA # \n");
-           
-            Bitmonlandia bitmonlandia = new Bitmonlandia(1);
+            Console.WriteLine("Escoge una de las siguentes opciones para generar BITMONLANDIA:\n");
+            Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("{1} MAPA: 5X5 // BITMONS: Dorvalo-Taplan-Wetar // TERRENOS: Desierto-Agua-Lava-Vegetacion  ");
+            Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("{2} MAPA: 10X10 // BITMONS: ~ // TERRENOS: ~ ");
+            Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("{3} MAPA: 15X15 // BITMONS: ~ // TERRENOS: ~ \n");
+            Console.ForegroundColor = ConsoleColor.White; Console.Write("Opcion: ");
+            int opcion = int.Parse(Console.ReadLine());
+            Console.Write("\n");
+            Bitmonlandia bitmonlandia = new Bitmonlandia(opcion);
 
             int[] tupla = { 1, 2 };
             int[] tupla2 = { 4, 3 };
@@ -32,17 +38,11 @@ namespace Bitmonlandia
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));*/
 
             //-----------------------------------------------MENU----------------------------------------------------------------------
-            Console.WriteLine("Escoge una de las siguentes opciones para generar BITMONLANDIA:\n");
-            Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("{1} MAPA: 5X5 // BITMONS: Dorvalo-Taplan-Wetar // TERRENOS: Desierto-Agua-Lava-Vegetacion  ");
-            Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("{2} MAPA: 10X10 // BITMONS: ~ // TERRENOS: ~ ");
-            Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("{3} MAPA: 15X15 // BITMONS: ~ // TERRENOS: ~ \n");
-            Console.ForegroundColor = ConsoleColor.White; Console.Write("Opcion: ");
-            int opcion = int.Parse(Console.ReadLine());
-            Console.Write("\n");
-            Mapa mapa = new Mapa(opcion);
+            
+            
             //Mapa mapa  bitmonlandia.GetMapa(); *Instancie el mapa de manera que se pueda colocar la opcion*
             Console.WriteLine("--------------------# MAPA INICIAL #---------------------\n");
-            mapa.ImprimirTablero();
+            bitmonlandia.GetMapa().ImprimirTablero();
 
             //////////////////////////////////////////////////////////////
             //Simulacion por meses:
@@ -61,6 +61,7 @@ namespace Bitmonlandia
                     //Selecciono el primer bitmon y veo su especie tambien:
                     Bitmon bitmonA = lista[bit];
                     string especie = bitmonA.GetNombre();
+
 
                     //Y recorro la lista en busca de una coincidencia
                     for (int pareja = 0; pareja < lista.Count; pareja++)
@@ -93,26 +94,27 @@ namespace Bitmonlandia
                     //Transformar terreno:
                     if (especie == "Gofue")
                         {
-                            bitmonA.Secar(mapa);
+                            bitmonA.Secar(bitmonlandia.GetMapa());
                         }
 
                     else if (especie == "Taplan")
                         {
-                            bitmonA.Plantar(mapa);
+                            bitmonA.Plantar(bitmonlandia.GetMapa());
                         }
                         
 
                     //Moverse:
                     if (especie != "Ent")
                     {
-                        bitmonA.Movimiento(mapa);
+                        bitmonA.Movimiento(bitmonlandia.GetMapa());
                     }
                     
                 }
 
+                bitmonlandia.GetInformacion();
                 Console.WriteLine("");
                 Console.WriteLine("");
-                mapa.ImprimirTablero();
+                bitmonlandia.GetMapa().ImprimirTablero();
                 Console.WriteLine("Presione una ENTER para continuar");
                 Console.ReadLine();
             }
