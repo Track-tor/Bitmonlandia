@@ -78,7 +78,7 @@ namespace Bitmonlandia
             int horizontal = random.Next(-2, 3);
 
             //Veo si el bitmon caera fuera de los limites del mapa:
-            while ( (x+vertical<0) || (y+horizontal<0) || (x+vertical>=cant_filas) || (y+horizontal>=cant_columnas) )
+            while ((x + vertical < 0) || (y + horizontal < 0) || (x + vertical >= cant_filas) || (y + horizontal >= cant_columnas))
             {
                 vertical = random.Next(-2, 3);
                 horizontal = random.Next(-2, 3);
@@ -103,6 +103,7 @@ namespace Bitmonlandia
             mapa.RemoveBitmon(x, y, celda_antigua);
             posicion[0] += vertical;
             posicion[1] += horizontal;
+            celda = celda_nueva;
             string sigla = tipo_De_Bitmon.Substring(0, 3);
             mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
         }

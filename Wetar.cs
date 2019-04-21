@@ -105,6 +105,7 @@ namespace Bitmonlandia
                 mapa.RemoveBitmon(x, y, celda_antigua);
                 posicion[0] += vertical;
                 posicion[1] += horizontal;
+                celda = celda_nueva;
                 string sigla = tipo_De_Bitmon.Substring(0, 3);
                 mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
             }
