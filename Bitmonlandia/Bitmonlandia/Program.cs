@@ -13,7 +13,7 @@ namespace Bitmonlandia
             Bitmonlandia bitmonlandia = new Bitmonlandia(1);
 
             int[] tupla = { 1, 2 };
-            int[] tupla2 = { 3, 3 };
+            int[] tupla2 = { 4, 3 };
             int[] tupla3 = { 4, 4 };
             /*bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5,10,tupla));
             bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5, 10, tupla));*/
@@ -98,7 +98,7 @@ namespace Bitmonlandia
                 Console.WriteLine("");
                 Console.WriteLine("");
                 mapa.ImprimirTablero();
-                Console.WriteLine("Presione una tecla para continuar");
+                Console.WriteLine("Presione una ENTER para continuar");
                 Console.ReadLine();
             }
         }

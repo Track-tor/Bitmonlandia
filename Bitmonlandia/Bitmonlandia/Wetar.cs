@@ -172,7 +172,8 @@ namespace Bitmonlandia
             posicion[0] += vertical;
             posicion[1] += horizontal;
             string sigla = tipo_De_Bitmon.Substring(0, 3);
-            mapa.SetBitmon(sigla, x + vertical, y + horizontal);
+            mapa.SetBitmon(sigla, posicion[0], posicion[1]);
+            Console.WriteLine("{0}: ({1},{2})", tipo_De_Bitmon, posicion[0], posicion[1]);
         }
     }
 }

@@ -41,78 +41,22 @@ namespace Bitmonlandia
             int cant_columnas = tablero.GetLength(1);
             int x = posicion[0];
             int y = posicion[1];
-            int vertical = 0;
-            int horizontal = 0;
+            int vertical = random.Next(-2, 3);
+            int horizontal = random.Next(-2, 3);
 
-            //Veo si el bitmon esta en los limites del mapa:
-            //Esta en la esquina superior izquierda del tablero?
-            if (x == 0 && y == 0)
+            //Veo si el bitmon caera fuera de los limites del mapa:
+            while ( (x+vertical<0) || (y+horizontal<0) || (x+vertical>=cant_filas) || (y+horizontal>=cant_columnas) )
             {
-                vertical = random.Next(0, 2);
-                horizontal = random.Next(0, 2);
-            }
-
-            //Esta en el borde superior del tablero??
-            else if (x == 0 && y != cant_columnas - 1 && y != 0)
-            {
-                vertical = random.Next(0, 2);
-                horizontal = random.Next(-1, 2);
-            }
-
-            //Esta en la esquina superior derecha del tablero??
-            else if (x == 0 && y == cant_columnas - 1)
-            {
-                vertical = random.Next(0, 2);
-                horizontal = random.Next(-1, 1);
-            }
-
-            //Esta en el borde derecha del tablero??
-            else if (x != 0 && x != cant_filas - 1 && y == cant_columnas - 1)
-            {
-                vertical = random.Next(-1, 2);
-                horizontal = random.Next(-1, 1);
-            }
-
-            //Esta en la esquina inferior derecha del tablero??
-            else if (x == cant_filas - 1 && y == cant_columnas - 1)
-            {
-                vertical = random.Next(-1, 1);
-                horizontal = random.Next(-1, 1);
-            }
-
-            //Esta en el borde inferior del tablero??
-            else if (x == cant_filas - 1 && y != cant_columnas - 1 && y != 0)
-            {
-                vertical = random.Next(-1, 1);
-                horizontal = random.Next(-1, 2);
-            }
-
-            //Esta en la esquina inferior izquierda del tablero??
-            else if (x == cant_filas - 1 && y == 0)
-            {
-                vertical = random.Next(-1, 1);
-                horizontal = random.Next(0, 2);
-            }
-
-            //Esta en el borde izquierdo del tablero??
-            else if (x != 0 && x != cant_filas - 1 && y == 0)
-            {
-                vertical = random.Next(-1, 2);
-                horizontal = random.Next(0, 2);
-            }
-
-            //No esta en los bordes
-            else
-            {
-                vertical = random.Next(-1, 2);
-                horizontal = random.Next(-1, 2);
+                vertical = random.Next(-2, 3);
+                horizontal = random.Next(-2, 3);
             }
 
             mapa.RemoveBitmon(x, y);
             posicion[0] += vertical;
             posicion[1] += horizontal;
-            string sigla = tipo_De_Bitmon.Substring(0,3);
+            string sigla = tipo_De_Bitmon.Substring(0, 3);
             mapa.SetBitmon(sigla, x + vertical, y + horizontal);
+            Console.WriteLine("{0}: ({1},{2})", tipo_De_Bitmon, posicion[0], posicion[1]);
         }
     }
 }
