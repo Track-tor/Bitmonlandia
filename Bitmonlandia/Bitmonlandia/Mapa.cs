@@ -30,11 +30,11 @@ namespace Bitmonlandia
             {
                 alto = 5;
                 ancho = 5;
-                tablero = new string[5, 5, 2] { { { "D", "   " }, { "V", "   " }, { "A", "   " }, { "A", "   " }, { "N", "   " } }, 
-                                                { { "D", "   " }, { "A", "   " }, { "A", "Tap" }, { "A", "   " }, { "N", "   " } }, 
-                                                { { "D", "   " }, { "A", "   " }, { "A", "   " }, { "D", "   " }, { "V", "   " } }, 
-                                                { { "V", "   " }, { "L", "   " }, { "L", "   " }, { "D", "   " }, { "A", "   " } }, 
-                                                { { "V", "   " }, { "L", "   " }, { "L", "   " }, { "A", "Dor" }, { "A", "Wet" } } };
+                tablero = new string[5, 5, 4] { { { "D", "   ","   ","   "}, { "D", "   ","   ","   "},{ "D", "   ","   ","   "}, { "N", "   ","   ","   "}, { "D", "   ","   ","   "}}, 
+                                                { { "D", "   ","   ","   "}, { "V", "   ","   ","   "},{ "D", "   ","Tap","   "}, { "N", "   ","   ","   "}, { "D", "   ","   ","   "}}, 
+                                                { { "V", "   ","   ","   "}, { "V", "   ","   ","   "},{ "V", "   ","   ","   "}, { "D", "   ","   ","   "}, { "D", "   ","   ","   "}}, 
+                                                { { "L", "   ","   ","   "}, { "L", "   ","   ","   "},{ "V", "   ","   ","   "}, { "D", "   ","   ","   "}, { "A", "   ","   ","   "}}, 
+                                                { { "L", "   ","   ","   "}, { "L", "   ","   ","   "},{ "V", "   ","   ","   "}, { "A", "   ","Dor","   "}, { "A", "   ","Wet","   "}}};
             }
             else if (preset == 2)
             {
@@ -76,6 +76,7 @@ namespace Bitmonlandia
 
         public void ImprimirTablero()
         {
+            Console.ForegroundColor = ConsoleColor.Black;
             //Imprimir tablero en pantalla
             for (int i = 0; i < ancho; i++)
             {
@@ -84,55 +85,95 @@ namespace Bitmonlandia
                     switch (tablero[i, j, 0])
                     {
                         case "V":
-                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.BackgroundColor = ConsoleColor.Green;
                             break;
 
                         case "A":
-                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.BackgroundColor = ConsoleColor.Cyan;
                             break;
 
                         case "D":
-                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.BackgroundColor = ConsoleColor.Yellow;
                             break;
 
                         case "N":
-                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.BackgroundColor = ConsoleColor.White;
                             break;
 
                         case "L":
-                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.BackgroundColor = ConsoleColor.DarkRed;
                             break;
 
                     }
-                    Console.Write("[{0}:", tablero[i, j, 0].ToString());
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.Write("{0}", tablero[i, j, 1].ToString());
+                    Console.Write(" [{0}] ", tablero[i, j, 1].ToString());
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.Write(" ");
+                }
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.WriteLine("");
+
+                for (int j = 0; j < alto; j++)
+                {
                     switch (tablero[i, j, 0])
                     {
                         case "V":
-                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.BackgroundColor = ConsoleColor.Green;
                             break;
 
                         case "A":
-                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.BackgroundColor = ConsoleColor.Cyan;
                             break;
 
                         case "D":
-                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.BackgroundColor = ConsoleColor.Yellow;
                             break;
 
                         case "N":
-                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.BackgroundColor = ConsoleColor.White;
                             break;
 
                         case "L":
-                            Console.ForegroundColor = ConsoleColor.DarkRed;
+                            Console.BackgroundColor = ConsoleColor.DarkRed;
                             break;
 
                     }
-                    Console.Write("]     ");
+                    Console.Write(" |{0}| ", tablero[i, j, 2].ToString());
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.Write(" ");
                 }
+                Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine("");
+
+                for (int j = 0; j < alto; j++)
+                {
+                    switch (tablero[i, j, 0])
+                    {
+                        case "V":
+                            Console.BackgroundColor = ConsoleColor.Green;
+                            break;
+
+                        case "A":
+                            Console.BackgroundColor = ConsoleColor.Cyan;
+                            break;
+
+                        case "D":
+                            Console.BackgroundColor = ConsoleColor.Yellow;
+                            break;
+
+                        case "N":
+                            Console.BackgroundColor = ConsoleColor.White;
+                            break;
+
+                        case "L":
+                            Console.BackgroundColor = ConsoleColor.DarkRed;
+                            break;
+
+                    }
+                    Console.Write(" [{0}] ", tablero[i, j, 3].ToString());
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.Write(" ");
+                }
+                Console.BackgroundColor = ConsoleColor.Black;
                 Console.WriteLine("");
                 Console.WriteLine("");
 

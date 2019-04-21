@@ -91,7 +91,6 @@ namespace Bitmonlandia
             int cant_columnas = tablero.GetLength(1);
             int x = posicion[0];
             int y = posicion[1];
-            Console.WriteLine("ANTES: {0} {1}", posicion[0], posicion[1]);
             int vertical = random.Next(-1, 2);
             int horizontal = random.Next(-1, 2);
 
@@ -102,13 +101,11 @@ namespace Bitmonlandia
                 horizontal = random.Next(-1, 2);
 
             }
-            Console.WriteLine("AVANZA: {0} {1}", vertical, horizontal);
             mapa.RemoveBitmon(x, y);
             posicion[0] += vertical;
             posicion[1] += horizontal;
             string sigla = tipo_De_Bitmon.Substring(0, 3);
             mapa.SetBitmon(sigla, posicion[0], posicion[1]);
-            Console.WriteLine("AHORA: {0}: ({1},{2})", tipo_De_Bitmon, posicion[0], posicion[1]);
         }
 
         /*Esta funcion es para que el Gofue transforme un terreno vegetacion en desiertico, o un terreno
