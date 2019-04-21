@@ -15,7 +15,9 @@ namespace Bitmonlandia
         protected bool estado_De_Vida = true;
         protected int puntos_De_Ataque;
         protected int puntos_De_Vida;
+        protected int celda = 1;
         protected int [] posicion= new int[2];
+
 
         public Bitmon(string tipo_De_Bitmon, int tiempo_De_Vida,int puntos_De_Ataque,int puntos_De_Vida, int [] posicion)
         {
@@ -101,11 +103,28 @@ namespace Bitmonlandia
                 horizontal = random.Next(-1, 2);
 
             }
-            mapa.RemoveBitmon(x, y);
+
+            int celda_antigua = celda;
+            int celda_nueva = celda;
+
+            //Veo si esta ocupada la celda a la cual se va a mover
+            while (tablero[x+vertical,y+horizontal,celda_nueva] != "   ")
+            {
+                //Si ya no hay mas espacio a donde se va a mover, se quedar en el mismo lugar
+                if (celda_nueva == 3 && (tablero[x+vertical,y+horizontal,celda_nueva] != "   "))
+                {
+                    vertical = 0;
+                    horizontal = 0;
+                    break;
+                }
+                celda_nueva++;
+            }
+
+            mapa.RemoveBitmon(x, y, celda_nueva);
             posicion[0] += vertical;
             posicion[1] += horizontal;
             string sigla = tipo_De_Bitmon.Substring(0, 3);
-            mapa.SetBitmon(sigla, posicion[0], posicion[1]);
+            mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
         }
 
         /*Esta funcion es para que el Gofue transforme un terreno vegetacion en desiertico, o un terreno

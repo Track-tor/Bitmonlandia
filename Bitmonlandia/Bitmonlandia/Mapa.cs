@@ -31,10 +31,10 @@ namespace Bitmonlandia
                 alto = 5;
                 ancho = 5;
                 tablero = new string[5, 5, 4] { { { "D", "   ","   ","   "}, { "D", "   ","   ","   "},{ "D", "   ","   ","   "}, { "N", "   ","   ","   "}, { "D", "   ","   ","   "}}, 
-                                                { { "D", "   ","   ","   "}, { "V", "   ","   ","   "},{ "D", "   ","Tap","   "}, { "N", "   ","   ","   "}, { "D", "   ","   ","   "}}, 
+                                                { { "D", "   ","   ","   "}, { "V", "   ","   ","   "},{ "D", "   ","   ","   "}, { "N", "   ","   ","   "}, { "D", "   ","   ","   "}}, 
                                                 { { "V", "   ","   ","   "}, { "V", "   ","   ","   "},{ "V", "   ","   ","   "}, { "D", "   ","   ","   "}, { "D", "   ","   ","   "}}, 
                                                 { { "L", "   ","   ","   "}, { "L", "   ","   ","   "},{ "V", "   ","   ","   "}, { "D", "   ","   ","   "}, { "A", "   ","   ","   "}}, 
-                                                { { "L", "   ","   ","   "}, { "L", "   ","   ","   "},{ "V", "   ","   ","   "}, { "A", "   ","Dor","   "}, { "A", "   ","Wet","   "}}};
+                                                { { "L", "   ","   ","   "}, { "L", "   ","   ","   "},{ "V", "   ","   ","   "}, { "A", "   ","   ","   "}, { "A", "   ","   ","   "}}};
             }
             else if (preset == 2)
             {
@@ -193,15 +193,15 @@ namespace Bitmonlandia
         }
 
         //Funcion para agregar el bitmon a la cordenada deseada (vital para Moverse())
-        public void SetBitmon(string especie, int x, int y)
+        public void SetBitmon(string especie, int x, int y, int celda)
         {
-            this.tablero[x, y, 1] = especie;
+            this.tablero[x, y, celda] = especie;
         }
 
         //Funcion para quitar el bitmon de la cordenada deseada (vital para Moverse())
-        public void RemoveBitmon(int x, int y)
+        public void RemoveBitmon(int x, int y, int celda)
         {
-            this.tablero[x, y, 1] = "   ";
+            this.tablero[x, y, celda] = "   ";
         }
     }
 }

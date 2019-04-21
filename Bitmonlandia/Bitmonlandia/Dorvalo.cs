@@ -83,13 +83,27 @@ namespace Bitmonlandia
                 vertical = random.Next(-2, 3);
                 horizontal = random.Next(-2, 3);
             }
+            int celda_antigua = celda;
+            int celda_nueva = celda;
 
-            mapa.RemoveBitmon(x, y);
+            //Veo si esta ocupada la celda a la cual se va a mover
+            while (tablero[x + vertical, y + horizontal, celda_nueva] != "   ")
+            {
+                //Si ya no hay mas espacio a donde se va a mover, se quedar en el mismo lugar
+                if (celda_nueva == 3 && (tablero[x + vertical, y + horizontal, celda_nueva] != "   "))
+                {
+                    vertical = 0;
+                    horizontal = 0;
+                    break;
+                }
+                celda_nueva++;
+            }
+
+            mapa.RemoveBitmon(x, y, celda_nueva);
             posicion[0] += vertical;
             posicion[1] += horizontal;
             string sigla = tipo_De_Bitmon.Substring(0, 3);
-            mapa.SetBitmon(sigla, x + vertical, y + horizontal);
-            Console.WriteLine("{0}: ({1},{2})", tipo_De_Bitmon, posicion[0], posicion[1]);
+            mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
         }
     }
 }
