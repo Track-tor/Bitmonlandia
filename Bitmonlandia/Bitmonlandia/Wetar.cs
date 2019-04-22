@@ -16,13 +16,17 @@ namespace Bitmonlandia
         }
         public override Bitmon Pelea(Bitmon peleador)
         {
-            if (peleador.GetNombre() == "Gofue" | peleador.GetNombre() == "Dorvalo")
+            if (peleador.GetNombre() == "Gofue" || peleador.GetNombre() == "Dorvalo")
             {
-                while (estado_De_Vida == true | peleador.GetEstadoDeVida() == true)
+                while (estado_De_Vida == true && peleador.GetEstadoDeVida() == true)
                 {
                     puntos_De_Vida -= peleador.GetPuntosDeAtaque();
                     peleador.RecibirAtaque(puntos_De_Ataque);
+                    CambiarEstadoDeVida();
+                    peleador.CambiarEstadoDeVida();
                 }
+
+                peleador.CambiarEstadoDeVida();
             }
 
             return base.Pelea(peleador);
@@ -78,7 +82,7 @@ namespace Bitmonlandia
                 int horizontal = random.Next(-1, 2);
 
                 //Veo si el bitmon caera fuera de los limites del mapa:
-                while (((x + vertical) < 0) || ((y + horizontal) < 0) || ((x + vertical) >= cant_filas) || ((y + horizontal) >= cant_columnas) || (tablero[x+vertical,y+horizontal,0] == "A"))
+                while (((x + vertical) < 0) || ((y + horizontal) < 0) || ((x + vertical) >= cant_filas) || ((y + horizontal) >= cant_columnas) || (tablero[x+vertical,y+horizontal,0] != "A"))
                 {
                     vertical = random.Next(-1, 2);
                     horizontal = random.Next(-1, 2);

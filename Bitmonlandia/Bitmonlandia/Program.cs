@@ -48,13 +48,13 @@ namespace Bitmonlandia
             int[] tupla3 = { 4, 4 };
             /*bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5,10,tupla));
             bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5, 10, tupla));*/
-            bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10 , 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10 , 50, 100, tupla));
             //bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 5, 10, tupla2));
             /*bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
-            */bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla2));
+            */bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla2));
             /*bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla));*/
-            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla3));
+            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla3));
             /*bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));*/
@@ -67,42 +67,45 @@ namespace Bitmonlandia
             int cantidad_meses = int.Parse(Console.ReadLine());
             Console.Write("\n");
 
-            for (int mes=0; mes<cantidad_meses; mes++)
+            for (int mes = 0; mes < cantidad_meses; mes++)
             {
                 Console.WriteLine("Mes: {0}", mes);
-                List<Bitmon> lista = bitmonlandia.GetLista();
 
                 //Se recorre la lista de bitmons para ver si hay bitmons en la misma casilla
-                for (int bit=0; bit< lista.Count; bit++)
+                for (int bit = 0; bit < bitmonlandia.GetLista().Count; bit++)
                 {
                     //Selecciono el primer bitmon y veo su especie tambien:
-                    Bitmon bitmonA = lista[bit];
-                    string especie = bitmonA.GetNombre();
-
+                    string especie = bitmonlandia.GetLista()[bit].GetNombre();
 
                     //Y recorro la lista en busca de una coincidencia
-                    for (int pareja = 0; pareja < lista.Count; pareja++)
+                    for (int pareja = 0; pareja < bitmonlandia.GetLista().Count; pareja++)
                     {
-
                         //No queremos que se junte con él mismo asi que lo omitimos
                         if (pareja == bit)
                         {
                             continue;
                         }
 
-                        if (lista[bit].GetPosicion() == lista[pareja].GetPosicion())
+                        if (bitmonlandia.GetLista()[bit].GetPosicion()[0] == bitmonlandia.GetLista()[pareja].GetPosicion()[0] && bitmonlandia.GetLista()[bit].GetPosicion()[1] == bitmonlandia.GetLista()[pareja].GetPosicion()[1
+                            ])
                         {
                             //Primero intentamos con pelea
-                            lista[bit].Pelea(lista[pareja]);
+                            bitmonlandia.GetLista()[bit].Pelea(bitmonlandia.GetLista()[pareja]);
 
                             //Si no funciona, significa que se llevan bien para reproducirse
-                            lista[bit].Reproduccion(lista[pareja], size, bitmonlandia);
+                            bitmonlandia.GetLista()[bit].Reproduccion(bitmonlandia.GetLista()[pareja], size, bitmonlandia);
                         }
+
+                        if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == false)
+                            bitmonlandia.GetMapa().RemoveBitmon(bitmonlandia.GetLista()[bit].GetPosicion()[0], bitmonlandia.GetLista()[bit].GetPosicion()[1], bitmonlandia.GetLista()[bit].GetCelda());
+
+                        if (bitmonlandia.GetLista()[pareja].GetEstadoDeVida() == false)
+                            bitmonlandia.GetMapa().RemoveBitmon(bitmonlandia.GetLista()[pareja].GetPosicion()[0], bitmonlandia.GetLista()[pareja].GetPosicion()[1], bitmonlandia.GetLista()[pareja].GetCelda());
                     }
 
                     /*Comprobamos si sigue vivo este bitmon, para asi saber si moverlo y cambiar el terreno
                         * si corresponde*/
-                    if (bitmonA.GetEstadoDeVida() == false)
+                    if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == false)
                         {
                             continue;
                         }
@@ -111,19 +114,19 @@ namespace Bitmonlandia
                     //Transformar terreno:
                     if (especie == "Gofue")
                         {
-                            bitmonA.Secar(bitmonlandia.GetMapa());
+                        bitmonlandia.GetLista()[bit].Secar(bitmonlandia.GetMapa());
                         }
 
                     else if (especie == "Taplan")
                         {
-                            bitmonA.Plantar(bitmonlandia.GetMapa());
+                        bitmonlandia.GetLista()[bit].Plantar(bitmonlandia.GetMapa());
                         }
                         
 
                     //Moverse:
                     if (especie != "Ent")
                     {
-                        bitmonA.Movimiento(bitmonlandia.GetMapa());
+                        bitmonlandia.GetLista()[bit].Movimiento(bitmonlandia.GetMapa());
                     }
                     
                 }

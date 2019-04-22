@@ -16,7 +16,7 @@ namespace Bitmonlandia
         }
         public override Bitmon Pelea(Bitmon peleador)
         {
-            if (peleador.GetNombre() == "Gofue" | peleador.GetNombre() == "Dorvalo")
+            if (peleador.GetNombre() == "Gofue" || peleador.GetNombre() == "Dorvalo")
             {
                 while (estado_De_Vida == true | peleador.GetEstadoDeVida() == true)
                 {

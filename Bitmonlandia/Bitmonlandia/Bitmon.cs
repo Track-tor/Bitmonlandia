@@ -17,6 +17,7 @@ namespace Bitmonlandia
         protected int puntos_De_Vida;
         protected int celda = 1;
         protected int [] posicion= new int[2];
+        protected int hijos = 0;
 
 
         public Bitmon(string tipo_De_Bitmon, int tiempo_De_Vida,int puntos_De_Ataque,int puntos_De_Vida, int [] posicion)
@@ -56,7 +57,14 @@ namespace Bitmonlandia
             return posicion;
         }
 
+        public int GetCelda()
+        {
+            return celda;
+        }
 
+        //Sets
+
+      
         // El Bitmon recibe el ataque
         public void RecibirAtaque(int puntos_De_Ataque)
         {
@@ -64,7 +72,7 @@ namespace Bitmonlandia
         }
 
         // Cambia el estado de vida del Bitmon cuando los puntos de vida son menores a 0
-        private void CambiarEstadoDeVida(bool estado_De_Vida)
+        public void CambiarEstadoDeVida()
         {
             if (puntos_De_Vida <= 0)
             {
