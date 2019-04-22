@@ -74,6 +74,11 @@ namespace Bitmonlandia
                 //Se recorre la lista de bitmons para ver si hay bitmons en la misma casilla
                 for (int bit = 0; bit < bitmonlandia.GetLista().Count; bit++)
                 {
+                    if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == false)
+                    {
+                        continue;
+                    }
+
                     //Selecciono el primer bitmon y veo su especie tambien:
                     string especie = bitmonlandia.GetLista()[bit].GetNombre();
 
@@ -93,7 +98,7 @@ namespace Bitmonlandia
                             bitmonlandia.GetLista()[bit].Pelea(bitmonlandia.GetLista()[pareja]);
 
                             //Si no funciona, significa que se llevan bien para reproducirse
-                            if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == true && bitmonlandia.GetLista()[bit].GetEstadoDeVida() == true)
+                            if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == true && bitmonlandia.GetLista()[pareja].GetEstadoDeVida() == true)
                             {
                                 bitmonlandia.GetLista()[bit].Reproduccion(bitmonlandia.GetLista()[pareja], size, bitmonlandia);
                             }
@@ -131,7 +136,13 @@ namespace Bitmonlandia
                     {
                         bitmonlandia.GetLista()[bit].Movimiento(bitmonlandia.GetMapa());
                     }
-                    
+
+                    //Si sigue vivo despues de todo, hacerlo envejecer
+                    if (bitmonlandia.GetLista()[bit].GetEstadoDeVida()==true)
+                    {
+                        bitmonlandia.GetLista()[bit].Envejecer();
+                    }
+
                 }
 
                 bitmonlandia.GetInformacion();
@@ -141,6 +152,12 @@ namespace Bitmonlandia
                 Console.WriteLine("Presione una ENTER para continuar");
                 Console.ReadLine();
             }
+
+
+
+
+
+
         }
     }
 }
