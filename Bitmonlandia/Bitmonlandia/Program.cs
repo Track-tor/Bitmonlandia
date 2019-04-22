@@ -161,6 +161,7 @@ namespace Bitmonlandia
 
             //Tiempo de vida promedio Bitmon:
             bitmonlandia.TiempoDeVidaPromedioBitmon();
+            Console.WriteLine("");
 
             ////////////////////////////////////////////
             //Tiempo de vida promedio de cada especie:
@@ -181,6 +182,10 @@ namespace Bitmonlandia
 
             //Ent
             bitmonlandia.TiempoDeVidaPromedioEspecie("Ent");
+            Console.WriteLine("");
+
+            /////////////////////////////////////////////////
+
 
 
 

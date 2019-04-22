@@ -80,30 +80,52 @@ namespace Bitmonlandia
         public void TiempoDeVidaPromedioBitmon()
         {
             float suma = 0;
+            float cantidad_muertos = 0;
             for (int bit = 0; bit < GetLista().Count(); bit++)
             {
                 if (GetLista()[bit].GetEstadoDeVida() == false)
                 {
                     suma += (float) GetLista()[bit].GetMesesVividos();
+                    cantidad_muertos += 1;
                 }
             }
-            Console.WriteLine("Tiempo de vida promedio Bitmon: {0} meses", (int) (suma / (GetLista().Count())));
+
+            if (cantidad_muertos> 0)
+            {
+                int resultado = (int)(suma / cantidad_muertos);
+                Console.WriteLine("Tiempo de vida promedio Bitmon: {0} meses", resultado);
+            }
+
+            else
+            {
+                Console.WriteLine("No hay un tiempo de vida promedio Bitmon ya que no han habido muertos");
+            }
         }
 
         //Tiempo de vida promedio de cada especie:
         public void TiempoDeVidaPromedioEspecie(string especie)
         {
             float suma = 0;
-            float cantidad_especie = 0;
+            float cantidad_muertos = 0;
             for (int bit = 0; bit < GetLista().Count(); bit++)
             {
-                if (GetLista()[bit].GetEstadoDeVida() == false && GetLista()[bit].GetNombre()=="especie")
+                if (GetLista()[bit].GetEstadoDeVida() == false && GetLista()[bit].GetNombre()==especie)
                 {
                     suma += (float)GetLista()[bit].GetMesesVividos();
-                    cantidad_especie += 1;
+                    cantidad_muertos += 1;
                 }
             }
-            Console.WriteLine("Tiempo de vida promedio {0}: {1} meses", (int) (suma / (cantidad_especie)));
+
+            if (cantidad_muertos > 0)
+            {
+                int resultado = (int)(suma / cantidad_muertos);
+                Console.WriteLine("Tiempo de vida promedio {0}: {1} meses", especie, resultado);
+            }
+
+            else
+            {
+                Console.WriteLine("No hay un tiempo de vida promedio {0} ya que no han habido {1}s muertos", especie, especie);
+            }
         }
 
 
