@@ -150,6 +150,7 @@ namespace Bitmonlandia
                 Console.WriteLine("");
                 bitmonlandia.GetMapa().ImprimirTablero();
                 Console.WriteLine("Presione una ENTER para continuar");
+                bitmonlandia.SetTiempoTranscurrido();
                 Console.ReadLine();
             }
             Console.WriteLine("");
@@ -185,7 +186,14 @@ namespace Bitmonlandia
             Console.WriteLine("");
 
             /////////////////////////////////////////////////
+            //Tasa de natalidad de cada especie:
 
+
+
+
+
+            ////////////////////////////////////////////////
+            //Tasa de mortalidad de cada especie:
 
 
 

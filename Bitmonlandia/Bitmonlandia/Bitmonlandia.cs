@@ -26,6 +26,12 @@ namespace Bitmonlandia
             return tiempo_Transcurrido;
         }
 
+        //Agregar en un mes cada vez que esta funcion es llamada
+        public void SetTiempoTranscurrido()
+        {
+            tiempo_Transcurrido += 1;
+        }
+
         /*recibe como argumneto la lista de bitmons vivos y muertos y
           entrega la cantidad de bitmons que se encuentran en el bithalla, si esta
           muerto lo elimino de la lista y resto en uno el indice b*/
