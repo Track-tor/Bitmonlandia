@@ -76,5 +76,42 @@ namespace Bitmonlandia
             }
         }
 
+        //Tiempo de vida promedio Bitmon:
+        public void TiempoDeVidaPromedioBitmon()
+        {
+            float suma = 0;
+            for (int bit = 0; bit < GetLista().Count(); bit++)
+            {
+                if (GetLista()[bit].GetEstadoDeVida() == false)
+                {
+                    suma += (float) GetLista()[bit].GetMesesVividos();
+                }
+            }
+            Console.WriteLine("Tiempo de vida promedio Bitmon: {0} meses", (int) (suma / (GetLista().Count())));
+        }
+
+        //Tiempo de vida promedio de cada especie:
+        public void TiempoDeVidaPromedioEspecie(string especie)
+        {
+            float suma = 0;
+            float cantidad_especie = 0;
+            for (int bit = 0; bit < GetLista().Count(); bit++)
+            {
+                if (GetLista()[bit].GetEstadoDeVida() == false && GetLista()[bit].GetNombre()=="especie")
+                {
+                    suma += (float)GetLista()[bit].GetMesesVividos();
+                    cantidad_especie += 1;
+                }
+            }
+            Console.WriteLine("Tiempo de vida promedio {0}: {1} meses", (int) (suma / (cantidad_especie)));
+        }
+
+
+
+
+
+
+
+
     }
 }

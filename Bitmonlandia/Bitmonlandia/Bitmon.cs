@@ -63,6 +63,11 @@ namespace Bitmonlandia
             return celda;
         }
 
+        public int GetMesesVividos()
+        {
+            return meses_vividos;
+        }
+
         public void Envejecer()
         {
             tiempo_De_Vida -= 1;

@@ -152,12 +152,47 @@ namespace Bitmonlandia
                 Console.WriteLine("Presione una ENTER para continuar");
                 Console.ReadLine();
             }
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            /////////////////////////
+            //Estadisticas finales
+
+            //Tiempo de vida promedio Bitmon:
+            bitmonlandia.TiempoDeVidaPromedioBitmon();
+
+            ////////////////////////////////////////////
+            //Tiempo de vida promedio de cada especie:
+            //Taplan
+            bitmonlandia.TiempoDeVidaPromedioEspecie("Taplan");
+
+            //Dorvalo
+            bitmonlandia.TiempoDeVidaPromedioEspecie("Dorvalo");
+
+            //Gofue
+            bitmonlandia.TiempoDeVidaPromedioEspecie("Gofue");
+
+            //Doti
+            bitmonlandia.TiempoDeVidaPromedioEspecie("Doti");
+
+            //Wetar
+            bitmonlandia.TiempoDeVidaPromedioEspecie("Wetar");
+
+            //Ent
+            bitmonlandia.TiempoDeVidaPromedioEspecie("Ent");
 
 
 
 
 
 
+
+
+
+
+
+            Console.ReadLine();
         }
     }
 }
