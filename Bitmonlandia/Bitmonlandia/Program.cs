@@ -235,8 +235,35 @@ namespace Bitmonlandia
             bitmonlandia.TasaDeMortalidad("Ent");
 
             Console.WriteLine("");
+            /////////////////////////////////////////////////
+            //Cantidad de hijos por especie
+            //Taplan
+            bitmonlandia.HijosPromedioEspecie("Taplan");
 
+            //Dorvalo
+            bitmonlandia.HijosPromedioEspecie("Dorvalo");
 
+            //Gofue
+            bitmonlandia.HijosPromedioEspecie("Gofue");
+
+            //Doti
+            bitmonlandia.HijosPromedioEspecie("Doti");
+
+            //Wetar
+            bitmonlandia.HijosPromedioEspecie("Wetar");
+
+            //Ent
+            bitmonlandia.HijosPromedioEspecie("Ent");
+
+            Console.WriteLine("");
+
+            ////////////////////////////////////////////////
+            //Listado de especies extintas:
+            bitmonlandia.GetEspeciesExtintas();
+
+            Console.WriteLine("");
+            ///////////////////////////////////////////
+            //Bithalla:
 
 
 

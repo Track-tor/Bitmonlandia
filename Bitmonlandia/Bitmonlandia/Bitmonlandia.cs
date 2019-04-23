@@ -230,5 +230,116 @@ namespace Bitmonlandia
                 Console.WriteLine("No hay un tasa bruta de mortalidad {0} ya que no ha muerto ninguno", especie);
             }
         }
+
+        //Promedio de hijos por especie:
+        public void HijosPromedioEspecie(string especie)
+        {
+            float n_nacimientos = 0;
+            float poblacion_total = 0;
+            for (int bit = 0; bit < GetLista().Count(); bit++)
+            {
+                if (GetLista()[bit].GetNombre() == especie)
+                {
+                    poblacion_total += (float)GetLista()[bit].GetMesesVividos();
+                    n_nacimientos += (float)GetLista()[bit].GetHijos();
+                }
+            }
+
+            if (n_nacimientos > 0 && poblacion_total > 0)
+            {
+                int resultado = ((int)(n_nacimientos / poblacion_total)) * 1000;
+                Console.WriteLine("Cantidad de hijos promedio {0}: {1}", especie, resultado);
+            }
+
+            else
+            {
+                Console.WriteLine("No hay cantidad de hijos promedio {0} ya que ninguno ha tenido hijos", especie);
+            }
+
+
+        }
+
+        //Listado especies extintas:
+        public void GetEspeciesExtintas()
+        {
+            int n_tap = 0;
+            int n_dor = 0;
+            int n_dot = 0;
+            int n_ent = 0;
+            int n_gof = 0;
+            int n_wet = 0;
+
+            for (int bit = 0; bit < GetLista().Count(); bit++)
+            {
+                if (GetLista()[bit].GetEstadoDeVida() == true)
+                {
+                    switch (GetLista()[bit].GetNombre())
+                    {
+                        case "Taplan":
+                            n_tap += 1;
+                            break;
+
+                        case "Dorvalo":
+                            n_dor += 1;
+                            break;
+
+                        case "Doti":
+                            n_dot += 1;
+                            break;
+
+                        case "Ent":
+                            n_ent += 1;
+                            break;
+
+                        case "Gofue":
+                            n_gof += 1;
+                            break;
+
+                        case "Wetar":
+                            n_wet += 1;
+                            break;
+                    }
+                }
+            }
+
+            if (n_tap!=0 && n_dor!=0 && n_dot != 0 && n_ent != 0 && n_wet != 0 && n_gof != 0)
+            {
+                Console.WriteLine("No hay especies extintas");
+            }
+
+            else
+            {
+                Console.WriteLine("Lista de especies extintas:");
+                if (n_tap == 0)
+                {
+                    Console.WriteLine("Taplan");
+                }
+
+                if (n_dor == 0)
+                {
+                    Console.WriteLine("Dorvalo");
+                }
+
+                if (n_dot == 0)
+                {
+                    Console.WriteLine("Doti");
+                }
+
+                if (n_ent == 0)
+                {
+                    Console.WriteLine("Ent");
+                }
+
+                if (n_gof == 0)
+                {
+                    Console.WriteLine("Gofue");
+                }
+
+                if (n_wet == 0)
+                {
+                    Console.WriteLine("Wetar");
+                }
+            }
+        }
     }
 }
