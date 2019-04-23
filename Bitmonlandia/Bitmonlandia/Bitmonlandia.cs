@@ -61,9 +61,22 @@ namespace Bitmonlandia
         public void añadir_bitmon(Bitmon bitmon)
         {
             lista_bitmons_totales.Add(bitmon);
+            string sigla = bitmon.GetNombre().Substring(0, 3);
+            int x = bitmon.GetPosicion()[0];
+            int y = bitmon.GetPosicion()[1];
+            if (GetMapa().GetTablero()[x,y,1]=="   ")
+            {
+                mapa.SetBitmon(sigla, x, y, 1);
+            }
+
+            else if (GetMapa().GetTablero()[x, y, 2] == "   ")
+            {
+                mapa.SetBitmon(sigla, x, y, 2);
+            }
         }
 
-        public void Posicionar_bitmons()
+        //Funcion que posiciona los bitmons INICIALES
+        public void PosicionInicialBitmons()
         {
             for (int bit =0; bit<lista_bitmons_totales.Count(); bit++)
             {
@@ -98,7 +111,7 @@ namespace Bitmonlandia
             int[] tupla = { c1, c2 };
 
             //Veo si el bitmon caera fuera de los limites del mapa:
-            while (GetMapa().GetTablero()[c1, c2, 1] != "   ")
+            while (GetMapa().GetTablero()[c1, c2, 1] != "   " && GetMapa().GetTablero()[c1, c2, 2] != "   ")
             {
                 c1 = random.Next(size); // Asignacion de una coordenada aleatoria
                 c2 = random.Next(size); // Asignacion de una coordenada aleatoria
@@ -109,6 +122,7 @@ namespace Bitmonlandia
             int pv = random.Next(10, 100);
             añadir_bitmon(new Ent("Ent", 15, pa, pv, tupla));
             hijos_ents += 1;
+
         }
 
         //Tiempo de vida promedio Bitmon:
@@ -127,7 +141,7 @@ namespace Bitmonlandia
 
             if (cantidad_muertos> 0)
             {
-                int resultado = (int)(suma / cantidad_muertos);
+                float resultado = (float)(suma / cantidad_muertos);
                 Console.WriteLine("Tiempo de vida promedio Bitmon: {0} meses", resultado);
             }
 
@@ -153,7 +167,7 @@ namespace Bitmonlandia
 
             if (cantidad_muertos > 0)
             {
-                int resultado = (int)(suma / cantidad_muertos);
+                float resultado = (float)(suma / cantidad_muertos);
                 Console.WriteLine("Tiempo de vida promedio {0}: {1} meses", especie, resultado);
             }
 
@@ -189,13 +203,13 @@ namespace Bitmonlandia
                         poblacion_total += (float)GetLista()[bit].GetMesesVividos();
                     }
                 }
-
                 n_nacimientos = hijos_ents;
             }
 
+
             if (n_nacimientos > 0 && poblacion_total>0)
             {
-                int resultado = ((int)(n_nacimientos / poblacion_total))*1000;
+                float resultado = ((float)(n_nacimientos / poblacion_total))*1000;
                 Console.WriteLine("Tasa bruta de natalidad {0}: {1}", especie, resultado);
             }
 
@@ -221,7 +235,7 @@ namespace Bitmonlandia
 
             if (n_muertos > 0 && poblacion_total > 0)
             {
-                int resultado = ((int)(n_muertos / poblacion_total))*100;
+                float resultado = ((float)(n_muertos / poblacion_total))*100;
                 Console.WriteLine("Tasa bruta de mortalidad {0}: {1}", especie, resultado);
             }
 
@@ -247,7 +261,7 @@ namespace Bitmonlandia
 
             if (n_nacimientos > 0 && poblacion_total > 0)
             {
-                int resultado = ((int)(n_nacimientos / poblacion_total)) * 1000;
+                float resultado = ((float)(n_nacimientos / poblacion_total)) * 1000;
                 Console.WriteLine("Cantidad de hijos promedio {0}: {1}", especie, resultado);
             }
 

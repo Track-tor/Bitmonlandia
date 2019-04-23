@@ -37,7 +37,7 @@ namespace Bitmonlandia
                 int[] tupla = { c1, c2 };
 
                 //Veo si el bitmon caera fuera de los limites del mapa:
-                while (bitmonlandia.GetMapa().GetTablero()[c1, c2, 1] != "   ")
+                while (bitmonlandia.GetMapa().GetTablero()[c1, c2, 1] != "   " && bitmonlandia.GetMapa().GetTablero()[c1, c2, 2] != "   " )
                 {
                     c1 = random.Next(size); // Asignacion de una coordenada aleatoria
                     c2 = random.Next(size); // Asignacion de una coordenada aleatoria

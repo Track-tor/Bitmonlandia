@@ -58,7 +58,7 @@ namespace Bitmonlandia
             /*bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));*/
-            bitmonlandia.Posicionar_bitmons();
+            bitmonlandia.PosicionInicialBitmons();
 
             Console.WriteLine("--------------------# MAPA INICIAL #---------------------\n");
             bitmonlandia.GetMapa().ImprimirTablero();
@@ -82,6 +82,12 @@ namespace Bitmonlandia
 
                     //Selecciono el primer bitmon y veo su especie tambien:
                     string especie = bitmonlandia.GetLista()[bit].GetNombre();
+
+                    //Moverse:
+                    if (especie != "Ent")
+                    {
+                        bitmonlandia.GetLista()[bit].Movimiento(bitmonlandia.GetMapa());
+                    }
 
                     //Y recorro la lista en busca de una coincidencia
                     for (int pareja = 0; pareja < bitmonlandia.GetLista().Count; pareja++)
@@ -130,13 +136,6 @@ namespace Bitmonlandia
                         {
                         bitmonlandia.GetLista()[bit].Plantar(bitmonlandia.GetMapa());
                         }
-                        
-
-                    //Moverse:
-                    if (especie != "Ent")
-                    {
-                        bitmonlandia.GetLista()[bit].Movimiento(bitmonlandia.GetMapa());
-                    }
 
                     //Si sigue vivo despues de todo, hacerlo envejecer
                     if (bitmonlandia.GetLista()[bit].GetEstadoDeVida()==true)
@@ -147,7 +146,7 @@ namespace Bitmonlandia
                 }
 
                 //Si han pasado 3 meses y algun Ent sigue vivo, spawnear uno
-                if (mes % 3 == 0)
+                if (mes % 3 == 0 && mes!=0)
                 {
                     bitmonlandia.PlantarEnt(size);
                 }
@@ -251,9 +250,6 @@ namespace Bitmonlandia
 
             //Wetar
             bitmonlandia.HijosPromedioEspecie("Wetar");
-
-            //Ent
-            bitmonlandia.HijosPromedioEspecie("Ent");
 
             Console.WriteLine("");
 
