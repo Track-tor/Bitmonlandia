@@ -21,6 +21,25 @@ namespace Bitmonlandia
         {
             if (peleador.GetNombre() == "Wetar"|| peleador.GetNombre() == "Taplan" || peleador.GetNombre() == "Ent")
             {
+                string rival = peleador.GetNombre();
+                int multiplicador = random.Next(10, 21);
+
+                //Dependiendo del rival, los puntos de ataque del Bitmon cambian
+                if (rival == "Wetar")
+                {
+                    puntos_De_Ataque += multiplicador;
+                }
+
+                else if (rival == "Ent")
+                {
+                    puntos_De_Ataque += 0;
+                }
+
+                else if (rival == "Taplan")
+                {
+                    puntos_De_Ataque -= multiplicador;
+                }
+
                 while (estado_De_Vida == true && peleador.GetEstadoDeVida() == true)
                 {
                     puntos_De_Vida -= peleador.GetPuntosDeAtaque();
