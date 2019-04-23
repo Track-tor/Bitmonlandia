@@ -20,6 +20,7 @@ namespace Bitmonlandia
         protected int hijos = 0;
         protected int meses_vividos = 0;
         protected int puntos_De_Vida_Inicial;
+        protected string terreno;
 
 
         public Bitmon(string tipo_De_Bitmon, int tiempo_De_Vida,int puntos_De_Ataque,int puntos_De_Vida, int [] posicion)
@@ -101,14 +102,13 @@ namespace Bitmonlandia
 
 
 
-
         public void Envejecer()
         {
             tiempo_De_Vida -= 1;
             meses_vividos += 1;
         }
 
-        // El Bitmon recibe el ataque
+        // El Bitmon recibe el ataque 
         public void RecibirAtaque(int puntos_De_Ataque)
         {
             this.puntos_De_Vida -= puntos_De_Ataque;
@@ -204,6 +204,7 @@ namespace Bitmonlandia
             int x = GetPosicion()[0];
             int y = GetPosicion()[1];
             string[,,] tablero = mapa.GetTablero();
+            terreno = tablero[x, y, 0];
             if (tablero[x, y, 0] == "D")
             {
                 mapa.SetTerreno("V", x, y);

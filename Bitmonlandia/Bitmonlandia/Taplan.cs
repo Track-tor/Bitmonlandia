@@ -91,5 +91,14 @@ namespace Bitmonlandia
 
             }
         }
+
+        // Reduce el tiempo de vida del Bitmon dependiendo de el terreno en donde se encuentre
+        public void ReduccionTiempoDeVidaPorTerreno()
+        {
+            if (terreno == "L")
+            {
+                tiempo_De_Vida -= 1;
+            }
+        }
     }
 }

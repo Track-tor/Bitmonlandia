@@ -142,5 +142,14 @@ namespace Bitmonlandia
             string sigla = tipo_De_Bitmon.Substring(0, 3);
             mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
         }
+
+        // Reduce el tiempo de vida del Bitmon dependiendo de el terreno en donde se encuentre
+        public void ReduccionTiempoDeVidaPorTerreno()
+        {
+            if (terreno == "L")
+            {
+                tiempo_De_Vida -= 1;
+            }
+        }
     }
 }

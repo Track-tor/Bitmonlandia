@@ -156,7 +156,7 @@ namespace Bitmonlandia
             return tablero;
         }
 
-        //Funcion para cambiar el terrrno del tablero ya que es private
+        //Funcion para cambiar el terreno del tablero ya que es private
         public void SetTerreno(string terreno, int x, int y)
         {
             this.tablero[x, y, 0] = terreno;

@@ -57,7 +57,7 @@ namespace Bitmonlandia
         /* Reproduccion de Bitmons consiste en que si la pareja es compatible, se instancia dentro de la lista de Bitmons 
         * un nuevo Bitmon de una especie aleatoria
        */
-
+        
         public override void Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia)
         {
             if (pareja.GetNombre() == "Gofue" || pareja.GetNombre() == "Dorvalo" || pareja.GetNombre() == "Doti")
@@ -96,6 +96,15 @@ namespace Bitmonlandia
                 hijos += 1;
                 pareja.SetHijos();
 
+            }
+        }
+
+        // Reduce el tiempo de vida del Bitmon dependiendo de el terreno en donde se encuentre
+        public void ReduccionTiempoDeVidaPorTerreno() 
+        {
+            if (terreno == "A")
+            {
+                tiempo_De_Vida -= 1;
             }
         }
     }
