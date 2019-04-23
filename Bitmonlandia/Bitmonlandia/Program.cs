@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Bitmonlandia
 {
@@ -167,20 +168,26 @@ namespace Bitmonlandia
                 bitmonlandia.SetTiempoTranscurrido();
                 Console.ReadLine();
             }
-            Console.WriteLine("--------------------------------# Estadisticas Finales #-------------------------------------");
             Console.WriteLine("");
-            //-------------------------------------------------------------------
-            //Estadisticas finales
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("--------------------------------# Resumen de la simulacion #-------------------------------------");
+            Console.WriteLine("");
+            File.WriteAllText("resumen.txt", "\\\\\\\\\\\\Resumen de la simulacion\\\\\\\\\\\\\r\n");
+            File.AppendAllText("resumen.txt", "\r\n");
 
             //Tiempo de vida promedio Bitmon:
             Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("Tiempo de vida promedio Bitmon:");
             Console.ForegroundColor = ConsoleColor.White; bitmonlandia.TiempoDeVidaPromedioBitmon();
             Console.WriteLine("");
+            File.AppendAllText("resumen.txt", "\r\n");
 
             ////////////////////////////////////////////
             //Tiempo de vida promedio de cada especie:
             Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("Tiempo de vida promedio de cada especie:");
             Console.ForegroundColor = ConsoleColor.White;
+            File.AppendAllText("resumen.txt", "Tiempo de vida promedio de cada especie:\r\n");
             //Taplan
             bitmonlandia.TiempoDeVidaPromedioEspecie("Taplan");
 
@@ -199,11 +206,13 @@ namespace Bitmonlandia
             //Ent
             bitmonlandia.TiempoDeVidaPromedioEspecie("Ent");
             Console.WriteLine("");
+            File.AppendAllText("resumen.txt", "\r\n");
 
             /////////////////////////////////////////////////
             //Tasa de natalidad de cada especie:
             Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("Tasa de natalidad de cada especie:");
             Console.ForegroundColor = ConsoleColor.White;
+            File.AppendAllText("resumen.txt", "Tasa de natalidad de cada especie:\r\n");
             //Taplan
             bitmonlandia.TasaDeNatalidad("Taplan");
 
@@ -223,11 +232,13 @@ namespace Bitmonlandia
             bitmonlandia.TasaDeNatalidad("Ent");
 
             Console.WriteLine("");
+            File.AppendAllText("resumen.txt", "\r\n");
 
             ////////////////////////////////////////////////
             //Tasa de mortalidad de cada especie:
             Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Tasa de mortalidad de cada especie:");
             Console.ForegroundColor = ConsoleColor.White;
+            File.AppendAllText("resumen.txt", "Tasa de mortalidad de cada especie:\r\n");
             //Taplan
             bitmonlandia.TasaDeMortalidad("Taplan");
 
@@ -247,10 +258,12 @@ namespace Bitmonlandia
             bitmonlandia.TasaDeMortalidad("Ent");
 
             Console.WriteLine("");
+            File.AppendAllText("resumen.txt","\r\n");
             /////////////////////////////////////////////////
             //Cantidad de hijos por especie
             Console.ForegroundColor = ConsoleColor.Cyan; Console.WriteLine("Cantidad de hijos por especie:");
             Console.ForegroundColor = ConsoleColor.White;
+            File.AppendAllText("resumen.txt", "Cantidad de hijos por especie:\r\n");
             //Taplan
             bitmonlandia.HijosPromedioEspecie("Taplan");
 
@@ -267,24 +280,26 @@ namespace Bitmonlandia
             bitmonlandia.HijosPromedioEspecie("Wetar");
 
             Console.WriteLine("");
+            File.AppendAllText("resumen.txt", "\r\n");
 
             ////////////////////////////////////////////////
             //Listado de especies extintas:
+            Console.ForegroundColor = ConsoleColor.Gray; Console.WriteLine("Lista de especies extintas:");
+            Console.ForegroundColor = ConsoleColor.White;
+            File.AppendAllText("resumen.txt", "Lista de especies extintas\r\n");
             bitmonlandia.GetEspeciesExtintas();
 
             Console.WriteLine("");
+            File.AppendAllText("resumen.txt", "\r\n");
             ///////////////////////////////////////////
             //Bithalla:
+            Console.ForegroundColor = ConsoleColor.Magenta; Console.WriteLine("Bithalla:");
+            Console.ForegroundColor = ConsoleColor.White;
+            File.AppendAllText("resumen.txt", "Bithalla:\r\n");
             bitmonlandia.Bithalla();
 
             Console.WriteLine("");
-
-
-
-
-
-
-
+            File.AppendAllText("resumen.txt", "\r\n");
 
             Console.ReadLine();
         }
