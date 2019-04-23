@@ -167,21 +167,20 @@ namespace Bitmonlandia
                 bitmonlandia.SetTiempoTranscurrido();
                 Console.ReadLine();
             }
+            Console.WriteLine("--------------------------------# Estadisticas Finales #-------------------------------------");
             Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            /////////////////////////
+            //-------------------------------------------------------------------
             //Estadisticas finales
 
             //Tiempo de vida promedio Bitmon:
-            Console.WriteLine("Tiempo de vida promedio Bitmon:");
-            bitmonlandia.TiempoDeVidaPromedioBitmon();
+            Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("Tiempo de vida promedio Bitmon:");
+            Console.ForegroundColor = ConsoleColor.White; bitmonlandia.TiempoDeVidaPromedioBitmon();
             Console.WriteLine("");
 
             ////////////////////////////////////////////
             //Tiempo de vida promedio de cada especie:
-            Console.WriteLine("Tiempo de vida promedio de cada especie:");
+            Console.ForegroundColor = ConsoleColor.Yellow; Console.WriteLine("Tiempo de vida promedio de cada especie:");
+            Console.ForegroundColor = ConsoleColor.White;
             //Taplan
             bitmonlandia.TiempoDeVidaPromedioEspecie("Taplan");
 
@@ -203,7 +202,8 @@ namespace Bitmonlandia
 
             /////////////////////////////////////////////////
             //Tasa de natalidad de cada especie:
-            Console.WriteLine("Tasa de natalidad de cada especie:");
+            Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("Tasa de natalidad de cada especie:");
+            Console.ForegroundColor = ConsoleColor.White;
             //Taplan
             bitmonlandia.TasaDeNatalidad("Taplan");
 
@@ -226,7 +226,8 @@ namespace Bitmonlandia
 
             ////////////////////////////////////////////////
             //Tasa de mortalidad de cada especie:
-            Console.WriteLine("Tasa de mortalidad de cada especie:");
+            Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Tasa de mortalidad de cada especie:");
+            Console.ForegroundColor = ConsoleColor.White;
             //Taplan
             bitmonlandia.TasaDeMortalidad("Taplan");
 
@@ -248,7 +249,8 @@ namespace Bitmonlandia
             Console.WriteLine("");
             /////////////////////////////////////////////////
             //Cantidad de hijos por especie
-            Console.WriteLine("Cantidad de hijos por especie:");
+            Console.ForegroundColor = ConsoleColor.Cyan; Console.WriteLine("Cantidad de hijos por especie:");
+            Console.ForegroundColor = ConsoleColor.White;
             //Taplan
             bitmonlandia.HijosPromedioEspecie("Taplan");
 
