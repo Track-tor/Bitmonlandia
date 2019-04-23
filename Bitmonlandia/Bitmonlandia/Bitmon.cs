@@ -120,6 +120,7 @@ namespace Bitmonlandia
             if (puntos_De_Vida <= 0)
             {
                 this.estado_De_Vida = false;
+
             }
         }
 
@@ -208,5 +209,9 @@ namespace Bitmonlandia
                 mapa.SetTerreno("V", x, y);
             }
         }
+
+
+
+
     }
 }

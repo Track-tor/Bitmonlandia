@@ -112,10 +112,17 @@ namespace Bitmonlandia
                         }
 
                         if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == false)
+                        {
                             bitmonlandia.GetMapa().RemoveBitmon(bitmonlandia.GetLista()[bit].GetPosicion()[0], bitmonlandia.GetLista()[bit].GetPosicion()[1], bitmonlandia.GetLista()[bit].GetCelda());
+                 
+                        }
 
                         if (bitmonlandia.GetLista()[pareja].GetEstadoDeVida() == false)
+                        {
                             bitmonlandia.GetMapa().RemoveBitmon(bitmonlandia.GetLista()[pareja].GetPosicion()[0], bitmonlandia.GetLista()[pareja].GetPosicion()[1], bitmonlandia.GetLista()[pareja].GetCelda());
+
+                        }
+
                     }
 
                     /*Comprobamos si sigue vivo este bitmon, para asi saber si moverlo y cambiar el terreno
