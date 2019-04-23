@@ -19,3 +19,10 @@ C:\Users\Matias\Desktop\Universidad\Programacion Orientada a Objetos\Bitmons\Bit
 C:\Users\Matias\Desktop\Universidad\Programacion Orientada a Objetos\Bitmons\Bitmonlandia-master\Bitmonlandia\Bitmonlandia\obj\Debug\Bitmonlandia.csproj.CoreCompileInputs.cache
 C:\Users\Matias\Desktop\Universidad\Programacion Orientada a Objetos\Bitmons\Bitmonlandia-master\Bitmonlandia\Bitmonlandia\obj\Debug\Bitmonlandia.exe
 C:\Users\Matias\Desktop\Universidad\Programacion Orientada a Objetos\Bitmons\Bitmonlandia-master\Bitmonlandia\Bitmonlandia\obj\Debug\Bitmonlandia.pdb
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia\Bitmonlandia\bin\Debug\Bitmonlandia.exe.config
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia\Bitmonlandia\bin\Debug\Bitmonlandia.exe
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia\Bitmonlandia\bin\Debug\Bitmonlandia.pdb
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia\Bitmonlandia\obj\Debug\Bitmonlandia.csprojResolveAssemblyReference.cache
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia\Bitmonlandia\obj\Debug\Bitmonlandia.csproj.CoreCompileInputs.cache
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia\Bitmonlandia\obj\Debug\Bitmonlandia.exe
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia\Bitmonlandia\obj\Debug\Bitmonlandia.pdb

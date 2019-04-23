@@ -27,8 +27,9 @@ namespace Bitmonlandia
                     CambiarEstadoDeVida();
                     peleador.CambiarEstadoDeVida();
                 }
+                SetGanador(estado_De_Vida);
+                peleador.SetGanador(peleador.GetEstadoDeVida());
 
-                peleador.CambiarEstadoDeVida();
             }
 
             return base.Pelea(peleador);

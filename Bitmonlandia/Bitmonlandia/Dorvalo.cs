@@ -30,6 +30,9 @@ namespace Bitmonlandia
                     Console.WriteLine($"{peleador.GetNombre()} perdio vida ");
                     Console.WriteLine($"{GetNombre()} perdio vida ");
                 }
+                //el bitmon que gana se recupera completamente
+                SetGanador(estado_De_Vida);
+                peleador.SetGanador(peleador.GetEstadoDeVida());
             }
 
             return base.Pelea(peleador);

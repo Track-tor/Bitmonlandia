@@ -167,11 +167,13 @@ namespace Bitmonlandia
             //Estadisticas finales
 
             //Tiempo de vida promedio Bitmon:
+            Console.WriteLine("Tiempo de vida promedio Bitmon:");
             bitmonlandia.TiempoDeVidaPromedioBitmon();
             Console.WriteLine("");
 
             ////////////////////////////////////////////
             //Tiempo de vida promedio de cada especie:
+            Console.WriteLine("Tiempo de vida promedio de cada especie:");
             //Taplan
             bitmonlandia.TiempoDeVidaPromedioEspecie("Taplan");
 
@@ -193,6 +195,7 @@ namespace Bitmonlandia
 
             /////////////////////////////////////////////////
             //Tasa de natalidad de cada especie:
+            Console.WriteLine("Tasa de natalidad de cada especie:");
             //Taplan
             bitmonlandia.TasaDeNatalidad("Taplan");
 
@@ -215,6 +218,7 @@ namespace Bitmonlandia
 
             ////////////////////////////////////////////////
             //Tasa de mortalidad de cada especie:
+            Console.WriteLine("Tasa de mortalidad de cada especie:");
             //Taplan
             bitmonlandia.TasaDeMortalidad("Taplan");
 
@@ -236,6 +240,7 @@ namespace Bitmonlandia
             Console.WriteLine("");
             /////////////////////////////////////////////////
             //Cantidad de hijos por especie
+            Console.WriteLine("Cantidad de hijos por especie:");
             //Taplan
             bitmonlandia.HijosPromedioEspecie("Taplan");
 
@@ -269,5 +274,7 @@ namespace Bitmonlandia
 
             Console.ReadLine();
         }
+
+
     }
 }

@@ -19,6 +19,7 @@ namespace Bitmonlandia
         protected int [] posicion= new int[2];
         protected int hijos = 0;
         protected int meses_vividos = 0;
+        protected int puntos_De_Vida_Inicial;
 
 
         public Bitmon(string tipo_De_Bitmon, int tiempo_De_Vida,int puntos_De_Ataque,int puntos_De_Vida, int [] posicion)
@@ -26,7 +27,8 @@ namespace Bitmonlandia
             this.tipo_De_Bitmon = tipo_De_Bitmon;
             this.tiempo_De_Vida = random.Next(10, tiempo_De_Vida);
             this.puntos_De_Ataque = puntos_De_Ataque;
-            this.puntos_De_Vida = puntos_De_Ataque;
+            this.puntos_De_Vida = puntos_De_Vida;
+            this.puntos_De_Vida_Inicial = puntos_De_Vida;
             this.posicion = posicion;
         }
 
@@ -86,6 +88,19 @@ namespace Bitmonlandia
         {
             return meses_vividos;
         }
+
+        // Setters
+
+        public void SetGanador(bool estado)
+        {
+            if (estado)
+            {
+                this.puntos_De_Vida = puntos_De_Vida_Inicial;
+            }
+        }
+
+
+
 
         public void Envejecer()
         {
