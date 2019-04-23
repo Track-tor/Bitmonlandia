@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 namespace Bitmonlandia
 {
     class Wetar:Bitmon
-    {  
+    {
+        //Tiempo de vida maximo segun esta especie = 40
+
         private static Random random = new Random();
 
         public Wetar(string tipo_De_Bitmon, int tiempo_De_Vida, int puntos_De_Ataque, int puntos_De_Vida, int[] posicion) : base(tipo_De_Bitmon, tiempo_De_Vida, puntos_De_Ataque, puntos_De_Vida, posicion)
@@ -35,38 +37,45 @@ namespace Bitmonlandia
         /* Reproduccion de Bitmons consiste en que si la pareja es compatible, se instancia dentro de la lista de Bitmons 
         * un nuevo Bitmon de una especie aleatoria
        */
-        public override Bitmon Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia)
+        public override void Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia)
         {
-            if (pareja.GetNombre() == "Ent" | pareja.GetNombre() == "Taplan" | pareja.GetNombre() == "Wetar" | pareja.GetNombre() == "Doti")
+            if (pareja.GetNombre() == "Taplan" | pareja.GetNombre() == "Wetar" | pareja.GetNombre() == "Doti")
             {
-                int num = random.Next(1, 7); // Numero aleatorio que genere un bitmon aleatorio
+                tiempo_De_Vida += (tiempo_De_Vida * 3) / 10;
+                pareja.SetTiempoDeVida(pareja.GetTiempoDeVida() + (pareja.GetTiempoDeVida() * 3) / 10);
                 int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
                 int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
                 int[] tupla = { c1, c2 };
-                switch (num)
+
+                //Veo si el bitmon caera fuera de los limites del mapa:
+                while (bitmonlandia.GetMapa().GetTablero()[c1, c2, 1] != "   " || bitmonlandia.GetMapa().GetTablero()[c1, c2, 0] != "A")
                 {
-                    case 1:
-                        bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 10, 10, tupla));
+                    c1 = random.Next(size); // Asignacion de una coordenada aleatoria
+                    c2 = random.Next(size); // Asignacion de una coordenada aleatoria
+                }
+
+                //Estadisticas
+                int pa = random.Next(10, ((puntos_De_Ataque + pareja.GetPuntosDeAtaque()) / 2));
+                int pv = random.Next(10, ((puntos_De_Vida + pareja.GetPuntosDeVida()) / 2));
+
+                switch (pareja.GetNombre())
+                {
+                    case "Taplan":
+                        bitmonlandia.añadir_bitmon(new Taplan("Taplan", 50, pa, pv, tupla));
                         break;
-                    case 2:
-                        bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 10, 10, tupla));
+
+                    case "Wetar":
+                        bitmonlandia.añadir_bitmon(new Wetar("Wetar", 40, pa, pv, tupla));
                         break;
-                    case 3:
-                        bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 10, 10, tupla));
-                        break;
-                    case 4:
-                        bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 10, 10, tupla));
-                        break;
-                    case 5:
-                        bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 10, 10, tupla));
-                        break;
-                    case 6:
-                        bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 10, 10, tupla));
+
+                    case "Doti":
+                        bitmonlandia.añadir_bitmon(new Doti("Doti", 30, pa, pv, tupla));
                         break;
                 }
 
+                hijos += 1;
+                pareja.SetHijos();
             }
-            return base.Reproduccion(pareja, size, bitmonlandia);
         }
 
 

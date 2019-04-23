@@ -58,7 +58,8 @@ namespace Bitmonlandia
             /*bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));*/
-            
+            bitmonlandia.Posicionar_bitmons();
+
             Console.WriteLine("--------------------# MAPA INICIAL #---------------------\n");
             bitmonlandia.GetMapa().ImprimirTablero();
 
@@ -145,6 +146,12 @@ namespace Bitmonlandia
 
                 }
 
+                //Si han pasado 3 meses y algun Ent sigue vivo, spawnear uno
+                if (mes % 3 == 0)
+                {
+                    bitmonlandia.PlantarEnt(size);
+                }
+
                 bitmonlandia.GetInformacion();
                 Console.WriteLine("");
                 Console.WriteLine("");
@@ -187,15 +194,47 @@ namespace Bitmonlandia
 
             /////////////////////////////////////////////////
             //Tasa de natalidad de cada especie:
+            //Taplan
+            bitmonlandia.TasaDeNatalidad("Taplan");
 
+            //Dorvalo
+            bitmonlandia.TasaDeNatalidad("Dorvalo");
 
+            //Gofue
+            bitmonlandia.TasaDeNatalidad("Gofue");
 
+            //Doti
+            bitmonlandia.TasaDeNatalidad("Doti");
 
+            //Wetar
+            bitmonlandia.TasaDeNatalidad("Wetar");
+
+            //Ent
+            bitmonlandia.TasaDeNatalidad("Ent");
+
+            Console.WriteLine("");
 
             ////////////////////////////////////////////////
             //Tasa de mortalidad de cada especie:
+            //Taplan
+            bitmonlandia.TasaDeMortalidad("Taplan");
 
+            //Dorvalo
+            bitmonlandia.TasaDeMortalidad("Dorvalo");
 
+            //Gofue
+            bitmonlandia.TasaDeMortalidad("Gofue");
+
+            //Doti
+            bitmonlandia.TasaDeMortalidad("Doti");
+
+            //Wetar
+            bitmonlandia.TasaDeMortalidad("Wetar");
+
+            //Ent
+            bitmonlandia.TasaDeMortalidad("Ent");
+
+            Console.WriteLine("");
 
 
 

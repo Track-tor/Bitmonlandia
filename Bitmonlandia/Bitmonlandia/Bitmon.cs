@@ -24,13 +24,17 @@ namespace Bitmonlandia
         public Bitmon(string tipo_De_Bitmon, int tiempo_De_Vida,int puntos_De_Ataque,int puntos_De_Vida, int [] posicion)
         {
             this.tipo_De_Bitmon = tipo_De_Bitmon;
-            this.tiempo_De_Vida = tiempo_De_Vida;
+            this.tiempo_De_Vida = random.Next(10, tiempo_De_Vida);
             this.puntos_De_Ataque = puntos_De_Ataque;
             this.puntos_De_Vida = puntos_De_Ataque;
             this.posicion = posicion;
         }
 
         //Gets De Atributos
+        public int GetCelda()
+        {
+            return celda;
+        }
 
         public bool GetEstadoDeVida()
         {
@@ -58,9 +62,24 @@ namespace Bitmonlandia
             return posicion;
         }
 
-        public int GetCelda()
+        public int GetTiempoDeVida()
         {
-            return celda;
+            return tiempo_De_Vida;
+        }
+
+        public void SetTiempoDeVida(int nuevo_Tiempo_De_Vida)
+        {
+            tiempo_De_Vida = nuevo_Tiempo_De_Vida;
+        }
+
+        public int GetHijos()
+        {
+            return hijos;
+        }
+
+        public void SetHijos()
+        {
+            hijos += 1;
         }
 
         public int GetMesesVividos()
@@ -74,9 +93,6 @@ namespace Bitmonlandia
             meses_vividos += 1;
         }
 
-        //Sets
-
-      
         // El Bitmon recibe el ataque
         public void RecibirAtaque(int puntos_De_Ataque)
         {
@@ -100,9 +116,8 @@ namespace Bitmonlandia
         }
 
         // Reproduccion de Bitmons
-        public virtual Bitmon Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia) 
+        public virtual void Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia) 
         {
-            return pareja;
         }
 
         // Movimiento de los Bitmons

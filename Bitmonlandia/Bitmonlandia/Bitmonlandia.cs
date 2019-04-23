@@ -8,10 +8,13 @@ namespace Bitmonlandia
 {
     class Bitmonlandia
     {
+        private Random random = new Random();
+
         private int seed; //atricuto que dicta la configuracion inicial del mapa y de los bitmons
         private Mapa mapa; //atributo que guarda el mapa actual de la simulacion del mundo bitmon
         private List<Bitmon> lista_bitmons_totales = new List<Bitmon>(); //lista con todos los bitmons presentes en el mapa (vivos y muertos)
         private int tiempo_Transcurrido = 0;
+        private int hijos_ents = 0;
 
         public Bitmonlandia(int seed)
         {
@@ -42,9 +45,7 @@ namespace Bitmonlandia
             {
                 if (lista_bitmons_totales[b].GetEstadoDeVida() == false)
                 {
-                    lista_bitmons_totales.Remove(lista_bitmons_totales[b]);
                     muertos++;
-                    b--;
                 }
             }
 
@@ -61,9 +62,16 @@ namespace Bitmonlandia
         {
             lista_bitmons_totales.Add(bitmon);
         }
-        public void Posicionar_bitmons(List<Bitmon> lista_bitmons_totales, string[] tablero)
-        {
 
+        public void Posicionar_bitmons()
+        {
+            for (int bit =0; bit<lista_bitmons_totales.Count(); bit++)
+            {
+                string sigla = lista_bitmons_totales[bit].GetNombre().Substring(0, 3);
+                int x = lista_bitmons_totales[bit].GetPosicion()[0];
+                int y = lista_bitmons_totales[bit].GetPosicion()[1];
+                mapa.SetBitmon(sigla, x, y, 1);
+            }
         }
 
         //Funcion que imprime el tablero en pantalla y da acceso a el map que es privado
@@ -80,6 +88,27 @@ namespace Bitmonlandia
                 Console.WriteLine("{0} : posicion:[{1},{2}], hp: {3}, estado:{4}",lista_bitmons_totales[i].GetNombre(), lista_bitmons_totales[i].GetPosicion()[0], lista_bitmons_totales[i].GetPosicion()[1], lista_bitmons_totales[i].GetPuntosDeVida(), lista_bitmons_totales[i].GetEstadoDeVida());
 
             }
+        }
+
+        //Spawnear Ent
+        public void PlantarEnt(int size)
+        {
+            int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
+            int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
+            int[] tupla = { c1, c2 };
+
+            //Veo si el bitmon caera fuera de los limites del mapa:
+            while (GetMapa().GetTablero()[c1, c2, 1] != "   ")
+            {
+                c1 = random.Next(size); // Asignacion de una coordenada aleatoria
+                c2 = random.Next(size); // Asignacion de una coordenada aleatoria
+            }
+
+            //Estadisticas
+            int pa = random.Next(10, 50);
+            int pv = random.Next(10, 100);
+            añadir_bitmon(new Ent("Ent", 15, pa, pv, tupla));
+            hijos_ents += 1;
         }
 
         //Tiempo de vida promedio Bitmon:
@@ -134,12 +163,72 @@ namespace Bitmonlandia
             }
         }
 
+        //Tasas de natalidad de cada especie:
+        public void TasaDeNatalidad(string especie)
+        {
+            float n_nacimientos = 0;
+            float poblacion_total = 0;
+            if (especie != "Ent")
+            {
+                for (int bit = 0; bit < GetLista().Count(); bit++)
+                {
+                    if (GetLista()[bit].GetEstadoDeVida() == true && GetLista()[bit].GetNombre() == especie)
+                    {
+                        poblacion_total += (float)GetLista()[bit].GetMesesVividos();
+                        n_nacimientos += (float)GetLista()[bit].GetHijos();
+                    }
+                }
+            }
 
+            else
+            {
+                for (int bit = 0; bit < GetLista().Count(); bit++)
+                {
+                    if (GetLista()[bit].GetEstadoDeVida() == true && GetLista()[bit].GetNombre() == especie)
+                    {
+                        poblacion_total += (float)GetLista()[bit].GetMesesVividos();
+                    }
+                }
 
+                n_nacimientos = hijos_ents;
+            }
 
+            if (n_nacimientos > 0 && poblacion_total>0)
+            {
+                int resultado = ((int)(n_nacimientos / poblacion_total))*1000;
+                Console.WriteLine("Tasa bruta de natalidad {0}: {1}", especie, resultado);
+            }
 
+            else
+            {
+                Console.WriteLine("No hay un tasa bruta de nacimiento {0} ya que se ha extinguido la especia", especie);
+            }
 
+        }
 
+        //Tasas de mortalidad de cada especie:
+        public void TasaDeMortalidad(string especie)
+        {
+            float n_muertos = 0;
+            float poblacion_total = GetLista().Count();
+            for (int bit = 0; bit < GetLista().Count(); bit++)
+            {
+                if (GetLista()[bit].GetEstadoDeVida() == false && GetLista()[bit].GetNombre() == especie)
+                {
+                    n_muertos += 1;
+                }
+            }
 
+            if (n_muertos > 0 && poblacion_total > 0)
+            {
+                int resultado = ((int)(n_muertos / poblacion_total))*100;
+                Console.WriteLine("Tasa bruta de mortalidad {0}: {1}", especie, resultado);
+            }
+
+            else
+            {
+                Console.WriteLine("No hay un tasa bruta de mortalidad {0} ya que no ha muerto ninguno", especie);
+            }
+        }
     }
 }
