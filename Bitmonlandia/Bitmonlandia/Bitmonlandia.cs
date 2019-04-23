@@ -35,22 +35,6 @@ namespace Bitmonlandia
             tiempo_Transcurrido += 1;
         }
 
-        /*recibe como argumneto la lista de bitmons vivos y muertos y
-          entrega la cantidad de bitmons que se encuentran en el bithalla, si esta
-          muerto lo elimino de la lista y resto en uno el indice b*/
-        public int Bithalla(List<Bitmon> lista_bitmons_totales)
-        {
-            int muertos = 0;
-            for (int b = 0; b < lista_bitmons_totales.Count(); b++)
-            {
-                if (lista_bitmons_totales[b].GetEstadoDeVida() == false)
-                {
-                    muertos++;
-                }
-            }
-
-            return muertos;
-        }
 
         public List<Bitmon> GetLista()
         {
@@ -352,6 +336,96 @@ namespace Bitmonlandia
                 if (n_wet == 0)
                 {
                     Console.WriteLine("Wetar");
+                }
+            }
+        }
+
+        //Bithalla:
+        public void Bithalla()
+        {
+            int n_tap = 0;
+            int n_dor = 0;
+            int n_dot = 0;
+            int n_ent = 0;
+            int n_gof = 0;
+            int n_wet = 0;
+            float muertos_total = 0;
+
+            for (int bit = 0; bit < GetLista().Count(); bit++)
+            {
+                if (GetLista()[bit].GetEstadoDeVida() == false)
+                {
+                    switch (GetLista()[bit].GetNombre())
+                    {
+                        case "Taplan":
+                            n_tap += 1;
+                            break;
+
+                        case "Dorvalo":
+                            n_dor += 1;
+                            break;
+
+                        case "Doti":
+                            n_dot += 1;
+                            break;
+
+                        case "Ent":
+                            n_ent += 1;
+                            break;
+
+                        case "Gofue":
+                            n_gof += 1;
+                            break;
+
+                        case "Wetar":
+                            n_wet += 1;
+                            break;
+                    }
+                    muertos_total += 1;
+                }
+            }
+
+            if (n_tap == 0 && n_dor == 0 && n_dot == 0 && n_ent == 0 && n_wet == 0 && n_gof == 0)
+            {
+                Console.WriteLine("Bithalla no tiene habitantes");
+            }
+
+            else
+            {
+                if (n_tap != 0)
+                {
+                    float porcentaje = ((float)n_tap) / muertos_total;
+                    Console.WriteLine("Cantidad de Taplan en el Bithalla: {0}, que son el %{1} del Bithalla", n_tap, porcentaje);
+                }
+
+                if (n_dor != 0)
+                {
+                    float porcentaje = ((float)n_dor) / muertos_total;
+                    Console.WriteLine("Cantidad de Taplan en el Bithalla: {0}, que son el %{1} del Bithalla", n_dor, porcentaje);
+                }
+
+                if (n_dot != 0)
+                {
+                    float porcentaje = ((float)n_dot) / muertos_total;
+                    Console.WriteLine("Cantidad de Taplan en el Bithalla: {0}, que son el %{1} del Bithalla", n_dot, porcentaje);
+                }
+
+                if (n_ent != 0)
+                {
+                    float porcentaje = ((float)n_ent) / muertos_total;
+                    Console.WriteLine("Cantidad de Taplan en el Bithalla: {0}, que son el %{1} del Bithalla", n_ent, porcentaje);
+                }
+
+                if (n_gof != 0)
+                {
+                    float porcentaje = ((float)n_gof) / muertos_total;
+                    Console.WriteLine("Cantidad de Taplan en el Bithalla: {0}, que son el %{1} del Bithalla", n_gof, porcentaje);
+                }
+
+                if (n_wet != 0)
+                {
+                    float porcentaje = ((float)n_wet) / muertos_total;
+                    Console.WriteLine("Cantidad de Taplan en el Bithalla: {0}, que son el %{1} del Bithalla", n_wet, porcentaje);
                 }
             }
         }

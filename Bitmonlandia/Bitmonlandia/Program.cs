@@ -105,7 +105,8 @@ namespace Bitmonlandia
                             bitmonlandia.GetLista()[bit].Pelea(bitmonlandia.GetLista()[pareja]);
 
                             //Si no funciona, significa que se llevan bien para reproducirse
-                            if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == true && bitmonlandia.GetLista()[pareja].GetEstadoDeVida() == true)
+                            if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == true && bitmonlandia.GetLista(
+                                )[pareja].GetEstadoDeVida() == true)
                             {
                                 bitmonlandia.GetLista()[bit].Reproduccion(bitmonlandia.GetLista()[pareja], size, bitmonlandia);
                             }
@@ -272,6 +273,10 @@ namespace Bitmonlandia
             Console.WriteLine("");
             ///////////////////////////////////////////
             //Bithalla:
+            bitmonlandia.Bithalla();
+
+            Console.WriteLine("");
+
 
 
 
