@@ -71,7 +71,7 @@ namespace Bitmonlandia
 
             for (int mes = 0; mes < cantidad_meses; mes++)
             {
-                Console.WriteLine("Mes: {0}", mes);
+                
 
                 //ciclo for para que los bitmons se muevan
                 for (int bit = 0; bit < bitmonlandia.GetLista().Count; bit++)
@@ -92,6 +92,7 @@ namespace Bitmonlandia
 
                 }
                 //se imprime el tablero para ver los movimientos que ocurrieron dentro del mes
+                Console.WriteLine("Mes: {0}", mes);
                 Console.WriteLine("");
                 Console.WriteLine("Los bitmons se han movido!");
                 bitmonlandia.GetMapa().ImprimirTablero();
@@ -184,7 +185,8 @@ namespace Bitmonlandia
                     bitmonlandia.PlantarEnt(size);
                 }
 
-                bitmonlandia.GetInformacion();
+                //bitmonlandia.GetInformacion();
+                Console.WriteLine("Mes: {0}", mes);
                 Console.WriteLine("");
                 Console.WriteLine("");
                 bitmonlandia.GetMapa().ImprimirTablero();

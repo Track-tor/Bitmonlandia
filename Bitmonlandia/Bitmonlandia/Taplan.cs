@@ -40,7 +40,7 @@ namespace Bitmonlandia
                     peleador.RecibirAtaque(puntos_De_Ataque);
                     CambiarEstadoDeVida();
                     peleador.CambiarEstadoDeVida();
-                    Console.WriteLine($"{puntos_De_Ataque} puntos de Ataque Taplan");
+                    //Console.WriteLine($"{puntos_De_Ataque} puntos de Ataque Taplan");
                 }
                 SetGanador(estado_De_Vida);
                 peleador.SetGanador(peleador.GetEstadoDeVida());

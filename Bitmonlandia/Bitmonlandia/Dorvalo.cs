@@ -141,7 +141,7 @@ namespace Bitmonlandia
             celda = celda_nueva;
             string sigla = tipo_De_Bitmon.Substring(0, 3);
             mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
-            Console.WriteLine($"Tiempo de vida Dorvalo: {tiempo_De_Vida}");
+            //Console.WriteLine($"Tiempo de vida Dorvalo: {tiempo_De_Vida}");
         }
 
         // Reduce el tiempo de vida del Bitmon dependiendo de el terreno en donde se encuentre

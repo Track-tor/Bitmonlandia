@@ -123,6 +123,7 @@ namespace Bitmonlandia
                 this.estado_De_Vida = false;
                 puntos_De_Ataque = 0;
                 puntos_De_Vida = 0;
+                Console.WriteLine("{0} ha muerto!",GetNombre());
             }
         }
 
