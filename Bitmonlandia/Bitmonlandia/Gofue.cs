@@ -100,12 +100,22 @@ namespace Bitmonlandia
         }
 
         // Reduce el tiempo de vida del Bitmon dependiendo de el terreno en donde se encuentre
-        public void ReduccionTiempoDeVidaPorTerreno() 
+        public override void Envejecer(Mapa mapa)
         {
+            int x = GetPosicion()[0];
+            int y = GetPosicion()[1];
+            string[,,] tablero = mapa.GetTablero();
+            terreno = tablero[x, y, 0];
+
             if (terreno == "A")
+            {
+                tiempo_De_Vida -= 2;
+            }
+            else
             {
                 tiempo_De_Vida -= 1;
             }
+            meses_vividos += 1;
         }
     }
 }

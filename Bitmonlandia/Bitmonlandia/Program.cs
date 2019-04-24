@@ -149,7 +149,7 @@ namespace Bitmonlandia
                     //Si sigue vivo despues de todo, hacerlo envejecer
                     if (bitmonlandia.GetLista()[bit].GetEstadoDeVida()==true)
                     {
-                        bitmonlandia.GetLista()[bit].Envejecer();
+                        bitmonlandia.GetLista()[bit].Envejecer(bitmonlandia.GetMapa());
                     }
 
                 }

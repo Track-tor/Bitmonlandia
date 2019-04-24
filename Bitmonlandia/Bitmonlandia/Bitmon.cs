@@ -101,8 +101,8 @@ namespace Bitmonlandia
         }
 
 
-
-        public void Envejecer()
+        //Les quita tiempo de vida a los bitmons
+        public virtual void Envejecer(Mapa mapa)
         {
             tiempo_De_Vida -= 1;
             meses_vividos += 1;
@@ -127,7 +127,6 @@ namespace Bitmonlandia
         // Pelea entre bitmons
         public virtual Bitmon Pelea(Bitmon peleador) 
         {
-
             return peleador;
         }
 

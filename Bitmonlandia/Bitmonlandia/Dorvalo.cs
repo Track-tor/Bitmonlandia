@@ -111,7 +111,7 @@ namespace Bitmonlandia
             int y = posicion[1];
             int vertical = random.Next(-2, 3);
             int horizontal = random.Next(-2, 3);
-
+            
             //Veo si el bitmon caera fuera de los limites del mapa:
             while ((x + vertical < 0) || (y + horizontal < 0) || (x + vertical >= cant_filas) || (y + horizontal >= cant_columnas))
             {
@@ -141,15 +141,26 @@ namespace Bitmonlandia
             celda = celda_nueva;
             string sigla = tipo_De_Bitmon.Substring(0, 3);
             mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
+            Console.WriteLine($"Tiempo de vida Dorvalo: {tiempo_De_Vida}");
         }
 
         // Reduce el tiempo de vida del Bitmon dependiendo de el terreno en donde se encuentre
-        public void ReduccionTiempoDeVidaPorTerreno()
+        public override void Envejecer(Mapa mapa)
         {
+            int x = GetPosicion()[0];
+            int y = GetPosicion()[1];
+            string[,,] tablero = mapa.GetTablero();
+            terreno = tablero[x, y, 0];
+
             if (terreno == "L")
+            {
+                tiempo_De_Vida -= 2;
+            }
+            else
             {
                 tiempo_De_Vida -= 1;
             }
+            meses_vividos += 1;
         }
     }
 }
