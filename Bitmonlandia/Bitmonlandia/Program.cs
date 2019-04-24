@@ -73,9 +73,35 @@ namespace Bitmonlandia
             {
                 Console.WriteLine("Mes: {0}", mes);
 
+                //ciclo for para que los bitmons se muevan
+                for (int bit = 0; bit < bitmonlandia.GetLista().Count; bit++)
+                {
+                    //vemos si es que el bitmon no esta muerto
+                    if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == false)
+                    {
+                        continue;
+                    }
+
+                    string especie = bitmonlandia.GetLista()[bit].GetNombre();
+
+                    //Movimiento:
+                    if (especie != "Ent")
+                    {
+                        bitmonlandia.GetLista()[bit].Movimiento(bitmonlandia.GetMapa());
+                    }
+
+                }
+                //se imprime el tablero para ver los movimientos que ocurrieron dentro del mes
+                Console.WriteLine("");
+                Console.WriteLine("Los bitmons se han movido!");
+                bitmonlandia.GetMapa().ImprimirTablero();
+                Console.WriteLine("Presione una ENTER para continuar");
+                Console.ReadLine();
+
                 //Se recorre la lista de bitmons para ver si hay bitmons en la misma casilla
                 for (int bit = 0; bit < bitmonlandia.GetLista().Count; bit++)
                 {
+                    // vemos si es que el bitmon no esta muerto
                     if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == false)
                     {
                         continue;
@@ -84,11 +110,6 @@ namespace Bitmonlandia
                     //Selecciono el primer bitmon y veo su especie tambien:
                     string especie = bitmonlandia.GetLista()[bit].GetNombre();
 
-                    //Moverse:
-                    if (especie != "Ent")
-                    {
-                        bitmonlandia.GetLista()[bit].Movimiento(bitmonlandia.GetMapa());
-                    }
 
                     //Y recorro la lista en busca de una coincidencia
                     for (int pareja = 0; pareja < bitmonlandia.GetLista().Count; pareja++)
@@ -137,7 +158,7 @@ namespace Bitmonlandia
                             continue;
                         }
 
-                    //Ahora que sabemos que esta vivo lo movemos y cambiamos el terreno si corresponde
+                    //Ahora que sabemos que esta vivo cambiamos el terreno si corresponde
                     //Transformar terreno:
                     if (especie == "Gofue")
                         {
