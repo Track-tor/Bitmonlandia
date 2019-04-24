@@ -21,6 +21,39 @@ namespace Bitmonlandia
         {
             this.seed = seed;
             mapa = new Mapa(seed);
+
+
+            //Se generan los bitmons predeterminados dependiendo de la seed
+            if(seed == 1)
+            {
+                int[] tupla = { 1, 2 };
+                int[] tupla2 = { 4, 3 };
+                int[] tupla3 = { 4, 4 };
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla2));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla3));
+                PosicionInicialBitmons();
+            }
+
+            if (seed == 2)
+            {
+                int[] tupla = { 1, 2 };
+                int[] tupla2 = { 4, 3 };
+                int[] tupla3 = { 3, 4 };
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla2));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla3));
+            }
+
+            if (seed == 3)
+            {
+                int[] tupla = { 1, 2 };
+                int[] tupla2 = { 4, 3 };
+                int[] tupla3 = { 6, 0 };
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla2));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla3));
+            }
         }
 
         //Metodos:

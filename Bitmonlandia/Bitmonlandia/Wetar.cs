@@ -96,46 +96,46 @@ namespace Bitmonlandia
 
         public override void Movimiento(Mapa mapa)
         {
+            string[,,] tablero = mapa.GetTablero();
+            int cant_filas = tablero.GetLength(0);
+            int cant_columnas = tablero.GetLength(1);
+            int x = posicion[0];
+            int y = posicion[1];
+            int vertical = random.Next(-1, 2);
+            int horizontal = random.Next(-1, 2);
+
+            //Veo si el bitmon caera fuera de los limites del mapa:
+            while (((x + vertical) < 0) || ((y + horizontal) < 0) || ((x + vertical) >= cant_filas) || ((y + horizontal) >= cant_columnas) || (tablero[x+vertical,y+horizontal,0] != "A"))
             {
-                string[,,] tablero = mapa.GetTablero();
-                int cant_filas = tablero.GetLength(0);
-                int cant_columnas = tablero.GetLength(1);
-                int x = posicion[0];
-                int y = posicion[1];
-                int vertical = random.Next(-1, 2);
-                int horizontal = random.Next(-1, 2);
+                vertical = random.Next(-1, 2);
+                horizontal = random.Next(-1, 2);
 
-                //Veo si el bitmon caera fuera de los limites del mapa:
-                while (((x + vertical) < 0) || ((y + horizontal) < 0) || ((x + vertical) >= cant_filas) || ((y + horizontal) >= cant_columnas) || (tablero[x+vertical,y+horizontal,0] != "A"))
-                {
-                    vertical = random.Next(-1, 2);
-                    horizontal = random.Next(-1, 2);
-
-                }
-                int celda_antigua = celda;
-                int celda_nueva = celda;
-
-                //Veo si esta ocupada la celda a la cual se va a mover
-                while (tablero[x + vertical, y + horizontal, celda_nueva] != "   ")
-                {
-                    //Si ya no hay mas espacio a donde se va a mover, se quedar en el mismo lugar
-                    if (celda_nueva == 2 && (tablero[x + vertical, y + horizontal, celda_nueva] != "   "))
-                    {
-                        celda_nueva = celda;
-                        vertical = 0;
-                        horizontal = 0;
-                        break;
-                    }
-                    celda_nueva++;
-                }
-
-                mapa.RemoveBitmon(x, y, celda_antigua);
-                posicion[0] += vertical;
-                posicion[1] += horizontal;
-                celda = celda_nueva;
-                string sigla = tipo_De_Bitmon.Substring(0, 3);
-                mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
             }
+
+            int celda_antigua = celda;
+            int celda_nueva = celda;
+
+            //Veo si esta ocupada la celda a la cual se va a mover
+            while (tablero[x + vertical, y + horizontal, celda_nueva] != "   ")
+            {
+                //Si ya no hay mas espacio a donde se va a mover, se quedar en el mismo lugar
+                if (celda_nueva == 2 && (tablero[x + vertical, y + horizontal, celda_nueva] != "   "))
+                {
+                    celda_nueva = celda;
+                    vertical = 0;
+                    horizontal = 0;
+                    break;
+                }
+                celda_nueva++;
+            }
+
+            mapa.RemoveBitmon(x, y, celda_antigua);
+            posicion[0] += vertical;
+            posicion[1] += horizontal;
+            celda = celda_nueva;
+            string sigla = tipo_De_Bitmon.Substring(0, 3);
+            mapa.SetBitmon(sigla, posicion[0], posicion[1], celda_nueva);
+            
         }
     }
 }

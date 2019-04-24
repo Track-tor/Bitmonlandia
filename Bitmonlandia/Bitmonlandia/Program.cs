@@ -44,22 +44,19 @@ namespace Bitmonlandia
 
             }
             //------------------------ Instancia de Bitmons---------------------------------------------
-            int[] tupla = { 1, 2 };
-            int[] tupla2 = { 4, 3 };
-            int[] tupla3 = { 4, 4 };
+            
+
+            // TO DO : LOS BITMONS HAY QUE INSTANCIARLOS DENTRO DE BITMONLANDIA(y bien posicionados)!!!
             /*bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5,10,tupla));
-            bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5, 10, tupla));*/
-            bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10 , 50, 100, tupla));
-            //bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 5, 10, tupla2));
-            /*bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 5, 10, tupla2));
             bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
-            */bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla2));
-            /*bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla));*/
-            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla3));
-            /*bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla));
+            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
             bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));*/
-            bitmonlandia.PosicionInicialBitmons();
+            
 
             Console.WriteLine("--------------------# MAPA INICIAL #---------------------\n");
             bitmonlandia.GetMapa().ImprimirTablero();
