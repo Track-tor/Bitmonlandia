@@ -126,7 +126,6 @@ namespace Bitmonlandia
         {
             int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
             int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
-            int[] tupla = { c1, c2 };
 
             //Veo si el bitmon caera fuera de los limites del mapa:
             while (GetMapa().GetTablero()[c1, c2, 1] != "   " && GetMapa().GetTablero()[c1, c2, 2] != "   ")
@@ -134,6 +133,8 @@ namespace Bitmonlandia
                 c1 = random.Next(size); // Asignacion de una coordenada aleatoria
                 c2 = random.Next(size); // Asignacion de una coordenada aleatoria
             }
+
+            int[] tupla = { c1, c2 };
 
             //Estadisticas
             int pa = random.Next(10, 50);

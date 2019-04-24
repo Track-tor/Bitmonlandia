@@ -60,7 +60,6 @@ namespace Bitmonlandia
                 pareja.SetTiempoDeVida(pareja.GetTiempoDeVida() + (pareja.GetTiempoDeVida() * 3) / 10);
                 int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
                 int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
-                int[] tupla = { c1, c2 };
 
                 //Veo si el bitmon caera fuera de los limites del mapa:
                 while (bitmonlandia.GetMapa().GetTablero()[c1, c2, 1] != "   " && bitmonlandia.GetMapa().GetTablero()[c1, c2, 2] != "   ")
@@ -68,6 +67,8 @@ namespace Bitmonlandia
                     c1 = random.Next(size); // Asignacion de una coordenada aleatoria
                     c2 = random.Next(size); // Asignacion de una coordenada aleatoria
                 }
+
+                int[] tupla = { c1, c2 };
 
                 //Estadisticas
                 int pa = random.Next(10, ((puntos_De_Ataque + pareja.GetPuntosDeAtaque()) / 2));
