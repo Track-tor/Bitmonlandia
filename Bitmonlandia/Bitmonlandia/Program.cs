@@ -113,16 +113,19 @@ namespace Bitmonlandia
                             }
                         }
 
+
+
+
                         if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == false)
                         {
                             bitmonlandia.GetMapa().RemoveBitmon(bitmonlandia.GetLista()[bit].GetPosicion()[0], bitmonlandia.GetLista()[bit].GetPosicion()[1], bitmonlandia.GetLista()[bit].GetCelda());
-                 
+                            bitmonlandia.GetLista()[bit].LimpiarCadaver();
                         }
 
                         if (bitmonlandia.GetLista()[pareja].GetEstadoDeVida() == false)
                         {
                             bitmonlandia.GetMapa().RemoveBitmon(bitmonlandia.GetLista()[pareja].GetPosicion()[0], bitmonlandia.GetLista()[pareja].GetPosicion()[1], bitmonlandia.GetLista()[pareja].GetCelda());
-
+                            bitmonlandia.GetLista()[pareja].LimpiarCadaver();
                         }
 
                     }

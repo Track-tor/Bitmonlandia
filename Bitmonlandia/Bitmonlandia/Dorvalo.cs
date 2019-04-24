@@ -111,7 +111,7 @@ namespace Bitmonlandia
             int y = posicion[1];
             int vertical = random.Next(-2, 3);
             int horizontal = random.Next(-2, 3);
-            
+
             //Veo si el bitmon caera fuera de los limites del mapa:
             while ((x + vertical < 0) || (y + horizontal < 0) || (x + vertical >= cant_filas) || (y + horizontal >= cant_columnas))
             {

@@ -101,6 +101,7 @@ namespace Bitmonlandia
         }
 
 
+
         //Les quita tiempo de vida a los bitmons
         public virtual void Envejecer(Mapa mapa)
         {
@@ -120,13 +121,15 @@ namespace Bitmonlandia
             if (puntos_De_Vida <= 0)
             {
                 this.estado_De_Vida = false;
-
+                puntos_De_Ataque = 0;
+                puntos_De_Vida = 0;
             }
         }
 
         // Pelea entre bitmons
         public virtual Bitmon Pelea(Bitmon peleador) 
         {
+
             return peleador;
         }
 
@@ -209,8 +212,12 @@ namespace Bitmonlandia
                 mapa.SetTerreno("V", x, y);
             }
         }
-
-
+        public void LimpiarCadaver()
+        {
+            celda = -1;
+            posicion[0] = -1;
+            posicion[1] = -1;
+        }
 
 
     }
