@@ -70,11 +70,15 @@ namespace Bitmonlandia
                 int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
                 int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
 
+                Console.WriteLine("{0},{1}", c1, c2);
                 //Veo si el bitmon caera fuera de los limites del mapa:
                 while (bitmonlandia.GetMapa().GetTablero()[c1, c2, 1] != "   " && bitmonlandia.GetMapa().GetTablero()[c1, c2, 2] != "   ")
                 {
                     c1 = random.Next(size); // Asignacion de una coordenada aleatoria
+                    Console.WriteLine("c1: {0}", c1);
                     c2 = random.Next(size); // Asignacion de una coordenada aleatoria
+                    Console.WriteLine("c2: {0}", c2);
+                    Console.WriteLine("");
                 }
 
                 int[] tupla = { c1, c2 };

@@ -26,12 +26,26 @@ namespace Bitmonlandia
             //Se generan los bitmons predeterminados dependiendo de la seed
             if(seed == 1)
             {
-                int[] tupla = { 1, 2 };
-                int[] tupla2 = { 4, 3 };
-                int[] tupla3 = { 4, 4 };
+                int[] tupla = { 0, 0 };
+                int[] tupla3 = { 0, 4 };
+                int[] tupla5 = { 4, 4 };
+                int[] tupla6 = { 4, 3 };
+                int[] tupla7 = { 4, 0 };
+                int[] tupla9 = { 0, 1 };
+                int[] tupla10 = { 1, 2 };
+                int[] tupla11 = { 2, 2 };
+                int[] tupla12 = { 3, 2 };
+                int[] tupla13 = { 2, 3 };
                 añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla));
-                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla2));
-                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla3));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla3));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla5));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla6));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla7));
+                añadir_bitmon(new Ent("Ent", 10, 80, 100, tupla9));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla10));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla11));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla12));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla13));
                 PosicionInicialBitmons();
             }
 
@@ -127,11 +141,15 @@ namespace Bitmonlandia
             int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
             int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
 
+            Console.WriteLine("{0},{1}", c1, c2);
             //Veo si el bitmon caera fuera de los limites del mapa:
             while (GetMapa().GetTablero()[c1, c2, 1] != "   " && GetMapa().GetTablero()[c1, c2, 2] != "   ")
             {
                 c1 = random.Next(size); // Asignacion de una coordenada aleatoria
+                Console.WriteLine("c1: {0}", c1);
                 c2 = random.Next(size); // Asignacion de una coordenada aleatoria
+                Console.WriteLine("c2: {0}", c2);
+                Console.WriteLine("");
             }
 
             int[] tupla = { c1, c2 };
