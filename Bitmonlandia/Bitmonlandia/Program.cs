@@ -9,6 +9,8 @@ namespace Bitmonlandia
 {
     class Program
     {
+        static Random random = new Random();
+
         static void Main(string[] args)
         {
             //-----------------------------------------------MENU----------------------------------------------------------------------
@@ -110,13 +112,8 @@ namespace Bitmonlandia
 
 
                     //Y recorro la lista en busca de una coincidencia
-                    for (int pareja = 0; pareja < bitmonlandia.GetLista().Count; pareja++)
+                    for (int pareja = bit+1; pareja < bitmonlandia.GetLista().Count; pareja++)
                     {
-                        //No queremos que se junte con él mismo asi que lo omitimos
-                        if (pareja == bit)
-                        {
-                            continue;
-                        }
 
                         if (bitmonlandia.GetLista()[bit].GetPosicion()[0] == bitmonlandia.GetLista()[pareja].GetPosicion()[0] && bitmonlandia.GetLista()[bit].GetPosicion()[1] == bitmonlandia.GetLista()[pareja].GetPosicion()[1
                             ])
@@ -125,10 +122,11 @@ namespace Bitmonlandia
                             bitmonlandia.GetLista()[bit].Pelea(bitmonlandia.GetLista()[pareja]);
 
                             //Si no funciona, significa que se llevan bien para reproducirse
-                            if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == true && bitmonlandia.GetLista(
-                                )[pareja].GetEstadoDeVida() == true)
+                            if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == true && bitmonlandia.GetLista()[pareja].GetEstadoDeVida() == true)
                             {
-                                bitmonlandia.GetLista()[bit].Reproduccion(bitmonlandia.GetLista()[pareja], size, bitmonlandia);
+                                int prob = random.Next(101);
+                                if(prob <= 30)
+                                    bitmonlandia.GetLista()[bit].Reproduccion(bitmonlandia.GetLista()[pareja], size, bitmonlandia);
                             }
                         }
 

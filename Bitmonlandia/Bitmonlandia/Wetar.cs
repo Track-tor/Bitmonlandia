@@ -54,7 +54,7 @@ namespace Bitmonlandia
        */
         public override void Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia)
         {
-            if (pareja.GetNombre() == "Taplan" | pareja.GetNombre() == "Wetar" | pareja.GetNombre() == "Doti")
+            if (pareja.GetNombre() == "Taplan" || pareja.GetNombre() == "Wetar" || pareja.GetNombre() == "Doti")
             {
                 tiempo_De_Vida += (tiempo_De_Vida * 3) / 10;
                 pareja.SetTiempoDeVida(pareja.GetTiempoDeVida() + (pareja.GetTiempoDeVida() * 3) / 10);
@@ -63,13 +63,15 @@ namespace Bitmonlandia
 
                 Console.WriteLine("{0},{1}", c1, c2);
                 //Veo si el bitmon caera fuera de los limites del mapa:
+                int cont_de_escape = 0;
                 while ((bitmonlandia.GetMapa().GetTablero()[c1, c2, 1] != "   " && bitmonlandia.GetMapa().GetTablero()[c1, c2, 2] != "   ") || bitmonlandia.GetMapa().GetTablero()[c1, c2, 0] != "A")
                 {
+                    //condicion de escape
+                    if (cont_de_escape > 20)
+                        return;
                     c1 = random.Next(size); // Asignacion de una coordenada aleatoria
-                    Console.WriteLine("c1: {0}", c1);
                     c2 = random.Next(size); // Asignacion de una coordenada aleatoria
-                    Console.WriteLine("c2: {0}", c2);
-                    Console.WriteLine("");
+                    cont_de_escape++;
                 }
 
                 int[] tupla = { c1, c2 };
