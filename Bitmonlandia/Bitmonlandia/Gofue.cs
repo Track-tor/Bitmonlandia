@@ -84,7 +84,53 @@ namespace Bitmonlandia
                 int pa = random.Next(10, ((puntos_De_Ataque + pareja.GetPuntosDeAtaque()) / 2));
                 int pv = random.Next(10, ((puntos_De_Vida + pareja.GetPuntosDeVida()) / 2));
 
-                switch (pareja.GetNombre())
+                //Veamos la cantidad de hijos que han tenido ambos
+                int hijos_padre = hijos;
+                int hijos_pareja = pareja.GetHijos();
+                string especie_hijo ="";
+
+                int probabilidad = random.Next(0, 101);
+
+                if (hijos_padre > hijos_pareja)
+                {
+                    if (probabilidad <= 70)
+                    {
+                        especie_hijo = tipo_De_Bitmon;
+                    }
+
+                    else
+                    {
+                        especie_hijo = pareja.GetNombre();
+                    }
+                }
+
+                else if (hijos_padre < hijos_pareja)
+                {
+                    if (probabilidad <= 70)
+                    {
+                        especie_hijo = pareja.GetNombre();
+                    }
+
+                    else
+                    {
+                        especie_hijo = tipo_De_Bitmon;
+                    }
+                }
+
+                else
+                {
+                    if (probabilidad <= 50)
+                    {
+                        especie_hijo = pareja.GetNombre();
+                    }
+
+                    else
+                    {
+                        especie_hijo = tipo_De_Bitmon;
+                    }
+                }
+
+                switch (especie_hijo)
                 {
                     case "Gofue":
                         bitmonlandia.añadir_bitmon(new Gofue("Gofue", 15, pa, pv, tupla));
