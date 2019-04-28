@@ -32,6 +32,18 @@ namespace Bitmonlandia
                 {
                     puntos_De_Ataque += multiplicador;
                 }
+                else if (rival == "Wetar")
+                {
+                    puntos_De_Ataque -= multiplicador;
+                }
+                else if (rival == "Taplan")
+                {
+                    puntos_De_Ataque += 0;
+                }
+                else if (rival == "Doti")
+                {
+                    puntos_De_Ataque += multiplicador;
+                }
 
                 while (estado_De_Vida == true && peleador.GetEstadoDeVida() == true)
                 {
