@@ -18,7 +18,7 @@ namespace Bitmonlandia
         }
         public override Bitmon Pelea(Bitmon peleador)
         {
-            if (peleador.GetNombre() == "Gofue" || peleador.GetNombre() == "Dorvalo" || peleador.GetNombre() == "Tapan" || peleador.GetNombre() == "Wetar" || peleador.GetNombre() == "Doti")
+            if (peleador.GetNombre() == "Gofue" || peleador.GetNombre() == "Dorvalo" || peleador.GetNombre() == "Taplan" || peleador.GetNombre() == "Wetar")
             {
                 string rival = peleador.GetNombre();
                 int multiplicador = random.Next(10, 21);
@@ -39,10 +39,6 @@ namespace Bitmonlandia
                 else if (rival == "Taplan")
                 {
                     puntos_De_Ataque += 0;
-                }
-                else if (rival == "Doti")
-                {
-                    puntos_De_Ataque += multiplicador;
                 }
 
                 while (estado_De_Vida == true && peleador.GetEstadoDeVida() == true)
