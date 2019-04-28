@@ -27,7 +27,7 @@ namespace Bitmonlandia
                 //Dependiendo del rival, los puntos de ataque del Bitmon cambian
                 if (rival == "Wetar")
                 {
-                    puntos_De_Ataque += 0;
+                    puntos_De_Ataque += multiplicador;
                 }
 
                 else if (rival == "Ent")
@@ -37,7 +37,7 @@ namespace Bitmonlandia
 
                 else if (rival == "Taplan")
                 {
-                    puntos_De_Ataque += multiplicador;
+                    puntos_De_Ataque += 0;
                 }
 
                 while (estado_De_Vida == true && peleador.GetEstadoDeVida() == true)
