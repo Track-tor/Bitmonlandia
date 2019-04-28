@@ -16,9 +16,9 @@ namespace Bitmonlandia
             //-----------------------------------------------MENU----------------------------------------------------------------------
             Console.WriteLine("# BITMONLANDIA # \n");
             Console.WriteLine("Escoge una de las siguentes opciones para generar BITMONLANDIA:\n");
-            Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("{1} MAPA: 5X5 // BITMONS: Dorvalo-Taplan-Wetar // TERRENOS: Desierto-Agua-Lava-Vegetacion  ");
-            Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("{2} MAPA: 10X10 // BITMONS: ~ // TERRENOS: ~ ");
-            Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("{3} MAPA: 15X15 // BITMONS: ~ // TERRENOS: ~ \n");
+            Console.ForegroundColor = ConsoleColor.Green; Console.WriteLine("{1} MAPA: 5X5");
+            Console.ForegroundColor = ConsoleColor.Blue; Console.WriteLine("{2} MAPA: 10X10");
+            Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("{3} MAPA: 15X15\n");
             Console.ForegroundColor = ConsoleColor.White; Console.Write("Opcion: ");
             string opcion = (Console.ReadLine());
             while (opcion != "1" && opcion != "2" && opcion != "3")
@@ -282,9 +282,9 @@ namespace Bitmonlandia
             File.AppendAllText("resumen.txt","\r\n");
             /////////////////////////////////////////////////
             //Cantidad de hijos por especie
-            Console.ForegroundColor = ConsoleColor.Cyan; Console.WriteLine("Cantidad de hijos por especie:");
+            Console.ForegroundColor = ConsoleColor.Cyan; Console.WriteLine("Cantidad de hijos promedio por especie:");
             Console.ForegroundColor = ConsoleColor.White;
-            File.AppendAllText("resumen.txt", "Cantidad de hijos por especie:\r\n");
+            File.AppendAllText("resumen.txt", "Cantidad de hijos promedio por especie:\r\n");
             //Taplan
             bitmonlandia.HijosPromedioEspecie("Taplan");
 

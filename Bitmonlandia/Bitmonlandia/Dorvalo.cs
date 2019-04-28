@@ -46,9 +46,6 @@ namespace Bitmonlandia
                     peleador.RecibirAtaque(puntos_De_Ataque);
                     CambiarEstadoDeVida();
                     peleador.CambiarEstadoDeVida();
-                    Console.WriteLine($"{puntos_De_Ataque} puntos de Ataque Dorvalo");
-                    Console.WriteLine($"{peleador.GetNombre()} perdio vida ");
-                    Console.WriteLine($"{GetNombre()} perdio vida ");
                 }
                 //el bitmon que gana se recupera completamente
                 SetGanador(estado_De_Vida);
@@ -70,7 +67,6 @@ namespace Bitmonlandia
                 int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
                 int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
 
-                Console.WriteLine("{0},{1}", c1, c2);
                 //Veo si el bitmon caera fuera de los limites del mapa:
                 int cont_de_escape = 0;
                 while (bitmonlandia.GetMapa().GetTablero()[c1, c2, 1] != "   " && bitmonlandia.GetMapa().GetTablero()[c1, c2, 2] != "   ")
@@ -150,6 +146,7 @@ namespace Bitmonlandia
                         bitmonlandia.añadir_bitmon(new Doti("Doti", 30, pa, pv, tupla));
                         break;
                 }
+                Console.WriteLine("Ha nacido un {0}", especie_hijo);
                 hijos += 1;
                 pareja.SetHijos();
             }

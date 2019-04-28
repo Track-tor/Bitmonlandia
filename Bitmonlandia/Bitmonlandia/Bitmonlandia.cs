@@ -51,22 +51,118 @@ namespace Bitmonlandia
 
             if (seed == 2)
             {
-                int[] tupla = { 1, 2 };
-                int[] tupla2 = { 4, 3 };
-                int[] tupla3 = { 3, 4 };
+                int[] tupla = { 9, 2 };
+                int[] tupla2 = { 9, 3 };
+                int[] tupla3 = { 8, 3 };
+                int[] tupla4 = { 1, 6 };
+                int[] tupla5 = { 1, 7 };
+                int[] tupla6 = { 0, 6 };
+                int[] tupla7 = { 6, 0 };
+                int[] tupla8 = { 7, 0 };
+                int[] tupla9 = { 2, 3 };
+                int[] tupla10 = { 9, 8 };
+                int[] tupla11 = { 9, 9 };
+                int[] tupla12 = { 8, 9 };
+                int[] tupla13 = { 9, 5 };
+                int[] tupla14= { 8, 1 };
+                int[] tupla15 = { 1, 1 };
+                int[] tupla16 = { 1, 2 };
+                int[] tupla17 = { 2, 1 };
+                int[] tupla18 = { 2, 2 };
                 añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla));
-                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla2));
-                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla3));
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla2));
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla3));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla4));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla5));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla6));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla7));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla8));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla9));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla10));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla11));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla12));
+                añadir_bitmon(new Ent("Ent", 10, 80, 100, tupla13));
+                añadir_bitmon(new Ent("Ent", 10, 80, 100, tupla14));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla15));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla16));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla17));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla18));
+                PosicionInicialBitmons();
             }
 
             if (seed == 3)
             {
-                int[] tupla = { 1, 2 };
-                int[] tupla2 = { 4, 3 };
-                int[] tupla3 = { 6, 0 };
+                int[] tupla = { 5, 7 };
+                int[] tupla2 = { 6, 7 };
+                int[] tupla3 = { 7, 7 };
+                int[] tupla4 = { 6, 14 };
+                int[] tupla5 = { 7, 14 };
+                int[] tupla6 = { 8, 14 };
+                int[] tupla7 = { 6, 0 };
+                int[] tupla8 = { 6, 1 };
+                int[] tupla9 = { 7, 0 };
+                int[] tupla10 = { 11, 0 };
+                int[] tupla11 = { 11, 1 };
+                int[] tupla12 = { 12, 2 };
+                int[] tupla13 = { 1, 2 };
+                int[] tupla14= { 2, 2 };
+                int[] tupla15 = { 12, 7 };
+                int[] tupla16 = { 1, 7 };
+                int[] tupla17 = { 7, 10 };
+                int[] tupla18 = { 8, 10 };
+                int[] tupla19 = { 8, 7 };
+                int[] tupla20 = { 1, 12 };
+                int[] tupla21 = { 2, 12 };
+                int[] tupla22 = { 3, 11 };
+                int[] tupla23 = { 12, 0 };
+                int[] tupla24 = { 11, 1 };
+                int[] tupla25 = { 12, 2 };
+                int[] tupla26 = { 5, 6 };
+                int[] tupla27 = { 6, 6 };
+                int[] tupla28 = { 7, 6 };
+                int[] tupla29 = { 8, 6 };
+                int[] tupla30 = { 9, 14 };
+                int[] tupla31 = { 10, 14 };
+                int[] tupla32 = { 11, 14 };
+                int[] tupla33 = { 6, 13 };
+                int[] tupla34 = { 7, 13 };
+                int[] tupla35 = { 8, 13 };
                 añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla));
-                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla2));
-                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla3));
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla2));
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla3));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla4));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla5));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla6));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla7));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla8));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla9));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla10));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla11));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla12));
+                añadir_bitmon(new Ent("Ent", 10, 80, 100, tupla13));
+                añadir_bitmon(new Ent("Ent", 10, 80, 100, tupla14));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla15));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla16));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla17));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla18));
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla19));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla20));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla21));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla22));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla23));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla24));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla25));
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla26));
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla27));
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla28));
+                añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla29));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla30));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla31));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla32));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla33));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla34));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla35));
+                PosicionInicialBitmons();
             }
         }
 
@@ -141,7 +237,6 @@ namespace Bitmonlandia
             int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
             int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
 
-            Console.WriteLine("{0},{1}", c1, c2);
             //Veo si el bitmon caera fuera de los limites del mapa:
             int cont_de_escape = 0;
             while (GetMapa().GetTablero()[c1, c2, 1] != "   " && GetMapa().GetTablero()[c1, c2, 2] != "   ")
@@ -160,6 +255,7 @@ namespace Bitmonlandia
             int pv = random.Next(10, 100);
             añadir_bitmon(new Ent("Ent", 15, pa, pv, tupla));
             hijos_ents += 1;
+            Console.WriteLine("Ha nacido un Ent");
 
         }
 
@@ -264,7 +360,7 @@ namespace Bitmonlandia
 
             else
             {
-                string text = String.Format("No hay un tasa bruta de nacimiento {0} ya que se ha extinguido la especie\r\n", especie);
+                string text = String.Format("No hay un tasa bruta de nacimiento {0} ya que no ha nacido ninguno\r\n", especie);
                 Console.WriteLine(text);
                 File.AppendAllText("resumen.txt", text);
             }
