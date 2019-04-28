@@ -26,7 +26,7 @@ namespace Bitmonlandia
                 //Dependiendo del rival, los puntos de ataque del Bitmon cambian
                 if (rival == "Gofue")
                 {
-                    puntos_De_Ataque -= multiplicador;
+                    puntos_De_Ataque += multiplicador;
                 }
                 else if (rival == "Dorvalo")
                 {
