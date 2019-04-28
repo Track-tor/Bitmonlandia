@@ -37,7 +37,7 @@ namespace Bitmonlandia
 
                 else if (rival == "Taplan")
                 {
-                    puntos_De_Ataque -= multiplicador;
+                    puntos_De_Ataque += multiplicador;
                 }
 
                 while (estado_De_Vida == true && peleador.GetEstadoDeVida() == true)
