@@ -24,6 +24,7 @@ namespace Bitmonlandia
 
 
             //Se generan los bitmons predeterminados dependiendo de la seed
+
             if(seed == 1)
             {
                 int[] tupla = { 0, 0 };
@@ -41,10 +42,10 @@ namespace Bitmonlandia
                 añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla5));
                 añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla6));
                 añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla7));
-                añadir_bitmon(new Ent("Ent", 10, 80, 100, tupla9));
-                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla10));
-                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla11));
-                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla12));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 80, 100, tupla9));
+                añadir_bitmon(new Taplan("Taplan", 10, 80, 100, tupla10));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla11));
+                añadir_bitmon(new Taplan("Taplan", 10, 80, 100, tupla12));
                 añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla13));
                 PosicionInicialBitmons();
             }
@@ -83,8 +84,8 @@ namespace Bitmonlandia
                 añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla12));
                 añadir_bitmon(new Ent("Ent", 10, 80, 100, tupla13));
                 añadir_bitmon(new Ent("Ent", 10, 80, 100, tupla14));
-                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla15));
-                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla16));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla15));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 80, 100, tupla16));
                 añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla17));
                 añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla18));
                 PosicionInicialBitmons();

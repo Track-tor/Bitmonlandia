@@ -34,6 +34,8 @@ namespace Bitmonlandia
                 }
                 else if (rival == "Wetar")
                 {
+
+
                     puntos_De_Ataque -= multiplicador;
                 }
                 else if (rival == "Taplan")

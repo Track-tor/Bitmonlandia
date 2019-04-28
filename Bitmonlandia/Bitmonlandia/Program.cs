@@ -125,7 +125,7 @@ namespace Bitmonlandia
                             if (bitmonlandia.GetLista()[bit].GetEstadoDeVida() == true && bitmonlandia.GetLista()[pareja].GetEstadoDeVida() == true)
                             {
                                 int prob = random.Next(101);
-                                if(prob <= 30)
+                                if(prob <= 15)//probabilidad del 15% de reproducirse
                                     bitmonlandia.GetLista()[bit].Reproduccion(bitmonlandia.GetLista()[pareja], size, bitmonlandia);
                             }
                         }

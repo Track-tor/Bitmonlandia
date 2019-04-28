@@ -161,11 +161,17 @@ namespace Bitmonlandia
             int horizontal = random.Next(-1, 2);
 
             //Veo si el bitmon caera fuera de los limites del mapa:
+            int cont_de_escape = 0;
             while (((x + vertical) < 0) || ((y + horizontal) < 0) || ((x + vertical) >= cant_filas) || ((y + horizontal) >= cant_columnas) || (tablero[x+vertical,y+horizontal,0] != "A"))
             {
+                //condicion de escape
+                if (cont_de_escape > 20)
+                    return;
+
+
                 vertical = random.Next(-1, 2);
                 horizontal = random.Next(-1, 2);
-
+                cont_de_escape++;
             }
 
             int celda_antigua = celda;
