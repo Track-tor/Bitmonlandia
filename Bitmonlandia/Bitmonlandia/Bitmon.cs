@@ -128,10 +128,8 @@ namespace Bitmonlandia
         }
 
         // Pelea entre bitmons
-        public virtual Bitmon Pelea(Bitmon peleador) 
+        public virtual void Pelea(Bitmon peleador) 
         {
-
-            return peleador;
         }
 
         // Reproduccion de Bitmons

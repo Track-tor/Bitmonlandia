@@ -16,7 +16,7 @@ namespace Bitmonlandia
         {
 
         }
-        public override Bitmon Pelea(Bitmon peleador)
+        public override void Pelea(Bitmon peleador)
         {
             if (peleador.GetNombre() == "Gofue" || peleador.GetNombre() == "Dorvalo" || peleador.GetNombre() == "Taplan" || peleador.GetNombre() == "Wetar")
             {
@@ -53,12 +53,6 @@ namespace Bitmonlandia
                 SetGanador(estado_De_Vida);
                 peleador.SetGanador(peleador.GetEstadoDeVida());
             }
-
-            return base.Pelea(peleador);
-        }
-
-        public override void Reproduccion(Bitmon pareja, int size, Bitmonlandia bitmonlandia)
-        {
         }
 
         // Reduce el tiempo de vida del Bitmon dependiendo de el terreno en donde se encuentre

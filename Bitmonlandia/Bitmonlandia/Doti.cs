@@ -19,11 +19,6 @@ namespace Bitmonlandia
 
         }
 
-        public override Bitmon Pelea(Bitmon peleador)
-        {
-            return base.Pelea(peleador);
-        }
-
         /* Reproduccion de Bitmons consiste en que si la pareja es compatible, se instancia dentro de la lista de Bitmons 
         * un nuevo Bitmon de una especie aleatoria
        */

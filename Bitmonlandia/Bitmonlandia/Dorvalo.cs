@@ -17,7 +17,7 @@ namespace Bitmonlandia
 
         }
 
-        public override Bitmon Pelea(Bitmon peleador)
+        public override void Pelea(Bitmon peleador)
         {
             if (peleador.GetNombre() == "Wetar" || peleador.GetNombre() == "Taplan" || peleador.GetNombre() == "Ent")
             {
@@ -51,8 +51,6 @@ namespace Bitmonlandia
                 SetGanador(estado_De_Vida);
                 peleador.SetGanador(peleador.GetEstadoDeVida());
             }
-
-            return base.Pelea(peleador);
         }
 
         /* Reproduccion de Bitmons consiste en que si la pareja es compatible, se instancia dentro de la lista de Bitmons 
