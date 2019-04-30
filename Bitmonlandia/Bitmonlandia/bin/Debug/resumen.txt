@@ -1,45 +1,48 @@
 \\\\\\Resumen de la simulacion\\\\\\
 
-Tiempo de vida promedio Bitmon: 8,2 meses
+Tiempo de vida promedio Bitmon: 6,538462 meses
 
 Tiempo de vida promedio de cada especie:
 Tiempo de vida promedio Taplan: 0 meses
-Tiempo de vida promedio Dorvalo: 1 meses
-No hay un tiempo de vida promedio Gofue ya que no han habido Gofues muertos
-Tiempo de vida promedio Doti: 11 meses
-No hay un tiempo de vida promedio Wetar ya que no han habido Wetars muertos
-Tiempo de vida promedio Ent: 18 meses
+Tiempo de vida promedio Dorvalo: 2,5 meses
+Tiempo de vida promedio Gofue: 17,5 meses
+No hay un tiempo de vida promedio Doti ya que no han habido Dotis muertos
+Tiempo de vida promedio Wetar: 6,5 meses
+Tiempo de vida promedio Ent: 8 meses
 
 Tasa de natalidad de cada especie:
-No hay un tasa bruta de nacimiento Taplan ya que se ha extinguido la especie
-No hay un tasa bruta de nacimiento Dorvalo ya que se ha extinguido la especie
-Tasa bruta de natalidad Gofue: 50
-Tasa bruta de natalidad Doti: 56,33803
-Tasa bruta de natalidad Wetar: 72,72727
-Tasa bruta de natalidad Ent: 117,6471
+No hay un tasa bruta de nacimiento Taplan ya que no ha nacido ninguno
+No hay un tasa bruta de nacimiento Dorvalo ya que no ha nacido ninguno
+No hay un tasa bruta de nacimiento Gofue ya que no ha nacido ninguno
+No hay un tasa bruta de nacimiento Doti ya que no ha nacido ninguno
+No hay un tasa bruta de nacimiento Wetar ya que no ha nacido ninguno
+Tasa bruta de natalidad Ent: 26,69903
 
 Tasa de mortalidad de cada especie:
-Tasa bruta de mortalidad Taplan: 4,166667
-Tasa bruta de mortalidad Dorvalo: 4,166667
-No hay un tasa bruta de mortalidad Gofue ya que no ha muerto ninguno
-Tasa bruta de mortalidad Doti: 8,333334
-No hay un tasa bruta de mortalidad Wetar ya que no ha muerto ninguno
-Tasa bruta de mortalidad Ent: 4,166667
+Tasa bruta de mortalidad Taplan: 6,976745
+Tasa bruta de mortalidad Dorvalo: 4,651163
+Tasa bruta de mortalidad Gofue: 4,651163
+No hay un tasa bruta de mortalidad Doti ya que no ha muerto ninguno
+Tasa bruta de mortalidad Wetar: 4,651163
+Tasa bruta de mortalidad Ent: 9,302325
 
-Cantidad de hijos por especie:
+Cantidad de hijos promedio por especie:
 No hay cantidad de hijos promedio Taplan ya que ninguno ha tenido hijos
 No hay cantidad de hijos promedio Dorvalo ya que ninguno ha tenido hijos
-Cantidad de hijos promedio Gofue: 50
-Cantidad de hijos promedio Doti: 75,26882
-Cantidad de hijos promedio Wetar: 72,72727
+No hay cantidad de hijos promedio Gofue ya que ninguno ha tenido hijos
+No hay cantidad de hijos promedio Doti ya que ninguno ha tenido hijos
+No hay cantidad de hijos promedio Wetar ya que ninguno ha tenido hijos
 
 Lista de especies extintas
 Taplan
 Dorvalo
+Gofue
+Wetar
 
 Bithalla:
-Cantidad de Taplan en el Bithalla: 1, que son el %20 del Bithalla
-Cantidad de Dorvalo en el Bithalla: 1, que son el %20 del Bithalla
-Cantidad de Doti en el Bithalla: 2, que son el %40 del Bithalla
-Cantidad de Ent en el Bithalla: 1, que son el %20 del Bithalla
+Cantidad de Taplan en el Bithalla: 3, que son el %23,07692 del Bithalla
+Cantidad de Dorvalo en el Bithalla: 2, que son el %15,38461 del Bithalla
+Cantidad de Ent en el Bithalla: 4, que son el %30,76923 del Bithalla
+Cantidad de Gofue en el Bithalla: 2, que son el %15,38461 del Bithalla
+Cantidad de Wetar en el Bithalla: 2, que son el %15,38461 del Bithalla
 

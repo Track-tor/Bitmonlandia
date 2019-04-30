@@ -45,20 +45,6 @@ namespace Bitmonlandia
                     break;
 
             }
-            //------------------------ Instancia de Bitmons---------------------------------------------
-            
-
-            // TO DO : LOS BITMONS HAY QUE INSTANCIARLOS DENTRO DE BITMONLANDIA(y bien posicionados)!!!
-            /*bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5,10,tupla));
-            bitmonlandia.añadir_bitmon(new Ent("Ent", 10, 5, 10, tupla));
-            bitmonlandia.añadir_bitmon(new Taplan("Taplan", 10, 5, 10, tupla2));
-            bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
-            bitmonlandia.añadir_bitmon(new Doti("Doti", 10, 5, 10, tupla));
-            bitmonlandia.añadir_bitmon(new Dorvalo("Dorvalo", 10, 5, 10, tupla));
-            bitmonlandia.añadir_bitmon(new Wetar("Wetar", 10, 5, 10, tupla));
-            bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));
-            bitmonlandia.añadir_bitmon(new Gofue("Gofue", 10, 5, 10, tupla));*/
-            
 
             Console.WriteLine("--------------------# MAPA INICIAL #---------------------\n");
             bitmonlandia.GetMapa().ImprimirTablero();
@@ -319,7 +305,7 @@ namespace Bitmonlandia
             File.AppendAllText("resumen.txt", "Bithalla:\r\n");
             bitmonlandia.Bithalla();
 
-            Console.WriteLine("");
+            Console.WriteLine("\nse ha guardado el resumen de la simulacion en el archivo resumen.txt ubicado en bin\n");
             File.AppendAllText("resumen.txt", "\r\n");
 
             Console.ReadLine();
@@ -327,4 +313,5 @@ namespace Bitmonlandia
 
 
     }
+
 }
