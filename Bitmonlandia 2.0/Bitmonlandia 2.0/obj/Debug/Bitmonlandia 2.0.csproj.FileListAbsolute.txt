@@ -1,0 +1,10 @@
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\bin\Debug\Bitmonlandia 2.0.exe.config
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\bin\Debug\Bitmonlandia 2.0.exe
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\bin\Debug\Bitmonlandia 2.0.pdb
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.csprojResolveAssemblyReference.cache
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.Form1.resources
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.Properties.Resources.resources
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.csproj.GenerateResource.cache
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.csproj.CoreCompileInputs.cache
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.exe
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.pdb
