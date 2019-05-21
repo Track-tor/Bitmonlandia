@@ -8,3 +8,5 @@ C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug
 C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.csproj.CoreCompileInputs.cache
 C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.exe
 C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.pdb
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.Form2.resources
+C:\Users\Matias Paulsen\source\repos\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.Form3.resources

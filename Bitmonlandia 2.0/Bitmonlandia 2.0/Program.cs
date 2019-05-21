@@ -19,12 +19,26 @@ namespace Bitmonlandia_2._0
             Form1 form1 = new Form1();
             Application.Run(form1);
 
-            int seed = form1.GetSize();
+            int seed = form1.GetSeed();
             int meses = form1.GetMeses();
-            Bitmonlandia bitmonlandia = new Bitmonlandia(seed);
 
-            Form2 mapa = new Form2();
-            Application.Run(mapa);
+            if (seed == 1)
+            {
+                Form2 form2 = new Form2(seed, meses);
+                Application.Run(form2);
+            }
+
+            /*else if (seed == 2)
+            {
+                Form3 form3 = new Form3(seed, meses);
+                Application.Run(form3);
+            }
+
+            else if (seed == 3)
+            {
+                Form4 form4 = new Form4(seed, meses);
+                Application.Run(form4);
+            }*/
         }
     }
 }

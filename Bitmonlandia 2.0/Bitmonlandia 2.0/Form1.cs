@@ -114,9 +114,9 @@ namespace Bitmonlandia_2._0
         }
         //////////////////////////////////////////////
         //Getters
-        public int GetSize()
+        public int GetSeed()
         {
-            return size;
+            return seed;
         }
 
         public int GetMeses()
