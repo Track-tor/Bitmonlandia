@@ -67,13 +67,17 @@ namespace Bitmonlandia_2._0
                         p.BackColor = Color.White;
                     }
 
+                    int size_celda = tableLayoutPanel1.GetColumnWidths()[0];
                     //Creo las dos casilla de fotos para los bitmons en una celda
                     PictureBox fto1 = new PictureBox();
+                    fto1.Size = new Size(size_celda/2, size_celda);
                     fto1.SizeMode = PictureBoxSizeMode.Zoom;
+                    fto1.Location = new Point(0,0);
                     p.Controls.Add(fto1);
-
+                    
                     PictureBox fto2 = new PictureBox();
-                    fto2.Location = new Point(0, fto1.Height);
+                    fto2.Size = new Size(size_celda / 2, size_celda);
+                    fto2.Location = new Point(fto1.Width, 0);
                     fto2.SizeMode = PictureBoxSizeMode.Zoom;
                     p.Controls.Add(fto2);
 
