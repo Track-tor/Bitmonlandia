@@ -78,6 +78,12 @@
     <Compile Include="Mapa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResumenGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResumenGrafico.Designer.cs">
+      <DependentUpon>ResumenGrafico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Taplan.cs" />
     <Compile Include="Wetar.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -98,6 +104,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ResumenGrafico.resx">
+      <DependentUpon>ResumenGrafico.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

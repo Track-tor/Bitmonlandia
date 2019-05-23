@@ -28,25 +28,25 @@ namespace Bitmonlandia_2._0
             if (seed == 1)
             {
                 int[] tupla = { 0, 0 };
-                int[] tupla3 = { 0, 4 };
-                int[] tupla5 = { 4, 4 };
-                int[] tupla6 = { 4, 3 };
-                int[] tupla7 = { 4, 0 };
-                int[] tupla9 = { 0, 1 };
-                int[] tupla10 = { 1, 2 };
-                int[] tupla11 = { 2, 2 };
-                int[] tupla12 = { 3, 2 };
-                int[] tupla13 = { 2, 3 };
+                int[] tupla2 = { 0, 4 };
+                int[] tupla3 = { 4, 4 };
+                int[] tupla4 = { 4, 3 };
+                int[] tupla5 = { 4, 0 };
+                int[] tupla6 = { 0, 1 };
+                int[] tupla7 = { 1, 2 };
+                int[] tupla8 = { 2, 2 };
+                int[] tupla9 = { 3, 2 };
+                int[] tupla10 = { 2, 3 };
                 añadir_bitmon(new Taplan("Taplan", 10, 50, 100, tupla));
-                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla3));
-                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla5));
-                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla6));
-                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla7));
-                añadir_bitmon(new Dorvalo("Dorvalo", 10, 80, 100, tupla9));
-                añadir_bitmon(new Taplan("Taplan", 10, 80, 100, tupla10));
-                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla11));
-                añadir_bitmon(new Taplan("Taplan", 10, 80, 100, tupla12));
-                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla13));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 60, 100, tupla2));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla3));
+                añadir_bitmon(new Wetar("Wetar", 10, 80, 100, tupla4));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla5));
+                añadir_bitmon(new Dorvalo("Dorvalo", 10, 80, 100, tupla6));
+                añadir_bitmon(new Taplan("Taplan", 10, 80, 100, tupla7));
+                añadir_bitmon(new Gofue("Gofue", 10, 80, 100, tupla8));
+                añadir_bitmon(new Taplan("Taplan", 10, 80, 100, tupla9));
+                añadir_bitmon(new Doti("Doti", 10, 80, 100, tupla10));
                 PosicionInicialBitmons();
             }
 
@@ -262,7 +262,7 @@ namespace Bitmonlandia_2._0
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //Resumen del Simulacion
         //Tiempo de vida promedio Bitmon:
-        public void TiempoDeVidaPromedioBitmon()
+        public string TiempoDeVidaPromedioBitmon()
         {
             float suma = 0;
             float cantidad_muertos = 0;
@@ -279,20 +279,21 @@ namespace Bitmonlandia_2._0
             {
                 float resultado = (float)(suma / cantidad_muertos);
                 string text = String.Format("Tiempo de vida promedio Bitmon: {0} meses\r\n", resultado);
-                Console.WriteLine(text);
                 File.AppendAllText("resumen.txt", text);
+                text = String.Format("{0} meses\r\n", resultado);
+                return text;
             }
 
             else
             {
-                string text = "No hay un tiempo de vida promedio Bitmon ya que no han habido muertos\r\n";
-                Console.WriteLine(text);
+                string text = "Ningun Bitmon murio\r\n";
                 File.AppendAllText("resumen.txt", text);
+                return text;
             }
         }
 
         //Tiempo de vida promedio de cada especie:
-        public void TiempoDeVidaPromedioEspecie(string especie)
+        public string TiempoDeVidaPromedioEspecie(string especie)
         {
             float suma = 0;
             float cantidad_muertos = 0;
@@ -309,20 +310,21 @@ namespace Bitmonlandia_2._0
             {
                 float resultado = (float)(suma / cantidad_muertos);
                 string text = String.Format("Tiempo de vida promedio {0}: {1} meses\r\n", especie, resultado);
-                Console.WriteLine(text);
                 File.AppendAllText("resumen.txt", text);
+                text= String.Format("{0} meses\r\n", resultado);
+                return text;
             }
 
             else
             {
-                string text = String.Format("No hay un tiempo de vida promedio {0} ya que no han habido {1}s muertos\r\n", especie, especie);
-                Console.WriteLine(text);
+                string text = String.Format("No murio ningun {0}\r\n", especie, especie);
                 File.AppendAllText("resumen.txt", text);
+                return text;
             }
         }
 
         //Tasas de natalidad de cada especie:
-        public void TasaDeNatalidad(string especie)
+        public string TasaDeNatalidad(string especie)
         {
             float n_nacimientos = 0;
             float poblacion_total = 0;
@@ -355,21 +357,22 @@ namespace Bitmonlandia_2._0
             {
                 float resultado = ((float)(n_nacimientos / poblacion_total)) * 1000;
                 string text = String.Format("Tasa bruta de natalidad {0}: {1}\r\n", especie, resultado);
-                Console.WriteLine(text);
                 File.AppendAllText("resumen.txt", text);
+                text = String.Format("{0}\r\n", resultado);
+                return text;
             }
 
             else
             {
-                string text = String.Format("No hay un tasa bruta de nacimiento {0} ya que no ha nacido ninguno\r\n", especie);
-                Console.WriteLine(text);
+                string text = String.Format("No nacio ningun {0}\r\n", especie);
                 File.AppendAllText("resumen.txt", text);
+                return text;
             }
 
         }
 
         //Tasas de mortalidad de cada especie:
-        public void TasaDeMortalidad(string especie)
+        public string TasaDeMortalidad(string especie)
         {
             float n_muertos = 0;
             float poblacion_total = GetLista().Count();
@@ -385,20 +388,21 @@ namespace Bitmonlandia_2._0
             {
                 float resultado = ((float)(n_muertos / poblacion_total)) * 100;
                 string text = String.Format("Tasa bruta de mortalidad {0}: {1}\r\n", especie, resultado);
-                Console.WriteLine(text);
                 File.AppendAllText("resumen.txt", text);
+                text = String.Format("{0}\r\n", resultado);
+                return text;
             }
 
             else
             {
-                string text = String.Format("No hay un tasa bruta de mortalidad {0} ya que no ha muerto ninguno\r\n", especie);
-                Console.WriteLine(text);
+                string text = String.Format("No murio ningun {0}\r\n", especie);
                 File.AppendAllText("resumen.txt", text);
+                return text;
             }
         }
 
         //Promedio de hijos por especie:
-        public void HijosPromedioEspecie(string especie)
+        public string HijosPromedioEspecie(string especie)
         {
             float n_nacimientos = 0;
             float poblacion_total = 0;
@@ -415,23 +419,26 @@ namespace Bitmonlandia_2._0
             {
                 float resultado = ((float)(n_nacimientos / poblacion_total)) * 1000;
                 string text = String.Format("Cantidad de hijos promedio {0}: {1}\r\n", especie, resultado);
-                Console.WriteLine(text);
                 File.AppendAllText("resumen.txt", text);
+                text = String.Format("{0}\r\n", resultado);
+                return text;
             }
 
             else
             {
-                string text = String.Format("No hay cantidad de hijos promedio {0} ya que ninguno ha tenido hijos\r\n", especie);
-                Console.WriteLine(text);
+                string text = String.Format("Ningun {0} ha tenido hijos\r\n", especie);
                 File.AppendAllText("resumen.txt", text);
+                return text;
             }
 
 
         }
 
         //Listado especies extintas:
-        public void GetEspeciesExtintas()
+        public List<string> GetEspeciesExtintas()
         {
+            List<string> lista = new List<string>();
+
             int n_tap = 0;
             int n_dor = 0;
             int n_dot = 0;
@@ -474,53 +481,57 @@ namespace Bitmonlandia_2._0
 
             if (n_tap != 0 && n_dor != 0 && n_dot != 0 && n_ent != 0 && n_wet != 0 && n_gof != 0)
             {
-                Console.WriteLine("No hay especies extintas");
+                lista.Add("No hay especies extintas");
                 File.AppendAllText("resumen.txt", "No hay especies extintas\r\n");
+                return lista;
             }
 
             else
             {
                 if (n_tap == 0)
                 {
-                    Console.WriteLine("Taplan");
+                    lista.Add("Taplan");
                     File.AppendAllText("resumen.txt", "Taplan\r\n");
                 }
 
                 if (n_dor == 0)
                 {
-                    Console.WriteLine("Dorvalo");
+                    lista.Add("Dorvalo");
                     File.AppendAllText("resumen.txt", "Dorvalo\r\n");
                 }
 
                 if (n_dot == 0)
                 {
-                    Console.WriteLine("Doti");
+                    lista.Add("Doti");
                     File.AppendAllText("resumen.txt", "Doti\r\n");
                 }
 
                 if (n_ent == 0)
                 {
-                    Console.WriteLine("Ent");
+                    lista.Add("Ent");
                     File.AppendAllText("resumen.txt", "Ent\r\n");
                 }
 
                 if (n_gof == 0)
                 {
-                    Console.WriteLine("Gofue");
+                    lista.Add("Gofue");
                     File.AppendAllText("resumen.txt", "Gofue\r\n");
                 }
 
                 if (n_wet == 0)
                 {
-                    Console.WriteLine("Wetar");
+                    lista.Add("Wetar");
                     File.AppendAllText("resumen.txt", "Wetar\r\n");
                 }
+                return lista;
             }
         }
 
         //Bithalla:
-        public void Bithalla()
+        public List<string> Bithalla()
         {
+            List<string> lista = new List<string>();
+
             int n_tap = 0;
             int n_dor = 0;
             int n_dot = 0;
@@ -565,8 +576,9 @@ namespace Bitmonlandia_2._0
 
             if (n_tap == 0 && n_dor == 0 && n_dot == 0 && n_ent == 0 && n_wet == 0 && n_gof == 0)
             {
-                Console.WriteLine("Bithalla no tiene habitantes");
+                lista.Add("Bithalla no tiene habitantes");
                 File.AppendAllText("resumen.txt", "Bithalla no tiene habitantes\r\n");
+                return lista;
             }
 
             else
@@ -574,50 +586,94 @@ namespace Bitmonlandia_2._0
                 if (n_tap != 0)
                 {
                     float porcentaje = (((float)n_tap) / muertos_total) * 100;
-                    string text = String.Format("Cantidad de Taplan en el Bithalla: {0}, que son el %{1} del Bithalla\r\n", n_tap, porcentaje);
-                    Console.WriteLine(text);
+                    string text = String.Format("Cantidad de Taplan en el Bithalla: {0}, que son el {1}% del Bithalla\r\n", n_tap, porcentaje);
+                    lista.Add(text);
+                    File.AppendAllText("resumen.txt", text);
+                }
+
+                else
+                {
+                    string text = String.Format("No hay Taplan en el Bithalla\r\n");
+                    lista.Add(text);
                     File.AppendAllText("resumen.txt", text);
                 }
 
                 if (n_dor != 0)
                 {
                     float porcentaje = (((float)n_dor) / muertos_total) * 100;
-                    string text = String.Format("Cantidad de Dorvalo en el Bithalla: {0}, que son el %{1} del Bithalla\r\n", n_dor, porcentaje);
-                    Console.WriteLine(text);
+                    string text = String.Format("Cantidad de Dorvalo en el Bithalla: {0}, que son el {1}% del Bithalla\r\n", n_dor, porcentaje);
+                    lista.Add(text);
+                    File.AppendAllText("resumen.txt", text);
+                }
+
+                else
+                {
+                    string text = String.Format("No hay Dorvalo en el Bithalla\r\n");
+                    lista.Add(text);
                     File.AppendAllText("resumen.txt", text);
                 }
 
                 if (n_dot != 0)
                 {
                     float porcentaje = (((float)n_dot) / muertos_total) * 100;
-                    string text = String.Format("Cantidad de Doti en el Bithalla: {0}, que son el %{1} del Bithalla\r\n", n_dot, porcentaje);
-                    Console.WriteLine(text);
+                    string text = String.Format("Cantidad de Doti en el Bithalla: {0}, que son el {1}% del Bithalla\r\n", n_dot, porcentaje);
+                    lista.Add(text);
+                    File.AppendAllText("resumen.txt", text);
+                }
+
+                else
+                {
+                    string text = String.Format("No hay Doti en el Bithalla\r\n");
+                    lista.Add(text);
                     File.AppendAllText("resumen.txt", text);
                 }
 
                 if (n_ent != 0)
                 {
                     float porcentaje = (((float)n_ent) / muertos_total) * 100;
-                    string text = String.Format("Cantidad de Ent en el Bithalla: {0}, que son el %{1} del Bithalla\r\n", n_ent, porcentaje);
-                    Console.WriteLine(text);
+                    string text = String.Format("Cantidad de Ent en el Bithalla: {0}, que son el {1}% del Bithalla\r\n", n_ent, porcentaje);
+                    lista.Add(text);
+                    File.AppendAllText("resumen.txt", text);
+                }
+
+                else
+                {
+                    string text = String.Format("No hay Ent en el Bithalla\r\n");
+                    lista.Add(text);
                     File.AppendAllText("resumen.txt", text);
                 }
 
                 if (n_gof != 0)
                 {
                     float porcentaje = (((float)n_gof) / muertos_total) * 100;
-                    string text = String.Format("Cantidad de Gofue en el Bithalla: {0}, que son el %{1} del Bithalla\r\n", n_gof, porcentaje);
-                    Console.WriteLine(text);
+                    string text = String.Format("Cantidad de Gofue en el Bithalla: {0}, que son el {1}% del Bithalla\r\n", n_gof, porcentaje);
+                    lista.Add(text);
+                    File.AppendAllText("resumen.txt", text);
+                }
+
+                else
+                {
+                    string text = String.Format("No hay Gofue en el Bithalla\r\n");
+                    lista.Add(text);
                     File.AppendAllText("resumen.txt", text);
                 }
 
                 if (n_wet != 0)
                 {
                     float porcentaje = (((float)n_wet) / muertos_total) * 100;
-                    string text = String.Format("Cantidad de Wetar en el Bithalla: {0}, que son el %{1} del Bithalla\r\n", n_wet, porcentaje);
-                    Console.WriteLine(text);
+                    string text = String.Format("Cantidad de Wetar en el Bithalla: {0}, que son el {1}% del Bithalla\r\n", n_wet, porcentaje);
+                    lista.Add(text);
                     File.AppendAllText("resumen.txt", text);
                 }
+
+                else
+                {
+                    string text = String.Format("No hay Wetar en el Bithalla\r\n");
+                    lista.Add(text);
+                    File.AppendAllText("resumen.txt", text);
+                }
+
+                return lista;
             }
         }
     }
