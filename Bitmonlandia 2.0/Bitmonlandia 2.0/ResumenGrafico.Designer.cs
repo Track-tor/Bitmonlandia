@@ -646,7 +646,7 @@
             // 
             this.especies_extintas.Location = new System.Drawing.Point(789, 382);
             this.especies_extintas.Name = "especies_extintas";
-            this.especies_extintas.Size = new System.Drawing.Size(118, 201);
+            this.especies_extintas.Size = new System.Drawing.Size(357, 201);
             this.especies_extintas.TabIndex = 66;
             // 
             // ResumenGrafico

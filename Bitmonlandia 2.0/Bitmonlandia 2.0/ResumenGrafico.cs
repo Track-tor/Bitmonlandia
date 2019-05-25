@@ -77,7 +77,7 @@ namespace Bitmonlandia_2._0
             {
                 Label l = new Label();
                 l.Font = new Font("Microsoft Sans Serif", 10F);
-                l.Size = new Size(188,30);
+                l.Size = new Size(357, 30);
                 l.Text = lista_listas_strings[0][i];
                 especies_extintas.Controls.Add(l);
             }
