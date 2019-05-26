@@ -32,13 +32,11 @@
             this.Registro_titulo = new System.Windows.Forms.Label();
             this.Boton_Mes = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.Cuadro_Registro.SuspendLayout();
             this.SuspendLayout();
             // 
             // Cuadro_Registro
             // 
             this.Cuadro_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Cuadro_Registro.Controls.Add(this.Registro_titulo);
             this.Cuadro_Registro.Location = new System.Drawing.Point(1062, 94);
             this.Cuadro_Registro.Name = "Cuadro_Registro";
             this.Cuadro_Registro.Size = new System.Drawing.Size(235, 561);
@@ -46,23 +44,25 @@
             // 
             // Registro_titulo
             // 
+            this.Registro_titulo.BackColor = System.Drawing.SystemColors.Highlight;
             this.Registro_titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Registro_titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registro_titulo.Location = new System.Drawing.Point(0, 0);
+            this.Registro_titulo.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registro_titulo.Location = new System.Drawing.Point(1062, 38);
             this.Registro_titulo.Margin = new System.Windows.Forms.Padding(0);
             this.Registro_titulo.Name = "Registro_titulo";
-            this.Registro_titulo.Size = new System.Drawing.Size(234, 35);
+            this.Registro_titulo.Size = new System.Drawing.Size(234, 44);
             this.Registro_titulo.TabIndex = 2;
             this.Registro_titulo.Text = "REGISTRO";
             this.Registro_titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Boton_Mes
             // 
-            this.Boton_Mes.Location = new System.Drawing.Point(52, 217);
+            this.Boton_Mes.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Boton_Mes.Location = new System.Drawing.Point(54, 333);
             this.Boton_Mes.Name = "Boton_Mes";
             this.Boton_Mes.Size = new System.Drawing.Size(168, 168);
             this.Boton_Mes.TabIndex = 5;
-            this.Boton_Mes.Text = "Avanzar Simulacion";
+            this.Boton_Mes.Text = "AVANZAR EN LA SIMULACION\r\n";
             this.Boton_Mes.UseVisualStyleBackColor = true;
             this.Boton_Mes.Click += new System.EventHandler(this.Avanzar_Mes);
             // 
@@ -101,13 +101,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.Registro_titulo);
             this.Controls.Add(this.Cuadro_Registro);
             this.Controls.Add(this.Boton_Mes);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Mapa10x10";
             this.Text = "Form3";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Cuadro_Registro.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -19,6 +19,12 @@ namespace Bitmonlandia_2._0
         public OpcionesIniciales()
         {
             InitializeComponent();
+            Bitmap fondo = new Bitmap(Application.StartupPath + @"\Fondo\fondo2.jpg");
+            this.BackgroundImage = fondo;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+            label2.BackColor = Color.Transparent;
+            label2.Location = new Point(150,50);
+            label1.BackColor = Color.Transparent;
         }
 
         //Funcion para limpiar la pantalla
@@ -68,19 +74,22 @@ namespace Bitmonlandia_2._0
         public void IngresarMeses()
         {
             Label lbl = new Label();
+            lbl.Font = new Font("Impact", 20);
+            lbl.BackColor = Color.Transparent;
             lbl.Anchor = AnchorStyles.None;
             lbl.Text = "Ingresa cantidad de meses a simular";
-            lbl.Location = new Point(450,250);
+            lbl.Location = new Point(350, 50);
             lbl.TextAlign = ContentAlignment.MiddleCenter;
             lbl.AutoSize = true;
 
-            TextBox txb = new TextBox();
+            TextBox txb = new TextBox(); 
+            txb.Font = new Font("Impact", 12);
             txb.Anchor = AnchorStyles.None;
             txb.Name = "meses_ingresados";
-            txb.Location = new Point(470, 270);
+            txb.Location = new Point(500, 100);
 
             Button but = new Button();
-            but.Anchor = AnchorStyles.None;
+            but.Font = new Font("Impact", 10);
             but.Text = "OK";
             but.Location = new Point(480, 290);
             but.Click += ReadLineMeses;

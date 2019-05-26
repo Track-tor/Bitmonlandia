@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bitmonlandia_2._0
 {
-    class Bitmon
+    abstract class Bitmon
     {
         private Random random = new Random();
 
