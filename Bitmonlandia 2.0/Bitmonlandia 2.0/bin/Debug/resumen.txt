@@ -1,41 +1,46 @@
 \\\\\\Resumen de la simulacion\\\\\\
 
-Ningun Bitmon murio
+Tiempo de vida promedio Bitmon: 6,888889 meses
 
 Tiempo de vida promedio de cada especie:
-No murio ningun Taplan
-No murio ningun Dorvalo
-No murio ningun Gofue
+Tiempo de vida promedio Taplan: 0 meses
+Tiempo de vida promedio Dorvalo: 4 meses
+Tiempo de vida promedio Gofue: 10,33333 meses
 No murio ningun Doti
-No murio ningun Wetar
-No murio ningun Ent
+Tiempo de vida promedio Wetar: 12,5 meses
+Tiempo de vida promedio Ent: 2 meses
 
 Tasa de natalidad de cada especie:
 No nacio ningun Taplan
-No nacio ningun Dorvalo
-No nacio ningun Gofue
-No nacio ningun Doti
+Tasa bruta de natalidad Dorvalo: 12,5
+Tasa bruta de natalidad Gofue: 50
+Tasa bruta de natalidad Doti: 83,33334
 No nacio ningun Wetar
-No nacio ningun Ent
+Tasa bruta de natalidad Ent: 65,21739
 
 Tasa de mortalidad de cada especie:
-No murio ningun Taplan
-No murio ningun Dorvalo
-No murio ningun Gofue
+Tasa bruta de mortalidad Taplan: 7,142858
+Tasa bruta de mortalidad Dorvalo: 3,571429
+Tasa bruta de mortalidad Gofue: 10,71429
 No murio ningun Doti
-No murio ningun Wetar
-No murio ningun Ent
+Tasa bruta de mortalidad Wetar: 7,142858
+Tasa bruta de mortalidad Ent: 3,571429
 
 Cantidad de hijos promedio por especie:
 Ningun Taplan ha tenido hijos
-Ningun Dorvalo ha tenido hijos
-Ningun Gofue ha tenido hijos
-Ningun Doti ha tenido hijos
+Cantidad de hijos promedio Dorvalo: 11,90476
+Cantidad de hijos promedio Gofue: 42,25352
+Cantidad de hijos promedio Doti: 83,33334
 Ningun Wetar ha tenido hijos
 
 Lista de especies extintas
 No hay especies extintas
 
 Bithalla:
-Bithalla no tiene habitantes
+Cantidad de Taplan en el Bithalla: 2, que son el 22,22222% del Bithalla
+Cantidad de Dorvalo en el Bithalla: 1, que son el 11,11111% del Bithalla
+No hay Doti en el Bithalla
+Cantidad de Ent en el Bithalla: 1, que son el 11,11111% del Bithalla
+Cantidad de Gofue en el Bithalla: 3, que son el 33,33333% del Bithalla
+Cantidad de Wetar en el Bithalla: 2, que son el 22,22222% del Bithalla
 
