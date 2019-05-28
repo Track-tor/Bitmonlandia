@@ -8,12 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Text;
+using System.Runtime.InteropServices;
 
 namespace Bitmonlandia_2._0
 {
     //15x15
     public partial class Mapa15x15 : Form
     {
+
+        //codigo para cargar la fuente a utilizar en el programa
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbfont, uint cbfont
+            , IntPtr pdv, [In] ref uint pcFonts);
+
+        FontFamily ff;
+        Font font;
+
         static Random random = new Random();
         private int turno = 0;
         private int seed;
@@ -579,6 +590,45 @@ namespace Bitmonlandia_2._0
                 mes_contador++;
                 turno++;
             }
+        }
+
+        //funcion que carga la fuente a utilizar en el programa
+        private void LoadFont()
+        {
+            byte[] fontArray = Bitmonlandia_2._0.Properties.Resources.Diary_of_an_8_bit_mage;
+            int dataLenght = Bitmonlandia_2._0.Properties.Resources.Diary_of_an_8_bit_mage.Length;
+
+            IntPtr ptrdata = Marshal.AllocCoTaskMem(dataLenght);
+
+            Marshal.Copy(fontArray, 0, ptrdata, dataLenght);
+
+            uint cFonts = 0;
+
+            AddFontMemResourceEx(ptrdata, (uint)fontArray.Length, IntPtr.Zero, ref cFonts);
+
+            PrivateFontCollection pfc = new PrivateFontCollection();
+
+            pfc.AddMemoryFont(ptrdata, dataLenght);
+
+            Marshal.FreeCoTaskMem(ptrdata);
+
+            ff = pfc.Families[0];
+            font = new Font(ff, 15f, FontStyle.Bold);
+        }
+
+        //funcion que le hace alloc a la font
+        private void AllocFont(Font f, Control c, float size)
+        {
+            FontStyle fontStyle = FontStyle.Regular;
+            c.Font = new Font(ff, size, fontStyle);
+        }
+
+        private void Mapa15x15_Load(object sender, EventArgs e)
+        {
+            LoadFont();
+            AllocFont(font, this.Boton_Mes, 20);
+            AllocFont(font, this.Registro_titulo, 20);
+            AllocFont(font, this.Cuadro_Registro, 8);
         }
     }
 }

@@ -54,14 +54,14 @@
             this.Registro_titulo.Size = new System.Drawing.Size(234, 35);
             this.Registro_titulo.TabIndex = 2;
             this.Registro_titulo.Text = "REGISTRO";
-            this.Registro_titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Registro_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Boton_Mes
             // 
             this.Boton_Mes.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Boton_Mes.Location = new System.Drawing.Point(35, 259);
+            this.Boton_Mes.Location = new System.Drawing.Point(28, 259);
             this.Boton_Mes.Name = "Boton_Mes";
-            this.Boton_Mes.Size = new System.Drawing.Size(168, 168);
+            this.Boton_Mes.Size = new System.Drawing.Size(191, 168);
             this.Boton_Mes.TabIndex = 8;
             this.Boton_Mes.Text = "Avanzar Simulacion";
             this.Boton_Mes.UseVisualStyleBackColor = true;
@@ -119,6 +119,7 @@
             this.Name = "Mapa15x15";
             this.Text = "Form4";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Mapa15x15_Load);
             this.ResumeLayout(false);
 
         }

@@ -719,6 +719,7 @@
             this.Name = "ResumenGrafico";
             this.Text = "ResumenGrafico";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ResumenGrafico_Load);
             this.ResumeLayout(false);
 
         }
