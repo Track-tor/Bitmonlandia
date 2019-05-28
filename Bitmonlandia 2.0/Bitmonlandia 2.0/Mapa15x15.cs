@@ -66,30 +66,31 @@ namespace Bitmonlandia_2._0
                     Panel p = new Panel();
                     p.Margin = new Padding(0, 0, 0, 0);
                     p.Dock = DockStyle.Fill;
-
+                    p.BackgroundImageLayout = ImageLayout.Stretch;
                     if (tablero[i, j, 0] == "L")
                     {
-                        p.BackColor = Color.Red;
+                        p.BackgroundImage = Image.FromFile("lava.png");
+
                     }
 
                     else if (tablero[i, j, 0] == "D")
                     {
-                        p.BackColor = Color.Yellow;
+                        p.BackgroundImage = Image.FromFile("arena.jpg");
                     }
 
                     else if (tablero[i, j, 0] == "V")
                     {
-                        p.BackColor = Color.Green;
+                        p.BackgroundImage = Image.FromFile("pasto.jpg");
                     }
 
                     else if (tablero[i, j, 0] == "A")
                     {
-                        p.BackColor = Color.DarkBlue;
+                        p.BackgroundImage = Image.FromFile("agua.png");
                     }
 
                     else if (tablero[i, j, 0] == "N")
                     {
-                        p.BackColor = Color.White;
+                        p.BackgroundImage = Image.FromFile("nieve.jpg");
                     }
 
                     int size_celda = tableLayoutPanel1.GetColumnWidths()[0];
@@ -98,12 +99,14 @@ namespace Bitmonlandia_2._0
                     fto1.Size = new Size(size_celda / 2, size_celda);
                     fto1.SizeMode = PictureBoxSizeMode.Zoom;
                     fto1.Location = new Point(0, 0);
+                    fto1.BackColor = Color.Transparent;
                     p.Controls.Add(fto1);
 
                     PictureBox fto2 = new PictureBox();
                     fto2.Size = new Size(size_celda / 2, size_celda);
                     fto2.Location = new Point(fto1.Width, 0);
                     fto2.SizeMode = PictureBoxSizeMode.Zoom;
+                    fto2.BackColor = Color.Transparent;
                     p.Controls.Add(fto2);
 
                     //Añado bitmons si es que estan en la casilla 1
@@ -198,29 +201,29 @@ namespace Bitmonlandia_2._0
                     //Cambio el color de la celda de acuerdo al territorio
                     if (tablero[i, j, 0] == "L")
                     {
-                        p.BackColor = Color.Red;
+                        p.BackgroundImage = Image.FromFile("lava.png");
+
                     }
 
                     else if (tablero[i, j, 0] == "D")
                     {
-                        p.BackColor = Color.Yellow;
+                        p.BackgroundImage = Image.FromFile("arena.jpg");
                     }
 
                     else if (tablero[i, j, 0] == "V")
                     {
-                        p.BackColor = Color.Green;
+                        p.BackgroundImage = Image.FromFile("pasto.jpg");
                     }
 
                     else if (tablero[i, j, 0] == "A")
                     {
-                        p.BackColor = Color.DarkBlue;
+                        p.BackgroundImage = Image.FromFile("agua.png");
                     }
 
                     else if (tablero[i, j, 0] == "N")
                     {
-                        p.BackColor = Color.White;
+                        p.BackgroundImage = Image.FromFile("nieve.jpg");
                     }
-
                     //Agrego bitmons a las casillas si es que estan
                     int casilla = 1;
                     foreach (PictureBox fto in p.Controls)
