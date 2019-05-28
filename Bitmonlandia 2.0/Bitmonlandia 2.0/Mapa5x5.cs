@@ -65,7 +65,6 @@ namespace Bitmonlandia_2._0
                     Panel p = new Panel();
                     p.Margin = new Padding(0, 0, 0, 0);
                     p.Dock = DockStyle.Fill; 
-
                     if (tablero[i, j, 0] == "L")
                     {
                         p.BackColor = Color.Red;

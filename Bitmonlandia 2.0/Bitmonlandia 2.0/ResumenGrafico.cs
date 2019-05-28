@@ -27,6 +27,10 @@ namespace Bitmonlandia_2._0
         {
 
             InitializeComponent();
+            //Se le coloca fondo al forms con el resumen
+            Bitmap fondo = new Bitmap(Application.StartupPath + @"\Fondo\resumen.png");
+            this.BackgroundImage = fondo;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
 
             //Tasa de vida promedio bitmon
             t_v_p_bitmon.Text = lista_strings[0];
@@ -87,6 +91,7 @@ namespace Bitmonlandia_2._0
             for (int i=0; i< contador_especies_extintas; i++)
             {
                 Label l = new Label();
+                l.BackColor = Color.Transparent;
                 l.Font = new Font("Microsoft Sans Serif", 10F);
                 l.Size = new Size(357, 30);
                 l.Text = lista_listas_strings[0][i];
@@ -133,6 +138,7 @@ namespace Bitmonlandia_2._0
             LoadFont();
             foreach(Control n in Controls)
             {
+                n.BackColor = Color.Transparent;
                 AllocFont(font, n, 10);
             }
             
