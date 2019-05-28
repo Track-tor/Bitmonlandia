@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mapa5x5));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Boton_Mes = new System.Windows.Forms.Button();
             this.Registro_titulo = new System.Windows.Forms.Label();
@@ -71,6 +72,7 @@
             this.Registro_titulo.BackColor = System.Drawing.SystemColors.Highlight;
             this.Registro_titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Registro_titulo.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registro_titulo.Image = ((System.Drawing.Image)(resources.GetObject("Registro_titulo.Image")));
             this.Registro_titulo.Location = new System.Drawing.Point(1058, 30);
             this.Registro_titulo.Margin = new System.Windows.Forms.Padding(0);
             this.Registro_titulo.Name = "Registro_titulo";
@@ -81,6 +83,8 @@
             // 
             // Cuadro_Registro
             // 
+            this.Cuadro_Registro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Cuadro_Registro.BackgroundImage")));
+            this.Cuadro_Registro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Cuadro_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Cuadro_Registro.Location = new System.Drawing.Point(1057, 82);
             this.Cuadro_Registro.Name = "Cuadro_Registro";

@@ -135,5 +135,8 @@
   <ItemGroup>
     <None Include="bin\Debug\Disclaimer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pergamino.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

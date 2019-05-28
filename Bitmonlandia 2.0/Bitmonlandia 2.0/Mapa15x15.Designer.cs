@@ -28,26 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Cuadro_Registro = new System.Windows.Forms.FlowLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mapa15x15));
             this.Registro_titulo = new System.Windows.Forms.Label();
             this.Boton_Mes = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Cuadro_Registro = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
-            // 
-            // Cuadro_Registro
-            // 
-            this.Cuadro_Registro.BackColor = System.Drawing.SystemColors.Menu;
-            this.Cuadro_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Cuadro_Registro.Location = new System.Drawing.Point(1040, 99);
-            this.Cuadro_Registro.Name = "Cuadro_Registro";
-            this.Cuadro_Registro.Size = new System.Drawing.Size(235, 561);
-            this.Cuadro_Registro.TabIndex = 9;
             // 
             // Registro_titulo
             // 
             this.Registro_titulo.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Registro_titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Registro_titulo.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registro_titulo.Image = ((System.Drawing.Image)(resources.GetObject("Registro_titulo.Image")));
             this.Registro_titulo.Location = new System.Drawing.Point(1040, 42);
             this.Registro_titulo.Margin = new System.Windows.Forms.Padding(0);
             this.Registro_titulo.Name = "Registro_titulo";
@@ -106,6 +99,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(695, 695);
             this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // Cuadro_Registro
+            // 
+            this.Cuadro_Registro.BackColor = System.Drawing.SystemColors.Menu;
+            this.Cuadro_Registro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Cuadro_Registro.BackgroundImage")));
+            this.Cuadro_Registro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Cuadro_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Cuadro_Registro.Location = new System.Drawing.Point(1040, 99);
+            this.Cuadro_Registro.Name = "Cuadro_Registro";
+            this.Cuadro_Registro.Size = new System.Drawing.Size(235, 561);
+            this.Cuadro_Registro.TabIndex = 9;
             // 
             // Mapa15x15
             // 

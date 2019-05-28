@@ -39,6 +39,10 @@ namespace Bitmonlandia_2._0
             this.meses_a_simular = m;
             bitmonlandia = new Bitmonlandia(seed);
             tablero = bitmonlandia.GetMapa().GetTablero();
+            //Se le coloca fondo al forms con el mapa 15x15
+            Bitmap fondo = new Bitmap(Application.StartupPath + @"\Fondo\b1.png");
+            this.BackgroundImage = fondo;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
 
             ////////////////////////////////////////
             //Se imprime el mapa antes de la simulacion
@@ -265,6 +269,7 @@ namespace Bitmonlandia_2._0
         private void EscribirEnElRegistro(string orden)
         {
             Label l = new Label();
+            l.BackColor = Color.Transparent;
             l.AutoSize = false;
             l.Size = new Size(235, 13);
             l.Text = orden;
@@ -277,6 +282,7 @@ namespace Bitmonlandia_2._0
             else if (orden == "mes")
             {
                 Label espacio = new Label();
+                espacio.BackColor = Color.Transparent;
                 espacio.AutoSize = false;
                 espacio.Size = new Size(235, 13);
                 espacio.Text = "--------------------------------------------------------------------------";
