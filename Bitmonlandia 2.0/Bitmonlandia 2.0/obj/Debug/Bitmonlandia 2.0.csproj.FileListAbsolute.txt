@@ -40,3 +40,17 @@ C:\Users\Julio\Desktop\Bitmonlandia-master\Bitmonlandia 2.0\Bitmonlandia 2.0\obj
 C:\Users\Julio\Desktop\Bitmonlandia-master\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.csproj.CoreCompileInputs.cache
 C:\Users\Julio\Desktop\Bitmonlandia-master\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.exe
 C:\Users\Julio\Desktop\Bitmonlandia-master\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.pdb
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\bin\Debug\Bitmonlandia 2.0.exe.config
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\bin\Debug\Bitmonlandia 2.0.exe
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\bin\Debug\Bitmonlandia 2.0.pdb
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.csprojAssemblyReference.cache
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.Mapa15x15.resources
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.OpcionesIniciales.resources
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.Mapa5x5.resources
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.Mapa10x10.resources
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.Properties.Resources.resources
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia_2._0.ResumenGrafico.resources
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.csproj.GenerateResource.cache
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.csproj.CoreCompileInputs.cache
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.exe
+C:\Users\Julio\Desktop\Bitmonlandia 2.0\Bitmonlandia 2.0\obj\Debug\Bitmonlandia 2.0.pdb

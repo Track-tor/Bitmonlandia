@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mapa5x5));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.Boton_Mes = new System.Windows.Forms.Button();
             this.Registro_titulo = new System.Windows.Forms.Label();
             this.Cuadro_Registro = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -69,41 +70,50 @@
             // 
             // Registro_titulo
             // 
-            this.Registro_titulo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Registro_titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Registro_titulo.BackColor = System.Drawing.Color.Transparent;
             this.Registro_titulo.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registro_titulo.Image = ((System.Drawing.Image)(resources.GetObject("Registro_titulo.Image")));
-            this.Registro_titulo.Location = new System.Drawing.Point(1058, 30);
+            this.Registro_titulo.Location = new System.Drawing.Point(50, 50);
             this.Registro_titulo.Margin = new System.Windows.Forms.Padding(0);
             this.Registro_titulo.Name = "Registro_titulo";
-            this.Registro_titulo.Size = new System.Drawing.Size(234, 43);
+            this.Registro_titulo.Size = new System.Drawing.Size(246, 43);
             this.Registro_titulo.TabIndex = 2;
             this.Registro_titulo.Text = "REGISTRO";
             this.Registro_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Cuadro_Registro
             // 
-            this.Cuadro_Registro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Cuadro_Registro.BackgroundImage")));
+            this.Cuadro_Registro.BackColor = System.Drawing.Color.Transparent;
             this.Cuadro_Registro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Cuadro_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Cuadro_Registro.Location = new System.Drawing.Point(1057, 82);
+            this.Cuadro_Registro.Location = new System.Drawing.Point(89, 171);
             this.Cuadro_Registro.Name = "Cuadro_Registro";
-            this.Cuadro_Registro.Size = new System.Drawing.Size(235, 561);
+            this.Cuadro_Registro.Size = new System.Drawing.Size(178, 492);
             this.Cuadro_Registro.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::Bitmonlandia_2._0.Properties.Resources.pergamino;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.Cuadro_Registro);
+            this.panel1.Controls.Add(this.Registro_titulo);
+            this.panel1.Location = new System.Drawing.Point(996, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(348, 705);
+            this.panel1.TabIndex = 4;
             // 
             // Mapa5x5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.Registro_titulo);
-            this.Controls.Add(this.Cuadro_Registro);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Boton_Mes);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Mapa5x5";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Mapa5x5_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -114,5 +124,6 @@
         private System.Windows.Forms.Button Boton_Mes;
         private System.Windows.Forms.Label Registro_titulo;
         private System.Windows.Forms.FlowLayoutPanel Cuadro_Registro;
+        private System.Windows.Forms.Panel panel1;
     }
 }

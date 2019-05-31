@@ -42,6 +42,7 @@ namespace Bitmonlandia_2._0
             Bitmap fondo = new Bitmap(Application.StartupPath + @"\Fondo\b1.png");
             this.BackgroundImage = fondo;
             this.BackgroundImageLayout = ImageLayout.Stretch;
+            Cuadro_Registro.BackColor = Color.Transparent;
 
             ////////////////////////////////////////
             //Se imprime el mapa antes de la simulacion

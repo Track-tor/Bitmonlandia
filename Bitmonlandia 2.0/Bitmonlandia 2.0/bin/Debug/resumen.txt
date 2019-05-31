@@ -1,11 +1,11 @@
 \\\\\\Resumen de la simulacion\\\\\\
 
-Tiempo de vida promedio Bitmon: 1,666667 meses
+Tiempo de vida promedio Bitmon: 0,5 meses
 
 Tiempo de vida promedio de cada especie:
 Tiempo de vida promedio Taplan: 0 meses
 No murio ningun Dorvalo
-Tiempo de vida promedio Gofue: 5 meses
+Tiempo de vida promedio Gofue: 1 meses
 No murio ningun Doti
 No murio ningun Wetar
 No murio ningun Ent
@@ -16,12 +16,12 @@ No nacio ningun Dorvalo
 No nacio ningun Gofue
 No nacio ningun Doti
 No nacio ningun Wetar
-Tasa bruta de natalidad Ent: 95,2381
+No nacio ningun Ent
 
 Tasa de mortalidad de cada especie:
-Tasa bruta de mortalidad Taplan: 16,66667
+Tasa bruta de mortalidad Taplan: 10
 No murio ningun Dorvalo
-Tasa bruta de mortalidad Gofue: 8,333334
+Tasa bruta de mortalidad Gofue: 10
 No murio ningun Doti
 No murio ningun Wetar
 No murio ningun Ent
@@ -34,13 +34,13 @@ Ningun Doti ha tenido hijos
 Ningun Wetar ha tenido hijos
 
 Lista de especies extintas
-No hay especies extintas
+Ent
 
 Bithalla:
-Cantidad de Taplan en el Bithalla: 2, que son el 66,66666% del Bithalla
+Cantidad de Taplan en el Bithalla: 1, que son el 50% del Bithalla
 No hay Dorvalo en el Bithalla
 No hay Doti en el Bithalla
 No hay Ent en el Bithalla
-Cantidad de Gofue en el Bithalla: 1, que son el 33,33333% del Bithalla
+Cantidad de Gofue en el Bithalla: 1, que son el 50% del Bithalla
 No hay Wetar en el Bithalla
 
