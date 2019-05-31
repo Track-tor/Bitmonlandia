@@ -106,7 +106,14 @@ namespace Bitmonlandia_2._0
             {
                 if (c.Name == "meses_ingresados")
                 {
-                    meses = int.Parse(c.Text);
+                    try
+                    {
+                        meses = int.Parse(c.Text);
+                    }
+                    catch (Exception)
+                    {
+                        continue;
+                    }
                 }
             }
             PantallaNueva();
