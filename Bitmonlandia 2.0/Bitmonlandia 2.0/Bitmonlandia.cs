@@ -235,8 +235,8 @@ namespace Bitmonlandia_2._0
         //Spawnear Ent
         public void PlantarEnt(int size)
         {
-            int c1 = random.Next(size); // Asignacion de una coordenada aleatoria
-            int c2 = random.Next(size); // Asignacion de una coordenada aleatoria
+            int c1 = random.Next(size*5+1); // Asignacion de una coordenada aleatoria
+            int c2 = random.Next(size*5+1); // Asignacion de una coordenada aleatoria
 
             //Veo si el bitmon caera fuera de los limites del mapa:
             int cont_de_escape = 0;
