@@ -82,6 +82,7 @@
             // 
             // Cuadro_Registro
             // 
+            this.Cuadro_Registro.AutoScroll = true;
             this.Cuadro_Registro.BackColor = System.Drawing.Color.Transparent;
             this.Cuadro_Registro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Cuadro_Registro.Location = new System.Drawing.Point(89, 171);

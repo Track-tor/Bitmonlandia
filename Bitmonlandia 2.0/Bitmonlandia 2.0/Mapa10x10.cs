@@ -295,19 +295,6 @@ namespace Bitmonlandia_2._0
                 l.Text = String.Format("Mes {0}", mes_contador);
             }
 
-            //////////////
-            //Veo si el cuadro registro esta lleno para vaciarlo
-            if (Cuadro_Registro.Controls.Count > 40)
-            {
-                while (Cuadro_Registro.Controls.Count > 1)
-                {
-                    if (Cuadro_Registro.Controls[1].Name != "Registro_titulo")
-                    {
-                        Cuadro_Registro.Controls[1].Dispose();
-                    }
-                }
-            }
-
             Cuadro_Registro.Controls.Add(l);
         }
 

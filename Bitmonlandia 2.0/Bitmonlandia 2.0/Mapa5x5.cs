@@ -296,17 +296,7 @@ namespace Bitmonlandia_2._0
 
             //////////////
             //Veo si el cuadro registro esta lleno para vaciarlo
-            if (Cuadro_Registro.Controls.Count > 40)
-            {
-                while (Cuadro_Registro.Controls.Count > 1)
-                {
-                    if (Cuadro_Registro.Controls[1].Name != "Registro_titulo")
-                    {
-                        Cuadro_Registro.Controls[1].Dispose();
-                    }
-                }
-            }
-
+            
             Cuadro_Registro.Controls.Add(l);
         }
 
