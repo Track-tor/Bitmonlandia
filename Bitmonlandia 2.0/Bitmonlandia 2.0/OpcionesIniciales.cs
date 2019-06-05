@@ -139,6 +139,7 @@ namespace Bitmonlandia_2._0
 
             Button but = new Button();
             but.Text = "OK";
+            but.Anchor = AnchorStyles.None;
             but.Location = new Point(475, 290);
             but.Click += ReadLineMeses;
 

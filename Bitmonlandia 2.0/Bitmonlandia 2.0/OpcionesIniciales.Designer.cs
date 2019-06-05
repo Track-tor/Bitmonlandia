@@ -77,6 +77,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.Image = global::Bitmonlandia_2._0.Properties.Resources.Disclaimer;
             this.pictureBox3.Location = new System.Drawing.Point(1, 621);
             this.pictureBox3.Name = "pictureBox3";
@@ -87,6 +88,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::Bitmonlandia_2._0.Properties.Resources.opcion;
             this.pictureBox2.Location = new System.Drawing.Point(12, 405);
             this.pictureBox2.Name = "pictureBox2";
@@ -97,6 +99,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Bitmonlandia_2._0.Properties.Resources.Bitmonlandia;
             this.pictureBox1.Location = new System.Drawing.Point(183, 51);
             this.pictureBox1.Name = "pictureBox1";

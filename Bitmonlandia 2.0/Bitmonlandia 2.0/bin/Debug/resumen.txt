@@ -1,47 +1,46 @@
 \\\\\\Resumen de la simulacion\\\\\\
 
-Tiempo de vida promedio Bitmon: 4,125 meses
+Tiempo de vida promedio Bitmon: 2,666667 meses
 
 Tiempo de vida promedio de cada especie:
-Tiempo de vida promedio Taplan: 0 meses
-Tiempo de vida promedio Dorvalo: 15,5 meses
-Tiempo de vida promedio Gofue: 0 meses
+No murio ningun Taplan
+Tiempo de vida promedio Dorvalo: 4 meses
+No murio ningun Gofue
 No murio ningun Doti
-Tiempo de vida promedio Wetar: 0 meses
-Tiempo de vida promedio Ent: 2 meses
+Tiempo de vida promedio Wetar: 4 meses
+Tiempo de vida promedio Ent: 0 meses
 
 Tasa de natalidad de cada especie:
 No nacio ningun Taplan
 No nacio ningun Dorvalo
-Tasa bruta de natalidad Gofue: 10,52632
+No nacio ningun Gofue
 No nacio ningun Doti
 No nacio ningun Wetar
-Tasa bruta de natalidad Ent: 35,29412
+Tasa bruta de natalidad Ent: 133,3333
 
 Tasa de mortalidad de cada especie:
-Tasa bruta de mortalidad Taplan: 21,42857
-Tasa bruta de mortalidad Dorvalo: 14,28572
-Tasa bruta de mortalidad Gofue: 7,142858
+No murio ningun Taplan
+Tasa bruta de mortalidad Dorvalo: 5
+No murio ningun Gofue
 No murio ningun Doti
-Tasa bruta de mortalidad Wetar: 7,142858
-Tasa bruta de mortalidad Ent: 7,142858
+Tasa bruta de mortalidad Wetar: 5
+Tasa bruta de mortalidad Ent: 5
 
 Cantidad de hijos promedio por especie:
 Ningun Taplan ha tenido hijos
-Cantidad de hijos promedio Dorvalo: 32,25806
-Cantidad de hijos promedio Gofue: 10,52632
+Ningun Dorvalo ha tenido hijos
+Ningun Gofue ha tenido hijos
 Ningun Doti ha tenido hijos
 Ningun Wetar ha tenido hijos
 
 Lista de especies extintas
-Taplan
-Dorvalo
+No hay especies extintas
 
 Bithalla:
-Cantidad de Taplan en el Bithalla: 3, que son el 37,5% del Bithalla
-Cantidad de Dorvalo en el Bithalla: 2, que son el 25% del Bithalla
+No hay Taplan en el Bithalla
+Cantidad de Dorvalo en el Bithalla: 1, que son el 33,33333% del Bithalla
 No hay Doti en el Bithalla
-Cantidad de Ent en el Bithalla: 1, que son el 12,5% del Bithalla
-Cantidad de Gofue en el Bithalla: 1, que son el 12,5% del Bithalla
-Cantidad de Wetar en el Bithalla: 1, que son el 12,5% del Bithalla
+Cantidad de Ent en el Bithalla: 1, que son el 33,33333% del Bithalla
+No hay Gofue en el Bithalla
+Cantidad de Wetar en el Bithalla: 1, que son el 33,33333% del Bithalla
 
