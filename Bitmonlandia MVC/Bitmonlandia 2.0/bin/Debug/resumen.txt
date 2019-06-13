@@ -1,0 +1,41 @@
+\\\\\\Resumen de la simulacion\\\\\\
+
+Ningun Bitmon murio
+
+Tiempo de vida promedio de cada especie:
+No murio ningun Taplan
+No murio ningun Dorvalo
+No murio ningun Gofue
+No murio ningun Doti
+No murio ningun Wetar
+No murio ningun Ent
+
+Tasa de natalidad de cada especie:
+No nacio ningun Taplan
+No nacio ningun Dorvalo
+No nacio ningun Gofue
+No nacio ningun Doti
+No nacio ningun Wetar
+No nacio ningun Ent
+
+Tasa de mortalidad de cada especie:
+No murio ningun Taplan
+No murio ningun Dorvalo
+No murio ningun Gofue
+No murio ningun Doti
+No murio ningun Wetar
+No murio ningun Ent
+
+Cantidad de hijos promedio por especie:
+Ningun Taplan ha tenido hijos
+Ningun Dorvalo ha tenido hijos
+Ningun Gofue ha tenido hijos
+Ningun Doti ha tenido hijos
+Ningun Wetar ha tenido hijos
+
+Lista de especies extintas
+No hay especies extintas
+
+Bithalla:
+Bithalla no tiene habitantes
+
